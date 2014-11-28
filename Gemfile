@@ -24,7 +24,7 @@ group :development, :test do
  	gem 'jasmine-rails'
 end
 
-group :production do 
+group :production do
 	gem 'rails_12factor'
 end
 
@@ -36,8 +36,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
 end
-
-
 
 
 # To use ActiveModel has_secure_password
