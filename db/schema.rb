@@ -11,65 +11,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141128191132) do
+ActiveRecord::Schema.define(version: 20141128224437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "friends", force: true do |t|
-    t.integer "user_id"
-  end
-
-  create_table "room_invites", force: true do |t|
-    t.integer "user_id"
-    t.integer "room_id"
-  end
-
-  create_table "room_users", force: true do |t|
-    t.integer "user_id"
-    t.integer "room_id"
-  end
-
-  create_table "rooms", force: true do |t|
-    t.string  "name"
-    t.string  "description"
-    t.string  "private"
-    t.integer "user_id"
-  end
-
-  create_table "songs", force: true do |t|
-    t.integer "user_id"
-    t.integer "room_id"
-    t.string  "api_id"
-  end
-
-  create_table "user_stars", force: true do |t|
-    t.integer "user_id"
-    t.integer "song_id"
-  end
-
-  create_table "user_votes", force: true do |t|
-    t.integer "user_id"
-    t.integer "song_id"
-    t.integer "room_id"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.inet     "current_sign_in_ip"
-    t.inet     "last_sign_in_ip"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  create_table "room_invites", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "room_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "room_users", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "room_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rooms", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "private"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "songs", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "room_id"
+    t.string   "api_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_stars", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "song_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_votes", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "song_id"
+    t.integer  "room_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "password_hash"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
