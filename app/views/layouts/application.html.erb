@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="cloud-dj">
+<html>
 <head>
   <title>Cloud DJ</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<div ng-view>
+<body ng-app="AngularRails">
   <%= yield %>
-</div>
+
 
 </body>
 </html>

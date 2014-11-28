@@ -14,9 +14,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-
-// Add the following two lines
-//= require ../../../vendor/assets/javascripts/angular.min
-//= require main
-
+//= require angular
+//= require angular-route
+//= require angular-rails-templates
+//= require_tree ../templates
 //= require_tree .
