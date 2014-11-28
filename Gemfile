@@ -7,20 +7,25 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
-
 gem 'pg'
 
+gem 'sass-rails', '~> 4.0.3'
 
 gem 'httparty'
 
+gem 'jquery-rails'
 
+gem 'devise'
 
 gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
   gem 'rspec-rails'
- gem 'jasmine-rails'
+ 	gem 'jasmine-rails'
+end
 
+group :production do 
+	gem 'rails_12factor'
 end
 
 group :test do
