@@ -36,9 +36,9 @@ class CreateSoundDjTables < ActiveRecord::Migration
     end
 
     create_table :songs do |t|
-      t.string :title
-      t.string :artist
       t.references :user
+      t.string :api_id
+      t.references :room
     end
 
     create_table :user_votes do |t|
