@@ -4,6 +4,8 @@ class CreateUserVotes < ActiveRecord::Migration
       t.references :user
       t.references :song
       t.references :room
+
+      t.timestamps
     end
   end
 end
