@@ -15,7 +15,10 @@ gem 'httparty'
 
 gem 'jquery-rails'
 
-gem 'devise'
+# gem 'devise'
+
+gem 'bower-rails'
+gem 'angular-rails-templates'
 
 gem 'simplecov', :require => false, :group => :test
 
