@@ -5,6 +5,8 @@ class CreateRooms < ActiveRecord::Migration
       t.string :description
       t.string :private
       t.references :user, as: :moderator
+
+      t.timestamps
     end
   end
 end

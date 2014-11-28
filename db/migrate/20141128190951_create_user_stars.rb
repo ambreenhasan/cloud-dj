@@ -3,6 +3,8 @@ class CreateUserStars < ActiveRecord::Migration
     create_table :user_stars do |t|
       t.references :user
       t.references :song
+
+      t.timestamps
     end
   end
 end

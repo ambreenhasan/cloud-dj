@@ -4,6 +4,8 @@ class CreateRoomUsers < ActiveRecord::Migration
 
       t.references :user
       t.references :room
+
+      t.timestamps
     end
   end
 end
