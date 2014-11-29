@@ -1,0 +1,40 @@
+/*
+Syntax error: Invalid CSS after "style.scss": expected "{", was ""
+        on line 1 of app/assets/stylesheets/style.scss
+
+1: style.scss
+
+Backtrace:
+app/assets/stylesheets/style.scss:1
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:1147:in `expected'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:1085:in `expected'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:1080:in `tok!'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:534:in `block'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:529:in `ruleset'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:553:in `block_child'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:543:in `block_contents'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:82:in `stylesheet'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/scss/parser.rb:27:in `parse'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/engine.rb:342:in `_to_tree'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/plugin.rb:107:in `method_missing'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/exec.rb:463:in `watch_or_update'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/exec.rb:326:in `process_result'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/exec.rb:41:in `parse'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/lib/sass/exec.rb:21:in `parse!'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/gems/sass-3.2.19/bin/sass:13:in `<top (required)>'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/bin/sass:23:in `load'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/bin/sass:23:in `<main>'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/bin/ruby_executable_hooks:15:in `eval'
+/Users/alextrost/.rvm/gems/ruby-2.0.0-p481/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"style.scss\": expected \"{\", was \"\"\A         on line 1 of app/assets/stylesheets/style.scss\A \A 1: style.scss"; }

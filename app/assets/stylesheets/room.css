@@ -1,6 +1,7 @@
+$blue=#fff;
 
 body {
-	background-color: red;
+	background-color: $blue;
 }
 
 .test {
