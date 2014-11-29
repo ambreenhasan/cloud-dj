@@ -1,8 +1,8 @@
 class FriendsController < ApplicationController
 
   def index
-    user = User.find_by(invitee_id: )
-    @friends = Friend.where(user_id)
+    user = User.find_by(id: current_user.id)
+    @friends = user.friends
     respond_to do |f|
       f.json { render json: @friends.to_json }
     end
