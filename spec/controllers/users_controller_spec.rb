@@ -86,12 +86,8 @@ RSpec.describe UsersController, :type => :controller do
 
     it "does not update if invalid params" do
       @new_attr = {first_name: "", not_a_valid_attr: "hi there"}
-      p @new_attr
-      p @user
       put :update, :id => @user.id, :user => @new_attr
-      p @user
       @user.reload
-      p @user.first_name
       expect(@user.first_name).to eq("michael")
       expect(@user.last_name).to eq("teevan")
     end
