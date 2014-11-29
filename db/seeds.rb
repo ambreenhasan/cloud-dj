@@ -1,6 +1,6 @@
-# 10.times do
-#   User.create(email: Faker::Internet.email, encrypted_password: generated_password, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, location: Faker::Address.city)
-# end
+10.times do
+  User.create(email: Faker::Internet.email, password_hash: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+end
 
 # 100.times do
 #   Song.create(name: Faker::Hacker.adjective, artist: Faker::Hacker.abbreviation , album: Faker::Commerce.color, soundcloud_id: rand(100))
