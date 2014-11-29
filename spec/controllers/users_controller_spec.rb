@@ -75,14 +75,21 @@ RSpec.describe UsersController, :type => :controller do
   end
 
   describe "PUT users#update" do
-    it "" do
-
+    it "finds the user" do
+      # put :update, :id => @user.id
     end
   end
 
   describe "DELETE users#destroy" do
-    it "" do
+    it "deletes a user" do
+      expect {
+      delete :destroy, id: @user.id
+      }.to change {User.count}.by(-1)
+    end
 
+    it "redirects to the user index" do
+      delete :destroy, id: @user.id
+      expect(response).to be_redirect
     end
   end
 end
