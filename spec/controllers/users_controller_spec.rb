@@ -26,7 +26,7 @@ RSpec.describe UsersController, :type => :controller do
     end
   end
 
-  describe "users#create" do
+  describe "POST users#create" do
     it "creates a user if passed valid parameters" do
       post :create, format: :json, user: {
         email: 'create@me.com',
@@ -35,6 +35,14 @@ RSpec.describe UsersController, :type => :controller do
         password: 'banana'
         }
       expect(User.last.first_name).to eq('pleazzz')
+    end
+  end
+
+  describe "GET users#new" do
+    it "should return a success status" do
+      get :new
+      expect(response.status).to eq(200)
+      #currently failing because of missing template
     end
   end
 end
