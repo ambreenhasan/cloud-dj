@@ -17,13 +17,14 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def show
-    @user = User.find_by(id: current_user.id)
-    respond_to do |f|
-      f.json { render json: @user.to_json } if @user.save
-    end
+    @user = User.find_by(id: params[:id])
+    # respond_to do |f|
+    #   f.json { render json: @user.to_json } if @user.save
+    # end
   end
 
   def update

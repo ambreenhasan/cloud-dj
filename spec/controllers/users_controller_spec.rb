@@ -4,7 +4,7 @@ RSpec.describe UsersController, :type => :controller do
 
   before(:each) do
     User.destroy_all
-    User.create(email: 'michael@michael.com', first_name: 'michael', last_name: 'teevan', password: 'password')
+    @user = User.create(email: 'michael@michael.com', first_name: 'michael', last_name: 'teevan', password: 'password')
     User.create(email: 'dan@dan.com', first_name: 'daniel', last_name: 'notdaniel', password: 'd')
   end
 
@@ -43,6 +43,46 @@ RSpec.describe UsersController, :type => :controller do
       get :new
       expect(response.status).to eq(200)
       #currently failing because of missing template
+    end
+  end
+
+  describe "GET users#edit" do
+    it "should return a success status" do
+      get :edit, :id => @user.id
+      expect(response.status).to eq(200)
+      #currently failing because of missing template
+    end
+
+    it "assigns user to @user" do
+      get :edit, :id => @user.id
+      expect(assigns(:user)).to eq(user)
+      #currently failing because of missing template
+    end
+  end
+
+  describe "GET users#show" do
+    it "should return a success status" do
+      get :show, :id => @user.id
+      expect(response.status).to eq(200)
+      #currently failing because of missing template
+    end
+
+    it "assigns user to @user" do
+      get :show, :id => @user.id
+      expect(assigns(:user)).to eq(user)
+      #currently failing because of missing template
+    end
+  end
+
+  describe "PUT users#update" do
+    it "" do
+
+    end
+  end
+
+  describe "DELETE users#destroy" do
+    it "" do
+
     end
   end
 end
