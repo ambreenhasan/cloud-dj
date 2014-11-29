@@ -1,10 +1,19 @@
 // hide
 SC.initialize({
-  client_id:""
+  client_id: soundcloudClientId
 });
-// find all sounds of buskers licensed under 'creative commons share alike'
+
 SC.get('/tracks', { q: 'buskers', limit: 8}, function(tracks) {
   console.log(tracks);
 });
 
 // function searchSoundCloud(searchedItem)
+// function SoundCloudCtrl($scope, $http) {
+//    $http.get('/api_key').success(function(data) {
+//     console.log("success:" + data)
+//   }).error(function(data, status, headers, config){
+//     console.log("fail")
+//   })
+// }
+
+// SoundCloudCtrl();
