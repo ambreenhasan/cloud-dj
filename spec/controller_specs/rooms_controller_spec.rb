@@ -3,8 +3,6 @@ require 'rails_helper'
 RSpec.describe RoomsController, :type => :controller do
   before :each do
     Room.destroy_all
-    # Room.create(name: 'Aroom',description: 'Adesc',status: 'public',moderator: 'Amod')
-    # Room.create(name: 'Broom',description: 'Bdesc',status: 'private',moderator: 'Bmod')
   end
 
   describe 'GET room#index' do
@@ -20,9 +18,18 @@ RSpec.describe RoomsController, :type => :controller do
     end
   end
 
+  before :each do
+    Room.destroy_all
+    User.destroy_all
+    @user = User.create(email:'a@a.a',first_name:'aa',last_name:'aaa',password_hash:'a')
+    @valid_params = {name:'aRoom', description:'aDesc', status:'public'}
+  end
+
   describe 'POST rooms#create' do
     it 'creates a new room' do
-      expect{post :users, :user_id => @user.id}.to change{Room.count}.by 1
+      p @user.id
+      p @valid_params
+      expect{post :create, :user_id => @user.id, :room => @valid_params}.to change{Room.count}.by 1
     end
   end
 end
