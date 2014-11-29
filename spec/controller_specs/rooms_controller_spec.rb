@@ -21,8 +21,8 @@ RSpec.describe RoomsController, :type => :controller do
   end
 
   describe 'POST rooms#create' do
-    it '' do
-
+    it 'creates a new room' do
+      expect{post :users, :user_id => @user.id}.to change{Room.count}.by 1
     end
   end
 end
