@@ -9,7 +9,6 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     respond_to do |f|
       if @room.save
-        p @room
         f.json { render json: @room }
       else
         f.json { render :index }
@@ -18,7 +17,6 @@ class RoomsController < ApplicationController
     end
   end
 
-  #  new_user_room GET    /users/:user_id/rooms/new(.:format)        rooms#new
   # def new
   #   @room = Room.new
   # end
@@ -31,14 +29,17 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
   end
 
-  # def update
-  #   @room = Room.find(params[:id])
-  #   if @room.update(room_params)
-  #     redirect_to @room
-  #   else
-  #     render 'edit'
-  #   end
-  # end
+  def update
+    @room = Room.find_by(id: params[:id])
+    @room.update(room_params)
+    if @room.save
+      flash[:notice] = "Room updated!"
+      redirect_to user_rooms_path
+    else
+      flash[:notice] = "Room FAILed to update"
+      redirect_to user_rooms_path
+    end
+  end
 
   # def destroy
   #   room = Room.find(params[:id])
