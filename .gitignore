@@ -17,3 +17,4 @@
 config/secrets.yml
 bower.json
 app/assets/javascripts/ng-app/controllers/tokens.js
+app/assets/javascripts/ng-app/controllers/token.js
