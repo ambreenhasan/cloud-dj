@@ -90,9 +90,21 @@ RSpec.describe RoomsController, :type => :controller do
       @new_attr = {name: ""}
       put :update, :user_id => @user.id, :id => @room.id, :room => @new_attr
       @room.reload
-      p @room
       expect(@room.name).to eq("Aroom")
       expect(@room.description).to eq("Adesc")
+    end
+  end
+
+  describe "DELETE rooms#destroy" do
+    it "deletes a specific room" do
+      expect {
+      delete :destroy, :user_id => @user.id, :id => @room.id
+      }.to change {Room.count}.by(-1)
+    end
+
+    it "redirects to the rooms index" do
+      delete :destroy, :user_id => @user.id, :id => @room
+      expect(response).to be_redirect
     end
   end
 end

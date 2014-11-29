@@ -34,20 +34,21 @@ class RoomsController < ApplicationController
     @room.update(room_params)
     if @room.save
       flash[:notice] = "Room updated!"
-      redirect_to user_rooms_path
+      redirect_to user_room_path
     else
       flash[:notice] = "Room FAILed to update"
-      redirect_to user_rooms_path
+      redirect_to user_room_path
     end
   end
 
-  # def destroy
-  #   room = Room.find(params[:id])
-  #   room.destroy
-  #   redirect_to user_rooms_path
-  # end
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to user_rooms_path
+  end
 
   private
+
   def room_params
     params.require(:room).permit(:name, :description, :publicness, :user_id)
   end
