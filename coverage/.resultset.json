@@ -1,59 +1,29 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/controllers/rooms_controller.rb": [
+      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/controllers/songs_controller.rb": [
         1,
-        null,
         1,
         2,
         2,
         null,
         null,
         1,
-        2,
-        2,
-        2,
-        2,
-        null,
-        1,
-        2,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         1,
-        2,
         null,
         null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
         1,
         null,
         null,
         1,
+        null,
+        null,
         1,
-        4,
+        null,
+        null,
+        1,
         null,
         null,
         null
@@ -62,6 +32,14 @@
         1,
         1,
         null,
+        null
+      ],
+      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/models/song.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/models/user.rb": [
@@ -82,8 +60,8 @@
         null,
         null,
         1,
-        12,
-        12,
+        2,
+        2,
         null,
         null
       ],
@@ -97,6 +75,6 @@
         null
       ]
     },
-    "timestamp": 1417302884
+    "timestamp": 1417304524
   }
 }

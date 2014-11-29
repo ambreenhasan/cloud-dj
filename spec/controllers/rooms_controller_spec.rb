@@ -11,7 +11,7 @@ RSpec.describe RoomsController, :type => :controller do
 
   describe "GET rooms#index" do
     it "returns a successful status" do
-      get :index, :id => @user.id
+      get :index, :user_id => @user.id
       expect(response.status).to eq(200)
     end
 
