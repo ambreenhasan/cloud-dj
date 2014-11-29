@@ -13,13 +13,14 @@ class RoomsController < ApplicationController
     end
   end
 
-  # def new
-  #   @room = Room.new
-  # end
+  #  new_user_room GET    /users/:user_id/rooms/new(.:format)        rooms#new
+  def new
+    @room = Room.new
+  end
 
-  # def edit
-  #   @room = Room.find(params[:id])
-  # end
+  def edit
+    @room = Room.find(params[:id])
+  end
 
   # def show
   #   @room = Room.find(params[:id])
