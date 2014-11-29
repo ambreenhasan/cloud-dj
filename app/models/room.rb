@@ -1,4 +1,4 @@
 class Room < ActiveRecord::Base
-  has_many :users
-  has_one :moderator, class_name: "User", foreign_key: "user_id"
+  has_one :user
+  has_many :users, through: :room_users
 end
