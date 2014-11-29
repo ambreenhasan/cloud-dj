@@ -7,5 +7,5 @@ angular
             .when('/', {
                 templateUrl: 'home.html',
                 controller: 'HomeCtrl'
-            });
+        });
     });

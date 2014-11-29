@@ -1,10 +1,11 @@
 class ApiKeyController < ApplicationController
-  private
-  def soundcloud
-    Rails.application.secrets.soundcloud_api_key
-  end
+  respond_to :json
 
-  def youtube
-    Rails.application.secrets.youtube_api_key
-  end
+  # def soundcloud
+  #   respond_with(Rails.application.secrets.soundcloud_api_key)
+  # end
+
+  # def youtube
+  #   Rails.application.secrets.youtube_api_key
+  # end
 end
