@@ -5,6 +5,15 @@ class SongsController < ApplicationController
   end
 
   def create
+    @song = Song.new(song_params)
+    respond_to do |f|
+      if @song.save
+        f.json { render json: @song }
+      else
+        f.json { render :index }
+        f.html { redirect_to user_songs_path, notice: "Failed to save"}
+      end
+    end
   end
 
   def new
@@ -20,6 +29,12 @@ class SongsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def song_params
+    params.require(:song).permit(:user_id, :room_id, :api_id)
   end
 
 end

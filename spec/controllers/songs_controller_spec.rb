@@ -28,5 +28,19 @@ RSpec.describe SongsController, :type => :controller do
     end
   end
 
+  describe "POST songs#create" do
+    it "creates a new song when given valid params" do
+      post :create, :user_id => @user.id, format: :json, song: {
+        user_id: 3,
+        room_id: 4,
+        api_id: "thisisastring"
+      }
+      expect(Song.last.room_id).to eq(4)
+    end
+
+    it "" do
+
+    end
+  end
 
 end
