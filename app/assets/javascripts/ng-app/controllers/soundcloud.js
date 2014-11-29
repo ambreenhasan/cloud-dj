@@ -1,6 +1,6 @@
 // hide
 SC.initialize({
-  client_id: soundcloudClientId
+  client_id: soundcloudClientId()
 });
 
 SC.get('/tracks', { q: 'buskers', limit: 8}, function(tracks) {
