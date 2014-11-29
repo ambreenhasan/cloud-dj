@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'application#index'
   get '*path' => 'application#index'
 
-  get 'api_key' => 'application#action'
+  get 'api_key' => 'api_key#soundcloud'
 
   resources :users do
     resources :friends, only: [:index, :create, :new, :destroy]
