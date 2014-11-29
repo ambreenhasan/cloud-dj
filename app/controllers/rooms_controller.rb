@@ -8,7 +8,13 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     respond_to do |f|
-      f.json { render json: @room } if @room.save
+      if @room.save
+        p @room
+        f.json { render json: @room }
+      else
+        f.json { render :index }
+        f.html { redirect_to user_rooms_path, notice: "Failed to save"}
+      end
     end
   end
 

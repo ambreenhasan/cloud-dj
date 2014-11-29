@@ -38,8 +38,13 @@ RSpec.describe RoomsController, :type => :controller do
       expect(Room.last.name).to eq('Broom')
     end
 
-    it 'do not create a room if given invalid params' do
-
+    it 'does not create a room if given invalid params' do
+      expect{post :create, :user_id => @user.id, room: {
+        name: '',
+        description: 'Bdesc',
+        publicness: 'false',
+        user_id: @user.id,
+      }}.to change{Room.count}.by 0
     end
   end
 end
