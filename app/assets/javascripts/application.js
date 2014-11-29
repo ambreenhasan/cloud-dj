@@ -18,5 +18,5 @@
 //= require angular-route
 //= require angular-rails-templates
 //= require_tree ../templates
-//= require ../../../vendor/assets/javascripts/soundcloud_sdk
+// require ../../../vendor/assets/javascripts/soundcloud_sdk
 //= require_tree .
