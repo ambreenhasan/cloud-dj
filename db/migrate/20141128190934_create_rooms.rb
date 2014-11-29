@@ -3,7 +3,7 @@ class CreateRooms < ActiveRecord::Migration
     create_table :rooms do |t|
       t.string :name
       t.string :description
-      t.string :private
+      t.string :status
       t.references :user, as: :moderator
 
       t.timestamps
