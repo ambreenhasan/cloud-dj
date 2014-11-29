@@ -5,14 +5,12 @@ class RoomsController < ApplicationController
     render json: @rooms
   end
 
-  # def create
-  #   @room = Room.new(room_params)
-  #   if @room.save
-  #     redirect_to user_rooms_path
-  #   else
-  #     render new_user_room
-  #   end
-  # end
+  def create
+    @room = Room.new(room_params)
+    respond_to do |f|
+      f.json { render json: @room } if @room.save
+    end
+  end
 
   #  new_user_room GET    /users/:user_id/rooms/new(.:format)        rooms#new
   # def new
@@ -44,7 +42,7 @@ class RoomsController < ApplicationController
 
   private
   def room_params
-    params.require(:room).permit(:name, :description, :private, :moderator)
+    params.require(:room).permit(:name, :description, :publicness, :user_id)
   end
 
 end

@@ -6,7 +6,7 @@ RSpec.describe RoomsController, :type => :controller do
     User.destroy_all
     Room.destroy_all
     @user = User.create(email: 'michael@michael.com', first_name: 'michael', last_name: 'teevan', password: 'password')
-    @room = Room.create(name: 'Aroom',description: 'Adesc',status: 'public',user_id: @user.id)
+    @room = Room.create(name: 'Aroom',description: 'Adesc',publicness: 'public',user_id: @user.id)
   end
 
   describe 'GET rooms#index' do
@@ -27,5 +27,19 @@ RSpec.describe RoomsController, :type => :controller do
     end
   end
 
+  describe 'post rooms#create' do
+    it 'creates a new room if given valid params' do
+      post :create, :user_id => @user.id, format: :json, room: {
+        name: 'Broom',
+        description: 'Bdesc',
+        publicness: 'false',
+        user_id: @user.id
+      }
+      expect(Room.last.name).to eq('Broom')
+    end
 
+    it 'do not create a room if given invalid params' do
+
+    end
+  end
 end
