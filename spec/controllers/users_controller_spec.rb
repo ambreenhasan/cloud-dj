@@ -75,14 +75,34 @@ RSpec.describe UsersController, :type => :controller do
   end
 
   describe "PUT users#update" do
-    it "" do
+    it "finds the user and updates if valid params" do
+      @new_attr = {first_name: "michaelmichael"}
+      put :update, :id => @user.id, :user => @new_attr
+      @user.reload
+      expect(@user.first_name).to eq("michaelmichael")
+      expect(@user.last_name).to eq("teevan")
+      expect(response).to be_redirect
+    end
 
+    it "does not update if invalid params" do
+      @new_attr = {first_name: "", not_a_valid_attr: "hi there"}
+      put :update, :id => @user.id, :user => @new_attr
+      @user.reload
+      expect(@user.first_name).to eq("michael")
+      expect(@user.last_name).to eq("teevan")
     end
   end
 
   describe "DELETE users#destroy" do
-    it "" do
+    it "deletes a user" do
+      expect {
+      delete :destroy, id: @user.id
+      }.to change {User.count}.by(-1)
+    end
 
+    it "redirects to the user index" do
+      delete :destroy, id: @user.id
+      expect(response).to be_redirect
     end
   end
 end

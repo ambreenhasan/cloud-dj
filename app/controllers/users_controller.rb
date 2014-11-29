@@ -22,17 +22,24 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    # respond_to do |f|
-    #   f.json { render json: @user.to_json } if @user.save
-    # end
   end
 
   def update
+    @user = User.find_by(id: params[:id])
+    @user.update(user_params)
+    if @user.save
+      flash[:notice] = "User Successfully Updated"
+      redirect_to @user
+    else
+      flash[:notice] = "User FAILed to update"
+      redirect_to @user
+    end
   end
 
   def destroy
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
     @user.destroy
+    redirect_to users_path
   end
 
   private
