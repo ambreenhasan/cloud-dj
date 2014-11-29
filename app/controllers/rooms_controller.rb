@@ -4,14 +4,14 @@ class RoomsController < ApplicationController
     @rooms = Room.all
   end
 
-  # def create
-  #   @room = Room.new(room_params)
-  #   if @room.save
-  #     redirect_to @room
-  #   else
-  #     render new_user_room
-  #   end
-  # end
+  def create
+    @room = Room.new(room_params)
+    if @room.save
+      redirect_to @room
+    else
+      render new_user_room
+    end
+  end
 
   # def new
   #   @room = Room.new

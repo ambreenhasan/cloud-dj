@@ -3,18 +3,26 @@ require 'rails_helper'
 RSpec.describe RoomsController, :type => :controller do
   before :each do
     Room.destroy_all
+    # Room.create(name: 'Aroom',description: 'Adesc',status: 'public',moderator: 'Amod')
+    # Room.create(name: 'Broom',description: 'Bdesc',status: 'private',moderator: 'Bmod')
   end
 
   describe 'GET room#index' do
     it 'gives a successful response' do
+      get :index
       p "HELLO!!!!!"
       expect(response.status).to eq(200)
     end
 
-    # it 'returns a list of all existing rooms' do
-    #   Room.create(name: 'Aroom',description: 'Adesc',status: 'public',moderator: 'Amod')
-    #   Room.create(name: 'Broom',description: 'Bdesc',status: 'private',moderator: 'Bmod')
-    #   get :index
-    # end
+    it 'assigns @rooms to Room.all' do
+      get :index
+      expect(assigns(:rooms)).to eq Room.all
+    end
+  end
+
+  describe 'POST rooms#create' do
+    it '' do
+
+    end
   end
 end
