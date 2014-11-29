@@ -15,6 +15,8 @@ gem 'httparty'
 
 gem 'jquery-rails'
 
+gem 'rb-fsevent', '~> 0.9'
+
 # gem 'devise'
 
 gem 'bower-rails'
