@@ -25,4 +25,16 @@ RSpec.describe UsersController, :type => :controller do
       expect(parsed_response.length).to eq(User.count)
     end
   end
+
+  describe "users#create" do
+    it "creates a user if passed valid parameters" do
+      post :create, format: :json, user: {
+        email: 'create@me.com',
+        first_name: 'pleazzz',
+        last_name: 'createme',
+        password: 'banana'
+        }
+      expect(User.last.first_name).to eq('pleazzz')
+    end
+  end
 end
