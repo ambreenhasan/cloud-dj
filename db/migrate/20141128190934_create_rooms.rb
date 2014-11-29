@@ -4,7 +4,7 @@ class CreateRooms < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :status
-      t.references :user, as: :moderator
+      t.belongs_to :moderator, :class_name => 'User'
 
       t.timestamps
     end

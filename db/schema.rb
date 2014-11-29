@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20141128224437) do
     t.string   "name"
     t.string   "description"
     t.string   "status"
-    t.integer  "user_id"
+    t.integer  "moderator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
