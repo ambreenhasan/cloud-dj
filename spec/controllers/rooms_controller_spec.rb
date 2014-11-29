@@ -47,4 +47,18 @@ RSpec.describe RoomsController, :type => :controller do
       }}.to change{Room.count}.by 0
     end
   end
+
+  describe 'GET rooms#edit' do
+    it 'returns a success status' do
+      get :edit, :user_id => @user.id, :id => @room.id
+      expect(response.status).to eq(200)
+      #missing template error
+    end
+
+    it 'find a specific room' do
+      get :edit, :user_id => @user.id, :id => @room.id
+      expect(assigns(:room)).to eq(room)
+      #missing template error
+    end
+  end
 end

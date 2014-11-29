@@ -23,13 +23,13 @@ class RoomsController < ApplicationController
   #   @room = Room.new
   # end
 
-  # def edit
-  #   @room = Room.find(params[:id])
-  # end
+  def edit
+    @room = Room.find(params[:id])
+  end
 
-  # def show
-  #   @room = Room.find(params[:id])
-  # end
+  def show
+    @room = Room.find(params[:id])
+  end
 
   # def update
   #   @room = Room.find(params[:id])
