@@ -1,9 +1,5 @@
-$blue=#fff;
-
 body {
-	background-color: $blue;
-}
+  background-color: #ece2c6; }
 
-.test {
-	font-size: 50px;
-}
+h1 {
+  color: #bae7e8; }
