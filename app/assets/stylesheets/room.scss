@@ -1,1 +1,3 @@
-body {background-color: blue;}
+@import 'master.scss';
+
+h1 {color: $lblue;}
