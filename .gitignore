@@ -18,5 +18,8 @@ config/secrets.yml
 bower.json
 app/assets/javascripts/ng-app/controllers/tokens.js
 
-
+coverage
 /coverage/*
+/coverage
+coverage/
+coverage/*
