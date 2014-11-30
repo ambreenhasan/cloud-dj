@@ -6,10 +6,11 @@ class UsersController < ApplicationController
   end
 
   def create
+    p params
     @user = User.new(user_params)
-    respond_to do |f|
-        f.json { render json: @user } if @user.save
-    end
+    # respond_to do |f|
+    #     f.json { render json: @user } if @user.save
+    # end
   end
 
   def new
