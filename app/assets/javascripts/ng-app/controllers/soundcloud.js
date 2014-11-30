@@ -24,10 +24,14 @@ app.controller("SoundcloudCtrl", ["$scope", "$http", function($scope, $http) {
   function renderSongs(data) {
     // debugger;
     for (var i=0; i < 6; i++) {
-      $("#query_song_list").append("<li>" + data[i].attachments_uri + "</li>")
+      $("#query_song_list").append("<li id='song_option' class='bd-sm p-l'>" + data[i].title + "</li>")
       console.log(data[i]);
-      $("#query_song_list").slideDown();
+      $("#query_song_list").slideDown("slow");
     }
+  }
+
+  function songOption() {
+
   }
 
   function clearForm() {
