@@ -22,6 +22,12 @@ body {
 .c-lb {
   color: #bae7e8; }
 
+.c-g {
+  color: #333333; }
+
+.ff-g {
+  font-family: Garamond; }
+
 .p-l {
   padding: 3px; }
 
@@ -32,13 +38,17 @@ body {
   padding-top: 5em; }
 
 .pt-i {
-  padding-top: 8em; }
+  padding-top: -10em; }
 
 .pl-r {
   padding-left: 40em; }
 
 .pl-c {
   padding-left: 25em; }
+
+.p-in {
+  padding-left: 1em;
+  padding-right: 1em; }
 
 .mg-n {
   margin: 0; }
@@ -61,8 +71,11 @@ body {
 .ht-log {
   height: 12em; }
 
+.ht-m {
+  height: 25em; }
+
 .ht-b {
-  height: 46em; }
+  height: 60em; }
 
 .wdt-l {
   width: 25em; }
@@ -70,12 +83,15 @@ body {
 .ps-f {
   position: fixed; }
 
+.ps-r {
+  position: relative;
+  width: 100%; }
+
 t-t {
   top: 0; }
 
 .t-h {
-  top: -11em;
-  position: relative; }
+  top: -11em; }
 
 .hvr:hover {
   border: 3px black solid; }
@@ -109,3 +125,12 @@ h1 {
 
 #show_signup_form_button:hover {
   color: #75acd1; }
+
+#trending_carousel {
+  border: 2px purple solid;
+  height: 20em;
+  width: 50em;
+  margin-left: 30em;
+  text-align: center;
+  padding-top: 10em;
+  margin-top: 4em; }
