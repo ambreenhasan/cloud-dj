@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
     RoomInvite.where(invitee_id: self.id, accepted: 'false')
   end
 
+  def friendships
+    self.freinds.where(accepted: "true")
+  end
+
   include BCrypt
 
   def password

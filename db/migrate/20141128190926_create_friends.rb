@@ -1,8 +1,9 @@
 class CreateFriends < ActiveRecord::Migration
   def change
     create_table :friends do |t|
-      t.references :user, as: :inviter
-      t.references :user, as: :invitee
+      t.references :inviter, :class_name => "User"
+      t.references :invitee, :class_name => "User"
+      t.string :accepted, default: 'false'
 
       t.timestamps
 
