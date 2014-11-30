@@ -6,5 +6,7 @@ class UserVotesController < ApplicationController
   end
 
   def index
+    @usersVotes = UserVote.all
+    render json: @usersVotes
   end
 end

@@ -1,63 +1,23 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/controllers/songs_controller.rb": [
+      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/controllers/user_votes_controller.rb": [
         1,
         1,
-        2,
-        2,
         null,
         null,
         1,
-        2,
-        2,
-        2,
-        2,
-        null,
-        2,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        2,
         null,
         null,
         1,
         2,
         2,
-        2,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
         null,
         null
       ],
       "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/controllers/application_controller.rb": [
         1,
         1,
-        null,
-        null
-      ],
-      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/models/song.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
         null,
         null
       ],
@@ -79,8 +39,22 @@
         null,
         null,
         1,
-        8,
-        8,
+        4,
+        4,
+        null,
+        null
+      ],
+      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/models/song.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -92,8 +66,15 @@
         1,
         1,
         null
+      ],
+      "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/models/user_vote.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1417307388
+    "timestamp": 1417310017
   }
 }
