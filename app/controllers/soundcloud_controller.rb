@@ -1,0 +1,4 @@
+class SoundcloudController < ApplicationController
+
+
+end
