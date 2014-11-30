@@ -8,8 +8,11 @@ Rails.application.routes.draw do
 
   # get '*path' => 'application#index'
 
-  root 'application#index'
-  get '*path' => 'application#index'
+  root 'application#index' #don't remove these two lines
+  get '*path' => 'application#index' #don't remove these two lines
+
+
+ get 'soundcloud/search' => "soundcloud#search"
 
   resources :users do
     resources :friends, only: [:index, :create, :new, :destroy]
@@ -21,5 +24,7 @@ Rails.application.routes.draw do
   end
   resources :rooms, only: [:index]
 end
+
+
 
 
