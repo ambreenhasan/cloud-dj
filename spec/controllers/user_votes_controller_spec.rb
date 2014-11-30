@@ -13,6 +13,7 @@ RSpec.describe UserVotesController, :type => :controller do
     10.times do
       Song.create(user_id: @mike.id, room_id: @room.id, api_id: "#{rand(1..100)}")
     end
+    @song = Song.last
     10.times do
       UserVote.create(user_id: @mike.id, room_id: @room.id, song_id: "#{rand(1..100)}")
     end
@@ -37,18 +38,14 @@ RSpec.describe UserVotesController, :type => :controller do
     end
   end
 
-  # describe "POST user_votes#create" do
-  #   it "creates a new user_vote with valid params" do
-  #   end
-
-  #   it "doesn't create a user_vote if invalid params" do
-
-  #   end
-  # end
+  describe "POST user_votes#create" do
+    it "creates a new user_vote" do
+      expect{ post :create, :user_id => @mike.id, format: :json, user_vote: {
+        user_id: @mike.id,
+        song_id: @song.id,
+        room_id: @room.id
+        }}.to change{ @room.user_votes.count }.by 1
+    end
+  end
 
 end
-
-
-
-  # user_user_votes POST   /users/:user_id/user_votes(.:format)       user_votes#create
-  # room_user_votes GET    /rooms/:room_id/user_votes(.:format)       user_votes#index
