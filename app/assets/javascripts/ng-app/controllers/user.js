@@ -4,11 +4,11 @@ app.controller("UserCtrl", ["$scope", "$http", function($scope, $http) {
   // $scope.last_name = "";
   // $scope.password = "";
   $scope.submit = function(user) {
-    $http.post("/users", {
+    $http.post("/users", {user: {
         email: user.email,
         first_name: user.first_name,
         last_name: user.last_name,
-        password: user.password
+        password: user.password }
     }).success(function(data){
       console.log(data)
     })
