@@ -3,10 +3,15 @@
 
   RoomInvite.create(inviter_id: User.all.sample.id, invitee_id: User.all.sample.id, room_id: rand(1..10))
 
+  Song.create(user_id: User.all.sample.id, room_id: rand(1..5), api_id: "#{rand(1..100)}")
+
   UserStar.create(song_id: rand(1..20), user_id: User.all.sample.id)
+
 end
 
-
+100.times do
+  UserVote.create(user_id: User.all.sample.id, song_id: Song.all.sample.id, room_id: rand(1..5))
+end
 
 # 100.times do
 #   Song.create(name: Faker::Hacker.adjective, artist: Faker::Hacker.abbreviation , album: Faker::Commerce.color, soundcloud_id: rand(100))
