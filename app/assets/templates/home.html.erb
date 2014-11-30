@@ -1,6 +1,6 @@
 <div id="body" class="p-n mg-n ht-l bd-sm">
 
-  <div id="loggin_menu" class="bd-sm ht-log bk-b">
+  <div id="login_menu" class="bd-sm ht-log bk-b t-h" ng-controller="HomeCtrl">
     <form ng-submit="submit(user)" class="pt-m pl-r">
         <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
         <input type="password" placeholder="password" ng-model="user.password" class="input">
@@ -8,7 +8,7 @@
       </form>
   </div>
 
-  <div id="signup_menu" class="bd-sm ht-sig bk-g">
+  <div id="signup_menu" class="bd-sm ht-sig bk-g dsp-n">
     <div>
       <form ng-submit="submit(user)" class="pt-m pl-r">
         <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
@@ -20,13 +20,15 @@
     </div>
   </div>
 
-  <div id="home_body" class="bd-sm ht-b">
+  <div id="home_body" class="ht-b bd-r">
     <div>
       <p><a ng-href="/room">Create room</a></p>
     </div>
+    <div class="pl-c pt-i icon">
       <h1 class="blk fc">Cloud DJ</h1>
       <p> This is an awesome description of the project.</p>
       <p> So cool.</p>
+    </div>
   </div>
 
   <div id="home_trending_section" class="bd-sm bk-b ht-b">

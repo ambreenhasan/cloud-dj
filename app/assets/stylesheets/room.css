@@ -1,5 +1,5 @@
 body {
-  background-color: #fffff5; }
+  background: linear-gradient(to bottom right, white, #ffffec); }
 
 .bk-b {
   background-color: #080308; }
@@ -9,9 +9,6 @@ body {
 
 .blk {
   color: #080308; }
-
-h1 {
-  color: #bae7e8; }
 
 .dsp-n {
   display: none; }
@@ -28,8 +25,14 @@ h1 {
 .pt-m {
   padding-top: 5em; }
 
+.pt-i {
+  padding-top: 8em; }
+
 .pl-r {
   padding-left: 40em; }
+
+.pl-c {
+  padding-left: 25em; }
 
 .mg-n {
   margin: 0; }
@@ -49,11 +52,15 @@ h1 {
 .wdt-l {
   width: 25em; }
 
-ps-f {
+.ps-f {
   position: fixed; }
 
 t-t {
   top: 0; }
+
+.t-h {
+  top: -11em;
+  position: relative; }
 
 .hvr:hover {
   border: 3px black solid; }
@@ -65,3 +72,6 @@ t-t {
   font-size: 15px;
   width: 10em;
   text-align: center; }
+
+h1 {
+  font-size: 60px; }

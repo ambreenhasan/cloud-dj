@@ -1,26 +1,31 @@
 $black:#080308;
-$beige:#FFFFF5;
+$white:#FFFFFF;
+$beige:#FFFFEC;
 $dblue:#75ACD1;
 $lblue:#BAE7E8;
 $gray:#333333;
 $medium:12em;
 
-body {background-color: $beige;}
+
+
+body {background: linear-gradient(to bottom right, $white, $beige);}
 .bk-b {background-color: $black;}
 .bk-g {background-color: $gray;}
 
 .blk {color: $black;}
 
-h1 {color: $lblue;}
-
 .dsp-n {display: none;}
 
 .bd-sm {border: 1px black solid;}
 
+
+
 .p-l {padding: 3px;}
 .p-n {padding: 0;}
 .pt-m {padding-top: 5em;}
+.pt-i {padding-top: 8em;}
 .pl-r {padding-left: 40em;}
+.pl-c {padding-left: 25em;}
 .mg-n {margin: 0;}
 
 .ht-l {height: 100em;}
@@ -29,9 +34,10 @@ h1 {color: $lblue;}
 .ht-b {height: 46em;}
 .wdt-l {width: 25em}
 
-ps-f {position: fixed;}
+.ps-f {position: fixed;}
 
 t-t {top: 0}
+.t-h {top: -11em; position:relative;}
 
 .hvr:hover {border: 3px black solid}
 
@@ -43,4 +49,10 @@ t-t {top: 0}
   width: 10em;
   text-align: center;
 }
+
+h1 {
+  font-size: 60px;
+}
+
+
 
