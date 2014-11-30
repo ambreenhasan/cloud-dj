@@ -10,7 +10,7 @@ class SongsController < ApplicationController
       if @song.save
         f.json { render json: @song }
       else
-        f.json { render :index }
+        f.json { redirect_to user_songs_path }
         f.html { redirect_to user_songs_path, notice: "Failed to save"}
       end
     end

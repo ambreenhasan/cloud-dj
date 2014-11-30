@@ -38,8 +38,12 @@ RSpec.describe SongsController, :type => :controller do
       expect(Song.last.room_id).to eq(4)
     end
 
-    it "" do
-
+    it "doesn't create a song if invalid params" do
+      expect{ post :create, :user_id => @user.id, format: :json, song: {
+        user_id: "not a number!",
+        room_id: 4,
+        api_id: "thisisastring"
+      }}.to change{Song.count}.by 0
     end
   end
 

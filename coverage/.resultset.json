@@ -9,13 +9,13 @@
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
         2,
         null,
-        0,
-        0,
+        2,
+        1,
         null,
         null,
         null,
@@ -38,7 +38,7 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null,
         null
@@ -55,6 +55,12 @@
         1,
         1,
         1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/dy/dbc_phase_0/cloud-dj-finalproj/cloud-dj/app/models/user.rb": [
@@ -90,6 +96,6 @@
         null
       ]
     },
-    "timestamp": 1417305021
+    "timestamp": 1417305628
   }
 }
