@@ -27,6 +27,8 @@ body {background: linear-gradient(to bottom right, $white, $beige);}
 .pl-r {padding-left: 40em;}
 .pl-c {padding-left: 25em;}
 .mg-n {margin: 0;}
+.mgl-r {margin-left: 50em;}
+.mt-s {margin-top: 3.5em;}
 
 .ht-l {height: 100em;}
 .ht-sig {height: $medium + 2em}
@@ -54,5 +56,18 @@ h1 {
   font-size: 60px;
 }
 
+#hide_button{
+  height: 1em;
+  width: 3em;
+  border: 1px white solid;
+  background-color: black;
+  color: $white;
+  text-align: center;
+}
+
+#hide_button:hover {
+  border: 2px $dblue solid;
+  color: $dblue;
+}
 
 
