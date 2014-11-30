@@ -6,23 +6,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    p params
     @user = User.new(user_params)
-    # respond_to do |f|
-    #     f.json { render json: @user } if @user.save
-    # end
-  end
-
-  def new
-
-  end
-
-  def edit
-    @user = User.find(params[:id])
-  end
-
-  def show
-    @user = User.find_by(id: params[:id])
+    respond_to do |f|
+        f.json { render json: @user } if @user.save
+    end
   end
 
   def update
