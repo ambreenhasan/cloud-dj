@@ -18,3 +18,19 @@
   </div>
 </div>
 
+<!-- <button action="/soundcloud/search">YooHoo</button> -->
+<div ng-controller="SoundcloudCtrl">
+  <form ng-submit="submit(search)">
+    <input type="string" name="query" placeholder="Search for songs" ng-model="search.query" id="song_search_bar">
+    <input type="submit">
+  </form>
+</div>
+
+<div ng-controller="SoundcloudCtrl as sound">
+  <ul id="query_song_list" class="bd-sm dsp-n wdt-l">
+    <!-- <li  ng-repeat="song in sound.songs">{{ song }}</li> -->
+  </ul>
+</div>
+
+
+
