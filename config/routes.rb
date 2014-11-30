@@ -5,12 +5,16 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   # root 'application#index'
-  root 'users#index'
+  # root 'users#index'
 
   # get '*path' => 'application#index'
 
-  # get 'api_key' => 'api_key#soundcloud'
-  # get 'api_key' => 'api_key#youtube'
+  root 'application#index' #don't remove these two lines
+  # root 'soundcloud#search' #don't remove these two lines
+  get '*path' => 'application#index' #don't remove these two lines
+
+
+ post 'soundcloud/search' => "soundcloud#search"
 
   resources :users do
     resources :user_votes, only: [:create]
@@ -24,5 +28,7 @@ Rails.application.routes.draw do
     resources :user_votes, only: [:index]
   end
 end
+
+
 
 
