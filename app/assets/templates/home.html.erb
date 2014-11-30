@@ -26,4 +26,11 @@
   </form>
 </div>
 
+<div ng-controller="SoundcloudCtrl as sound">
+  <ul id="query_song_list" class="hidden">
+    <li  ng-repeat="song in sound.songs">{{ song }}</li>
+  </ul>
+</div>
+
+
 
