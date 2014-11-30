@@ -1,6 +1,9 @@
 body {
   background-color: #fffff5; }
 
+.bk-b {
+  background-color: #080308; }
+
 .blk {
   color: #080308; }
 
@@ -16,8 +19,32 @@ h1 {
 .p-l {
   padding: 3px; }
 
+.p-n {
+  padding: 0; }
+
+.mg-n {
+  margin: 0; }
+
+.ht-l {
+  height: 100em; }
+
+.ht-sig {
+  height: 32em; }
+
+.ht-log {
+  height: 30em; }
+
+.ht-b {
+  height: 46em; }
+
 .wdt-l {
-  width: 25%; }
+  width: 25em; }
+
+ps-f {
+  position: fixed; }
+
+t-t {
+  top: 0; }
 
 .hvr:hover {
   border: 3px black solid; }
