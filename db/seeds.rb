@@ -2,6 +2,8 @@
   User.create(email: Faker::Internet.email, password_hash: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
 
   RoomInvite.create(inviter_id: User.all.sample.id, invitee_id: User.all.sample.id, room_id: rand(1..10))
+
+  UserStar.create(song_id: rand(1..20), user_id: User.all.sample.id)
 end
 
 
