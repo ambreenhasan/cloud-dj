@@ -11,8 +11,6 @@ class UserVotesController < ApplicationController
     end
   end
 
-  # def new
-  # end
   private
 
   def user_vote_params
