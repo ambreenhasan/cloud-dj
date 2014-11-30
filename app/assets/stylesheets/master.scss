@@ -18,6 +18,8 @@ body {background: linear-gradient(to bottom right, $white, $beige);}
 
 .bd-sm {border: 1px black solid;}
 
+.c-db {color: $dblue;}
+.c-lb {color: $lblue;}
 
 
 .p-l {padding: 3px;}
@@ -27,6 +29,7 @@ body {background: linear-gradient(to bottom right, $white, $beige);}
 .pl-r {padding-left: 40em;}
 .pl-c {padding-left: 25em;}
 .mg-n {margin: 0;}
+.mgr-s {margin-right: 20em; }
 .mgl-r {margin-left: 50em;}
 .mt-s {margin-top: 3.5em;}
 
@@ -59,14 +62,23 @@ h1 {
 #hide_button{
   height: 1em;
   width: 3em;
-  border: 1px white solid;
+  border: 1px $lblue solid;
+  border-radius: 4px;
   background-color: black;
-  color: $white;
+  color: $lblue;
   text-align: center;
 }
 
 #hide_button:hover {
   border: 2px $dblue solid;
+  color: $dblue;
+}
+
+#show_signup_form_button {
+  float:right;
+}
+
+#show_signup_form_button:hover {
   color: $dblue;
 }
 

@@ -16,6 +16,12 @@ body {
 .bd-sm {
   border: 1px black solid; }
 
+.c-db {
+  color: #75acd1; }
+
+.c-lb {
+  color: #bae7e8; }
+
 .p-l {
   padding: 3px; }
 
@@ -36,6 +42,9 @@ body {
 
 .mg-n {
   margin: 0; }
+
+.mgr-s {
+  margin-right: 20em; }
 
 .mgl-r {
   margin-left: 50em; }
@@ -85,11 +94,18 @@ h1 {
 #hide_button {
   height: 1em;
   width: 3em;
-  border: 1px white solid;
+  border: 1px #bae7e8 solid;
+  border-radius: 4px;
   background-color: black;
-  color: white;
+  color: #bae7e8;
   text-align: center; }
 
 #hide_button:hover {
   border: 2px #75acd1 solid;
+  color: #75acd1; }
+
+#show_signup_form_button {
+  float: right; }
+
+#show_signup_form_button:hover {
   color: #75acd1; }
