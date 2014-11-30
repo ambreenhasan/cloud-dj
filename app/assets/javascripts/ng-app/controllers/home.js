@@ -1,4 +1,4 @@
-var app = angular.module('AngularRails')
+// var app = angular.module('AngularRails')
 
 app.controller('HomeCtrl', function ($scope) {
 
@@ -26,3 +26,5 @@ app.controller('HomeCtrl', function ($scope) {
    })
 
 });
+
+
