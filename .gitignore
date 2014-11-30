@@ -16,4 +16,5 @@
 /tmp
 config/secrets.yml
 bower.json
-app/assets/javascripts/ng-app/controllers/playback_token.js
+
+/coverage
