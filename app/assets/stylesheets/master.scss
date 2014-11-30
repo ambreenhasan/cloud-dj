@@ -1,8 +1,21 @@
 $black:#080308;
-$beige:#FBFFF4;
+$beige:#FFFFF5;
 $dblue:#75ACD1;
 $lblue:#BAE7E8;
 $gray:#A8A8A8;
 
-body {background-color: blue}
+body {background-color: $beige;}
 
+.blk {color: $black;}
+
+h1 {color: $lblue;}
+
+.dsp-n {display: none;}
+
+.bd-sm {border: 1px black solid;}
+
+.p-l {padding: 3px;}
+
+.wdt-l {width: 25%}
+
+.hvr:hover {border: 3px black solid}
