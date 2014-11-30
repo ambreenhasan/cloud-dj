@@ -11,10 +11,6 @@ Rails.application.routes.draw do
   root 'application#index'
   get '*path' => 'application#index'
 
-
-  # get 'api_key' => 'api_key#soundcloud'
-  # get 'api_key' => 'api_key#youtube'
-
   resources :users do
     resources :friends, only: [:index, :create, :new, :destroy]
     resources :room_invites, only: [:index, :create, :new, :destroy]
