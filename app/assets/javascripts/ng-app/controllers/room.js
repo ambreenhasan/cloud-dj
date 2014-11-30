@@ -1,3 +1,3 @@
 app.controller("RoomCtrl", function() {
-  alert("in room controller")
+  console.log("in room controller")
 })
