@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   # get '*path' => 'application#index'
 
   root 'application#index' #don't remove these two lines
-  # root 'soundcloud#search' #don't remove these two lines
   get '*path' => 'application#index' #don't remove these two lines
 
 
