@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   # get '*path' => 'application#index'
 
+  root 'application#index'
+  get '*path' => 'application#index'
+
+
   # get 'api_key' => 'api_key#soundcloud'
   # get 'api_key' => 'api_key#youtube'
 
