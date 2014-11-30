@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 20141128224437) do
   end
 
   create_table "room_invites", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "inviter_id"
+    t.integer  "invitee_id"
     t.integer  "room_id"
+    t.string   "accepted",   default: "false"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,7 +42,7 @@ ActiveRecord::Schema.define(version: 20141128224437) do
     t.string   "name"
     t.string   "description"
     t.string   "status"
-    t.integer  "user_id"
+    t.integer  "moderator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

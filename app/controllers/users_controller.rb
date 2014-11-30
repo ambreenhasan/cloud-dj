@@ -2,29 +2,26 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    respond_to do |f|
-      f.json { render json: @users }
-    end
+    render json: @users
   end
 
   def create
-    @user = User.new(params)
+    @user = User.new(user_params)
     respond_to do |f|
-      f.json { render json: @user } if @user.save
+        f.json { render json: @user } if @user.save
     end
   end
 
   def new
+
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def show
-    @user = User.find_by(id: current_user.id)
-    respond_to do |f|
-      f.json { render json: @user.to_json } if @user.save
-    end
+    @user = User.find_by(id: params[:id])
   end
 
   def update
@@ -35,9 +32,9 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
-  # private
-  # def user_params
-  #   params.require(:user).permit(:email, :first_name, :last_name, :password)
-  # end
+  private
+  def user_params
+    params.require(:user).permit(:email, :first_name, :last_name, :password)
+  end
 
 end
