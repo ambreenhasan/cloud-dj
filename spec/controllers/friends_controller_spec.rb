@@ -30,8 +30,33 @@ RSpec.describe FriendsController, :type => :controller do
   end
 
   describe "POST friends#create" do
-    it "" do
+    it "creates a new friend when passed valid params" do
+      post :create, :user_id => @michael.id, format: :json, friend: {
+        inviter_id: @michael.id,
+        invitee_id: 4
+      }
+      expect(Friend.last.inviter_id).to eq(@michael.id)
+      expect(Friend.last.invitee_id).to eq(4)
+    end
 
+    it "fails to create friend if given invalid params" do
+      expect{ post :create, :user_id => @michael.id, format: :json, friend: {
+        inviter_id: @michael.id,
+        invitee_id: "banana!"
+      }}.to change{Friend.count}.by 0
+    end
+  end
+
+  describe "DELETE friends#destroy" do
+    it "finds a friend and deletes it" do
+      expect {
+      delete :destroy, :user_id => @michael.id, :id => @friend.id
+      }.to change {Friend.count}.by(-1)
+    end
+
+    it "redirects when done" do
+      delete :destroy, :user_id => @michael.id, :id => @friend.id
+      expect(response).to be_redirect
     end
   end
 
