@@ -54,18 +54,11 @@ class UsersController < ApplicationController
   def login
     user = User.find_by_email(params[:user][:email])
     if user == user.authenticate(params[:user][:password])
-      notifications = Notification.where(user_id: user.id)
       session = UsersController.create_session(user)
-      render json: {user: user, session: session, notifications: notifications}
+      render json: {user: user, session: session}
     else
       render json: {error: "User not found"}
     end
-  end
-
-  def notifications
-    notifications = Notification.where(user_id: params[:id]).order('created_at desc')
-    user_status = User.find(params[:id]).status
-    render json: {notifications: notifications, user_status: user_status}
   end
 
   def self.create_session(user)
@@ -73,10 +66,6 @@ class UsersController < ApplicationController
     user.session_key = session_key
     user.save
     session_key
-  end
-
-  def user_params
-    params.require(:user).permit(:email, :bio, :password, :first_name, :last_name, :street, :city, :state, :zip)
   end
 
   def logout
