@@ -7,7 +7,7 @@ app.controller('HomeCtrl', function ($scope) {
           $("#login_menu").animate({top: 0}, 500);
           $("#hide_button").html("hide");
         } else  {
-          $("#login_menu").animate({top: -178}, 500);
+          $("#login_menu").animate({top: -163}, 500);
           $("#hide_button").html("login");
         }
     });

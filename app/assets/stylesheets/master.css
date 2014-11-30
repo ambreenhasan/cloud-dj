@@ -1,5 +1,9 @@
 body {
-  background: linear-gradient(to bottom right, white, #ffffec); }
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: white; }
 
 .bk-b {
   background-color: #080308; }
@@ -91,7 +95,7 @@ t-t {
   top: 0; }
 
 .t-h {
-  top: -11em; }
+  top: -10em; }
 
 .hvr:hover {
   border: 3px black solid; }
