@@ -12,9 +12,6 @@ class FriendsController < ApplicationController
     @create_friend =
   end
 
-  def new
-  end
-
   def destroy
   end
 
