@@ -7,9 +7,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    respond_to do |f|
-        f.json { render json: @user } if @user.save
-    end
+      if @user.save
+        render json: @user
+      end
   end
 
   def update
@@ -68,6 +68,7 @@ class UsersController < ApplicationController
     session_key
   end
 
+
   def logout
     user = User.find_by_session_key(params[:session_key])
     user.session_key = nil
@@ -78,6 +79,13 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
+  end
+
+  def self.create_session(user)
+    session_key = "#{SecureRandom.base64}"
+    user.session_key = session_key
+    user.save
+    session_key
   end
 
 end
