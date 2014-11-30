@@ -10,10 +10,10 @@ SC.initialize({
 //
 
 
-app.controller("SoundCloudCtrl", function($scope, $http){
+app.controller("SoundCloudCtrl", ["$scope", "$http", function($scope, $http){
   function searchSoundCloud(searchedSong) {
     SC.get('/tracks', { q: searchedSong, limit: 5}, function(tracks) {
     console.log(tracks);
   });
   }
-})
+}]);

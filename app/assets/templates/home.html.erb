@@ -1,10 +1,20 @@
 <h1 class="lb fc">The Home View!</h1>
 <ul>
-    <li ng-repeat="thing in things">
+    <li ng-repeat="thing in things" >
         {{thing}}
     </li>
 </ul>
 <div>
-  <p><a href="/room">Create room</a></p>
+  <p><a ng-href="/room">Create room</a></p>
+
+  <div>
+    <form ng-submit="submit(user)">
+      <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com">
+      <input type="string" placeholder="firstname" ng-model="user.first_name">
+      <input type="string" placeholder="lastname" ng-model="user.last_name">
+      <input type="password" placeholder="password" ng-model="user.password">
+      <input type="submit">
+    </form>
+  </div>
 </div>
 
