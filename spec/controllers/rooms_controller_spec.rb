@@ -11,7 +11,7 @@ RSpec.describe RoomsController, :type => :controller do
 
   describe "GET rooms#index" do
     it "returns a successful status" do
-      get :index, :id => @user.id
+      get :index, :user_id => @user.id
       expect(response.status).to eq(200)
     end
 
@@ -103,7 +103,7 @@ RSpec.describe RoomsController, :type => :controller do
     end
 
     it "redirects to the rooms index" do
-      delete :destroy, :user_id => @user.id, :id => @room
+      delete :destroy, :user_id => @user.id, :id => @room.id
       expect(response).to be_redirect
     end
   end

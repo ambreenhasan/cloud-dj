@@ -12,7 +12,6 @@ class RoomsController < ApplicationController
         f.json { render json: @room }
       else
         f.json { render :index }
-        f.html { redirect_to user_rooms_path, notice: "Failed to save"}
       end
     end
   end
