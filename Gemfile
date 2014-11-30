@@ -27,6 +27,7 @@ gem 'simplecov', :require => false, :group => :test
 group :development, :test do
   gem 'rspec-rails'
  	gem 'jasmine-rails'
+  gem 'faker'
 end
 
 group :production do
@@ -36,7 +37,6 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
