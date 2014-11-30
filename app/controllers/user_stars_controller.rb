@@ -1,5 +1,6 @@
 class UserStarsController < ApplicationController
   def create
+
   end
 
   def index

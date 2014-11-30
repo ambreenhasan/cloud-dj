@@ -47,9 +47,17 @@
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
+        null
+      ],
+      "/Users/michaelteevan/DBC/Phase3/FinalProject/cloud-dj/app/models/song.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/michaelteevan/DBC/Phase3/FinalProject/cloud-dj/app/models/user_star.rb": [
@@ -59,6 +67,6 @@
         null
       ]
     },
-    "timestamp": 1417310794
+    "timestamp": 1417314542
   }
 }

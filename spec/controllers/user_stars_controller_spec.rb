@@ -4,6 +4,7 @@ RSpec.describe UserStarsController, :type => :controller do
   before(:each) do
     User.destroy_all
     @mike = User.create(email: 'michael@michael.com', first_name: 'michael', last_name: 'teevan', password: 'password')
+    @song = Song.create(user_id: @mike.id, room_id: 1, api_id: "1")
     10.times do
       UserStar.create(user_id: @mike.id, song_id: rand(1..20))
     end
@@ -21,7 +22,15 @@ RSpec.describe UserStarsController, :type => :controller do
       end
 
       expect(last_response.count).to eq(user_stars.count)
+    end
+  end
 
+  describe "POST user_stars#create" do
+    it "creates a starred song for user" do
+      expect{ post :create, :user_id => @mike.id, format: :json, user_star: {
+        user_id: @mike.id,
+        song_id: @song.id
+      }}.to change{ @mike.user_stars.count }.by 1
     end
   end
 end
