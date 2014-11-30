@@ -15,10 +15,13 @@ app.controller('HomeCtrl', function ($scope) {
    $("#show_signup_form_button").on("click", function() {
       if ( $("#signup_menu").css('display') === 'none' ) {
         $("#signup_menu").slideDown(500);
-        $("#show_signup_form_button").html("");
+        $("#show_signup_form_button").html("hide registration form.");
+        $("#hide_button").css("display", "none");
       } else  {
         $("#signup_menu").slideUp(500);
         $("#show_signup_form_button").html("Not a member?");
+        $("#hide_button").css("display", "block");
+
       }
    })
 
