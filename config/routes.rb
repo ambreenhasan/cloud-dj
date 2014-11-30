@@ -15,9 +15,11 @@ Rails.application.routes.draw do
     resources :rooms
     resources :songs
     resources :user_stars, only: [:create, :new, :index]
-    resources :user_votes, only: [:create, :new, :index]
+    resources :user_votes, only: [:create]
   end
-  resources :rooms, only: [:index]
+  resources :rooms, only: [:index] do
+    resources :user_votes, only: [:index]
+  end
 end
 
 
