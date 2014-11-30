@@ -22,6 +22,7 @@ gem 'rb-fsevent', '~> 0.9'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'soundcloud'
+gem 'youtube_it'
 
 gem 'simplecov', :require => false, :group => :test
 
