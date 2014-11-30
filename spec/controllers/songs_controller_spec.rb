@@ -47,4 +47,32 @@ RSpec.describe SongsController, :type => :controller do
     end
   end
 
+  describe "GET songs#edit" do
+    it "returns a successful status" do
+      get :edit, :user_id => @user.id, :id => @song.id
+      expect(response.status).to eq(200)
+      #missing template error
+    end
+
+    it "assigns song to @song" do
+      get :edit, :user_id => @user.id, :id => @song.id
+      expect(assigns(:song)).to eq(song)
+      #missing template error
+    end
+  end
+
+  describe "GET songs#show" do
+    it "returns a successful status" do
+      get :edit, :user_id => @user.id, :id => @song.id
+      expect(response.status).to eq(200)
+      #missing template error
+    end
+
+    it "assigns song to @song" do
+      get :edit, :user_id => @user.id, :id => @song.id
+      expect(assigns(:song)).to eq(song)
+      #missing template error
+    end
+  end
+
 end

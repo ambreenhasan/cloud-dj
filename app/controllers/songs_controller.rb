@@ -16,13 +16,15 @@ class SongsController < ApplicationController
     end
   end
 
-  def new
-  end
+  # def new
+  # end
 
   def edit
+    @song = Song.find_by(id: params[:id])
   end
 
   def show
+    @song = Song.find_by(id: params[:id])
   end
 
   def update
