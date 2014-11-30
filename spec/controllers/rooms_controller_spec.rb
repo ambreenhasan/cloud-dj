@@ -103,7 +103,7 @@ RSpec.describe RoomsController, :type => :controller do
     end
 
     it "redirects to the rooms index" do
-      delete :destroy, :user_id => @user.id, :id => @room
+      delete :destroy, :user_id => @user.id, :id => @room.id
       expect(response).to be_redirect
     end
   end

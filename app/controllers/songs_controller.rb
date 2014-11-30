@@ -19,18 +19,14 @@ class SongsController < ApplicationController
   # def new
   # end
 
-  def edit
-    @song = Song.find_by(id: params[:id])
-  end
-
   def show
     @song = Song.find_by(id: params[:id])
   end
 
-  def update
-  end
-
   def destroy
+    song = Song.find(params[:id])
+    song.destroy
+    redirect_to user_songs_path
   end
 
   private
