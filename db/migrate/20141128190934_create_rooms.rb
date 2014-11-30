@@ -5,7 +5,6 @@ class CreateRooms < ActiveRecord::Migration
       t.string :description
       t.string :publicness
       t.references :user
-
       t.timestamps
     end
   end
