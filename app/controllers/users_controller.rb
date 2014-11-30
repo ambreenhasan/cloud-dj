@@ -30,9 +30,67 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+
+  def current_user
+    user = User.find_by(session_key: params[:session_key])
+    render json: user
+  end
+
+  # def create
+  #   p "*"*100
+  #   p params
+  #   if params[:user][:password] == params[:user][:password_confirm]
+  #     user = User.new(user_params)
+  #     if user.save
+  #       session = UsersController.create_session(user)
+  #       render json: { session: session, user: user, success: "You have logged in!"}
+  #     else
+  #       render json: {error: "Error has occured. Please try again."}
+  #     end
+  #   end
+  # end
+
+
+  def login
+    user = User.find_by_email(params[:user][:email])
+    if user == user.authenticate(params[:user][:password])
+      notifications = Notification.where(user_id: user.id)
+      session = UsersController.create_session(user)
+      render json: {user: user, session: session, notifications: notifications}
+    else
+      render json: {error: "User not found"}
+    end
+  end
+
+  def notifications
+    notifications = Notification.where(user_id: params[:id]).order('created_at desc')
+    user_status = User.find(params[:id]).status
+    render json: {notifications: notifications, user_status: user_status}
+  end
+
+  def self.create_session(user)
+    session_key = "#{SecureRandom.base64}"
+    user.session_key = session_key
+    user.save
+    session_key
+  end
+
+  def user_params
+    params.require(:user).permit(:email, :bio, :password, :first_name, :last_name, :street, :city, :state, :zip)
+  end
+
+  def logout
+    user = User.find_by_session_key(params[:session_key])
+    user.session_key = nil
+    user.save
+    #clear session key, unset in user's table
+  end
+
   private
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
 
 end
+
+
