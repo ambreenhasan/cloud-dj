@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20141128224437) do
   create_table "rooms", force: true do |t|
     t.string   "name"
     t.string   "description"
-    t.string   "status"
+    t.string   "publicness"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

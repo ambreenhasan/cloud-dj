@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
   has_many :user_stars
   has_many :user_votes
 
+  validates :first_name, presence: true
+  validates :last_name, presence:true
+
   include BCrypt
 
   def password

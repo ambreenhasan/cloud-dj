@@ -1,4 +1,5 @@
 class ApiKeyController < ApplicationController
+
   respond_to :js
 
   def soundcloud
