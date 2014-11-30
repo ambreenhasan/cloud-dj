@@ -1,4 +1,10 @@
-<h1>Welcome to the room view</h1>
+<h1>Create a new room</h1>
 
-
-
+<div>
+  <form ng-submit="submit(roomInformation)">
+    <input type="string" name="name" placeholder="Name of your room" ng-model="roomInformation.name">
+    <input type="string" name="description" placeholder="About your room!" ng-model="roomInformation.description">
+    Private Room<input type="checkbox" ng-model="roomInformation.publicness">
+    <input type="submit">
+  </form>
+</div>

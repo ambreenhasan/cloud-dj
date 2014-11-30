@@ -7,9 +7,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    respond_to do |f|
-        f.json { render json: @user } if @user.save
-    end
+      if @user.save
+        render json: @user
+      end
   end
 
   def update
@@ -54,30 +54,13 @@ class UsersController < ApplicationController
   def login
     user = User.find_by_email(params[:user][:email])
     if user == user.authenticate(params[:user][:password])
-      notifications = Notification.where(user_id: user.id)
       session = UsersController.create_session(user)
-      render json: {user: user, session: session, notifications: notifications}
+      render json: {user: user, session: session}
     else
       render json: {error: "User not found"}
     end
   end
 
-  def notifications
-    notifications = Notification.where(user_id: params[:id]).order('created_at desc')
-    user_status = User.find(params[:id]).status
-    render json: {notifications: notifications, user_status: user_status}
-  end
-
-  def self.create_session(user)
-    session_key = "#{SecureRandom.base64}"
-    user.session_key = session_key
-    user.save
-    session_key
-  end
-
-  def user_params
-    params.require(:user).permit(:email, :bio, :password, :first_name, :last_name, :street, :city, :state, :zip)
-  end
 
   def logout
     user = User.find_by_session_key(params[:session_key])
@@ -89,6 +72,13 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
+  end
+
+  def self.create_session(user)
+    session_key = "#{SecureRandom.base64}"
+    user.session_key = session_key
+    user.save
+    session_key
   end
 
 end
