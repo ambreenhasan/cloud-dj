@@ -8,9 +8,9 @@ class UsersController < ApplicationController
   def create
     p params
     @user = User.new(user_params)
-    respond_to do |f|
-        f.json { render json: @user } if @user.save
-    end
+      if @user.save
+        render json: @user
+      end
   end
 
   def new
