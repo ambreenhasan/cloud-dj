@@ -15,3 +15,6 @@ h1 {
 
 .wdt-l {
   width: 25%; }
+
+.hvr:hover {
+  border: 3px black solid; }
