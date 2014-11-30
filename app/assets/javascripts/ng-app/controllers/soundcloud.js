@@ -7,7 +7,16 @@ app.controller("SoundcloudCtrl", ["$scope", "$http", function($scope, $http) {
     $http.post("/soundcloud/search", {
       query: search.query
     }).success(function(data){
-      console.log(data)
+      renderSongs(data);
+      clearForm()
     })
+  }
+
+  function clearForm() {
+    $('#song_search_bar').val("");
+  }
+
+  function renderSongs(data) {
+    alert("yaya!")
   }
 }]);

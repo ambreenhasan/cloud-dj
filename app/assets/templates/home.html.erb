@@ -21,7 +21,9 @@
 <!-- <button action="/soundcloud/search">YooHoo</button> -->
 <div ng-controller="SoundcloudCtrl">
   <form ng-submit="submit(search)">
-    <input type="string" name="query" placeholder="Search for songs" ng-model="search.query">
+    <input type="string" name="query" placeholder="Search for songs" ng-model="search.query" id="song_search_bar">
     <input type="submit">
   </form>
 </div>
+
+
