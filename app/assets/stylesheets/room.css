@@ -4,6 +4,9 @@ body {
 .bk-b {
   background-color: #080308; }
 
+.bk-g {
+  background-color: #333333; }
+
 .blk {
   color: #080308; }
 
@@ -22,6 +25,12 @@ h1 {
 .p-n {
   padding: 0; }
 
+.pt-m {
+  padding-top: 5em; }
+
+.pl-r {
+  padding-left: 40em; }
+
 .mg-n {
   margin: 0; }
 
@@ -29,10 +38,10 @@ h1 {
   height: 100em; }
 
 .ht-sig {
-  height: 32em; }
+  height: 14em; }
 
 .ht-log {
-  height: 30em; }
+  height: 12em; }
 
 .ht-b {
   height: 46em; }
@@ -48,3 +57,11 @@ t-t {
 
 .hvr:hover {
   border: 3px black solid; }
+
+.input {
+  padding: 3px;
+  height: 1.5em;
+  border-radius: 4%;
+  font-size: 15px;
+  width: 10em;
+  text-align: center; }

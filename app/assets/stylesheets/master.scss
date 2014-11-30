@@ -2,11 +2,12 @@ $black:#080308;
 $beige:#FFFFF5;
 $dblue:#75ACD1;
 $lblue:#BAE7E8;
-$gray:#A8A8A8;
-$medium:30em;
+$gray:#333333;
+$medium:12em;
 
 body {background-color: $beige;}
 .bk-b {background-color: $black;}
+.bk-g {background-color: $gray;}
 
 .blk {color: $black;}
 
@@ -18,12 +19,14 @@ h1 {color: $lblue;}
 
 .p-l {padding: 3px;}
 .p-n {padding: 0;}
+.pt-m {padding-top: 5em;}
+.pl-r {padding-left: 40em;}
 .mg-n {margin: 0;}
 
 .ht-l {height: 100em;}
 .ht-sig {height: $medium + 2em}
 .ht-log {height: $medium;}
-.ht-b {height: $medium + 16em;}
+.ht-b {height: 46em;}
 .wdt-l {width: 25em}
 
 ps-f {position: fixed;}
@@ -31,3 +34,13 @@ ps-f {position: fixed;}
 t-t {top: 0}
 
 .hvr:hover {border: 3px black solid}
+
+.input {
+  padding: 3px;
+  height: 1.5em;
+  border-radius: 4%;
+  font-size: 15px;
+  width: 10em;
+  text-align: center;
+}
+

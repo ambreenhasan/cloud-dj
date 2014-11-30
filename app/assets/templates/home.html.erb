@@ -1,16 +1,21 @@
 <div id="body" class="p-n mg-n ht-l bd-sm">
 
-  <div id="loggin_menu" class="bd-sm ht-log dsp-n ">
+  <div id="loggin_menu" class="bd-sm ht-log bk-b">
+    <form ng-submit="submit(user)" class="pt-m pl-r">
+        <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
+        <input type="password" placeholder="password" ng-model="user.password" class="input">
+        <input type="submit" class="input">
+      </form>
   </div>
 
-  <div id="signup_menu" class="bd-sm ht-sig dsp-n">
+  <div id="signup_menu" class="bd-sm ht-sig bk-g">
     <div>
-      <form ng-submit="submit(user)">
-        <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com">
-        <input type="string" placeholder="firstname" ng-model="user.first_name">
-        <input type="string" placeholder="lastname" ng-model="user.last_name">
-        <input type="password" placeholder="password" ng-model="user.password">
-        <input type="submit">
+      <form ng-submit="submit(user)" class="pt-m pl-r">
+        <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
+        <input type="string" placeholder="firstname" ng-model="user.first_name" class="input">
+        <input type="string" placeholder="lastname" ng-model="user.last_name" class="input">
+        <input type="password" placeholder="password" ng-model="user.password" class="input">
+        <input type="submit" class="input">
       </form>
     </div>
   </div>
