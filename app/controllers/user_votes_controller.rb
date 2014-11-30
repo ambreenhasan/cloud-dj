@@ -1,14 +1,8 @@
 class UserVotesController < ApplicationController
   def index
+    @song_votes = UserVote.where(room_id: params[:room_id])
 
-    @user_votes = UserVote.find_by(room_id: params[:room_id])
-    p 'params'
-    p params
-    p 'all uservotes'
-    p UserVote.all
-    p 'selected uservotes'
-    p @user_votes
-    render json: @user_votes
+    render json: @song_votes
   end
 
   def create

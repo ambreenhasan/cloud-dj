@@ -7,10 +7,15 @@ RSpec.describe UserVotesController, :type => :controller do
     Song.destroy_all
     Room.destroy_all
     UserVote.destroy_all
-    @user = User.create(email: "michael@michael.com", first_name: "michael", last_name: "teevan", password: "password")
-    @room = Room.create(name: "Aroom",description: "Adesc",publicness: "public",user_id: @user.id)
-    @song = Song.create(user_id: @user.id, room_id: @room.id, api_id: "thisisastring")
-    @user_vote = UserVote.create(user_id: @user.id,room_id: @room.id,song_id: @song.id)
+
+    @mike = User.create(email: "michael@michael.com", first_name: "michael", last_name: "teevan", password: "password")
+    @room = Room.create(name: "Aroom", description: "Adesc", publicness: "public", user_id: @mike.id)
+    10.times do
+      Song.create(user_id: @mike.id, room_id: @room.id, api_id: "#{rand(1..100)}")
+    end
+    10.times do
+      UserVote.create(user_id: @mike.id, room_id: @room.id, song_id: "#{rand(1..100)}")
+    end
   end
 
   describe "GET user_votes#index" do
@@ -19,27 +24,27 @@ RSpec.describe UserVotesController, :type => :controller do
       expect(response.status).to eq(200)
     end
 
-    it "returns all user votes for a song" do
+    it "returns all votes made in room" do
       get :index, :room_id => @room.id
-      response
-      # parsed_response = JSON.parse(response.body)
-      # response_userids = parsed_response.map { |uVotes| uVotes["user_id"] }
-      # response_userids
-      # last_userVote = UserVote.last
+      last_response = JSON.parse(response.body)
+      response_rooms = last_response.map { |room| room["room_id"] }
+      song_votes = @room.user_votes
 
-      # expect(response_userids).to include(last_userVote.user_id)
-      # expect(parsed_response.length).to eq(UserVote.count)
+      song_votes.each do |vote|
+        expect(response_rooms).to include(vote.room_id)
+      end
+      expect(last_response.count).to eq(song_votes.count)
     end
   end
 
-  describe "POST user_votes#create" do
-    it "creates a new user_vote with valid params" do
-    end
+  # describe "POST user_votes#create" do
+  #   it "creates a new user_vote with valid params" do
+  #   end
 
-    it "doesn't create a user_vote if invalid params" do
+  #   it "doesn't create a user_vote if invalid params" do
 
-    end
-  end
+  #   end
+  # end
 
 end
 
