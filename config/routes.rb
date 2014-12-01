@@ -15,6 +15,8 @@ Rails.application.routes.draw do
  post 'soundcloud/search' => "soundcloud#search"
  post 'youtube/search' => "youtube#search"
 
+resources :sessions, only: [:create, :index, :destory]
+
   resources :users do
     resources :user_votes, only: [:create]
     resources :friends, only: [:index, :create, :destroy]

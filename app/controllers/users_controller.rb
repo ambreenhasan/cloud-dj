@@ -3,9 +3,8 @@ class UsersController < ApplicationController
   def index
     # @rooms = Room.all
     # @room = Room.new
-    session[:user_id] = 1
-    @users = User.all
-    @user = User.new
+    # session[:user_id] = 1
+    # @user = User.new
     if session[:user_id]
       @user = User.find(session[:user_id])
     end
@@ -76,15 +75,6 @@ class UsersController < ApplicationController
     user.session_key = session_key
     user.save
     session_key
-  end
-
-
-  def logout
-    # user = User.find_by_session_key(params[:session_key])
-    # user.session_key = nil
-    user.save
-    # session[:user_id] = nil
-    #clear session key, unset in user's table
   end
 
   private
