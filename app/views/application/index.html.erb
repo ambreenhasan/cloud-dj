@@ -28,7 +28,7 @@
 
     <div class="pl-l pt-i icon">
       <% if @user %>
-        <h1>CLOUD DJ WELCOMES <br> YOU, <%= @user.first_name %>.</h1>
+        <h1>CLOUD DJ WELCOMES <br> YOU, <%= @user.first_name.upcase %>.</h1>
      <% else %>
         <h1 class="blk fc">Cloud DJ</h1>
       <% end %>
@@ -36,17 +36,19 @@
       <p> So cool.</p>
     </div>
 
-    <div id="list_menu_div">
-      <ul id="list_menu">
-        <li>Home</li>
-        <hr>
-        <li id="new_room_tab">New Room</li>
-        <hr>
-        <li>My Profile</li>
-        <hr>
-        <li>Logout</li>
-      </ul>
-    </div>
+    <% if @user %>
+      <div id="list_menu_div">
+        <ul id="list_menu">
+          <li>Home</li>
+          <hr>
+          <li id="new_room_tab">New Room</li>
+          <hr>
+          <li>My Profile</li>
+          <hr>
+          <li>Logout</li>
+        </ul>
+      </div>
+    <% end %>
 
    <!--  <div id="new_room_button" class="bd-sm br-c">
       <h4> <br>create <br> new room!</h4>

@@ -3,11 +3,12 @@ class UsersController < ApplicationController
   def index
     # @rooms = Room.all
     # @room = Room.new
+    session[:user_id] = 1
     @users = User.all
     @user = User.new
-    # if session[:user_id]
-    #   @user = User.find(session[:user_id])
-    # end
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    end
   end
 
   def create
