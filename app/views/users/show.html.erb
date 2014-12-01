@@ -1,6 +1,6 @@
 <!-- when completed, this should be in room view -->
 
-<div id="song_search_bar">
+<div id="song_search_bar" class="bd-sm mgl-r">
   <%= form_tag("/search", method: "post") do %>
   <%= label_tag(:q, "Search for song:") %>
   <%= text_field_tag(:q) %>
@@ -11,11 +11,11 @@
   </div>
 </div>
 
-<div class="video_container">
+<div id="video_container" class="">
 
 </div>
 
-<div class="queue_container">
+<div id="queue_container" class="">
 
 </div>
 
