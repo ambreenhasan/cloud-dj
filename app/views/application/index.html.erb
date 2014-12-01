@@ -14,7 +14,7 @@
   <div id="signup_menu" class="bd-sm ht-sig bk-g dsp-n ps-a">
     <div>
 
-    <%= form_for @user, :html => {:class=>"pt-m pl-r"} do |f| %>
+    <%= form_for @user, :html => {:class=>"pt-m pl-r", :id=>"signin_form"}, method: :post, remote: true do |f| %>
       <%= f.text_field :email, :placeholder => "alex@alex.alex" %>
       <%= f.text_field :first_name, :placeholder => "firstname buddy!" %>
       <%= f.text_field :last_name, :placeholder => "lastname, champ" %>
@@ -33,6 +33,9 @@
   </div>
 
   <div id="home_body" class="ht-m bd-r">
+
+
+
     <div>
       <p><a href="/room">Create room</a></p>
     </div>

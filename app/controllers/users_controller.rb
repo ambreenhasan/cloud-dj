@@ -10,6 +10,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
       if @user.save
         session[:user_id] = @user.id
+        respond_to do |format|
+          format.js { render :user }
+        end
       end
   end
 
