@@ -2,13 +2,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @user = User.new
     # render json: @users
   end
 
   def create
     @user = User.new(user_params)
       if @user.save
-        render json: @user
+        session[:user_id] = @user.id
       end
   end
 
@@ -32,8 +33,7 @@ class UsersController < ApplicationController
 
 
   def current_user
-    user = User.find_by(session_key: params[:session_key])
-    render json: user
+    @user = User.find(session[:user_id])
   end
 
   # def create

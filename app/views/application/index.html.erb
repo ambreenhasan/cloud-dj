@@ -13,13 +13,22 @@
 
   <div id="signup_menu" class="bd-sm ht-sig bk-g dsp-n ps-a">
     <div>
-      <form class="pt-m pl-r">
+
+    <%= form_for @user, :html => {:class=>"pt-m pl-r"} do |f| %>
+      <%= f.text_field :email, :placeholder => "alex@alex.alex" %>
+      <%= f.text_field :first_name, :placeholder => "firstname buddy!" %>
+      <%= f.text_field :last_name, :placeholder => "lastname, champ" %>
+      <%= f.password_field :password, :placeholder => "password, shhh" %>
+      <%= f.submit %>
+      <% end %>
+
+      <!-- <form class="pt-m pl-r">
         <input type="email" name="email" placeholder="alex@alex.alex" value="blah@blah.com" class="input">
         <input type="string" placeholder="firstname" class="input">
         <input type="string" placeholder="lastname" class="input">
         <input type="password" placeholder="password" class="input">
         <input type="submit" class="input">
-      </form>
+      </form> -->
     </div>
   </div>
 
