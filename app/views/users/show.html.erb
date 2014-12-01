@@ -1,5 +1,18 @@
 <!-- when completed, this should be in room view -->
 
-<div>
+<div class="search_container">
+  <%= form_tag("/search", method: "post") do %>
+  <%= label_tag(:q, "Search for song:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+  <% end %>
+  <div></div>
+</div>
+
+<div class="video_container">
+
+</div>
+
+<div class="queue_container">
 
 </div>
