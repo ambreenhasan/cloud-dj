@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   end
 
   def create
-
+    p params
+    p "4" * 100
   end
 
   def destroy

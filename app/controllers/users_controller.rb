@@ -45,19 +45,22 @@ class UsersController < ApplicationController
     # @user = User.find(session[:user_id])
   end
 
-  # def create
-  #   p "*"*100
-  #   p params
-  #   if params[:user][:password] == params[:user][:password_confirm]
-  #     user = User.new(user_params)
-  #     if user.save
-  #       session = UsersController.create_session(user)
-  #       render json: { session: session, user: user, success: "You have logged in!"}
-  #     else
-  #       render json: {error: "Error has occured. Please try again."}
-  #     end
-  #   end
-  # end
+  def create
+    p "*"*100
+    p params
+    # if params[:user][:password] == params[:user][:password_confirm]
+      @user = User.new(params)
+      if user.save
+        session[:user_id] = @user.id
+        # session = UsersController.create_session(user)
+        # render json: { session: session, user: user, success: "You have logged in!"}
+      # else
+        # render json: {error: "Error has occured. Please try again."}
+      # end
+      else
+        p "fail" * 20
+    end
+  end
 
 
   def login
