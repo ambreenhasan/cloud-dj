@@ -156,4 +156,13 @@ h1 {
   background-color: #080308;
   text-align: center;
   color: #75acd1;
-  margin: 1em; }
+  font-size: 18px;
+  margin: 1em;
+  position: relative;
+  float: right;
+  margin-right: 14em;
+  top: -15em; }
+
+#new_room_form_div {
+  float: right;
+  top: -12em; }
