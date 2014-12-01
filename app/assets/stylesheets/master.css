@@ -20,6 +20,9 @@ body {
 .bd-sm {
   border: 1px black solid; }
 
+.br-c {
+  border-radius: 10px; }
+
 .c-db {
   color: #75acd1; }
 
@@ -138,3 +141,8 @@ h1 {
   text-align: center;
   padding-top: 10em;
   margin-top: 4em; }
+
+#hello {
+  height: 5em;
+  width: 5em;
+  background-color: blue; }
