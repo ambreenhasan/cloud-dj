@@ -39,7 +39,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { render :index }
+        p "3" * 100
+        format.js { render :created_user }
       else
         session[:errors] = @user.errors.full_messages
         format.js { render :signup_error }
