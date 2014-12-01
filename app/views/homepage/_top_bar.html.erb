@@ -4,10 +4,10 @@
 
         <div>
           <div id="login_error_target_div"></div>
-          <%= form_for :users, url: users_login_path, method: :post, :html => {:class=>"pt-m pl-r", :id=>"signin_form"}, remote: true do |f| %>
-            <%= f.text_field :email, :placeholder => "alex@alex.alex" %>
-            <%= f.password_field :password, :placeholder => "password, shhh" %>
-            <%= f.submit %>
+          <%= form_tag users_login_path, method: :post, :html => {:class=>"pt-m pl-r", :id=>"signin_form"}, remote: true do %>
+            <%= text_field_tag :email, :placeholder => "alex@alex.alex" %>
+            <%= password_field_tag :password, :placeholder => "password, shhh" %>
+            <%= submit_tag("login") %>
           <% end %>
         </div>
 
