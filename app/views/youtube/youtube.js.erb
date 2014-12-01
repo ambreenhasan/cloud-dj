@@ -1,0 +1,6 @@
+<% @videos.each do |video| %>
+  $("#query_song_list").append('<li><%= video.title %><br><%= video.description %></li>')
+<% end %>
+
+// attributes of video: http://ruby-doc.org/gems/docs/n/nddrylliog_youtube_it-2.1.4/YouTubeIt/Model/Video.html
+// video.video_id for identifier
