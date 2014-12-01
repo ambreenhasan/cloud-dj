@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   # get '*path' => 'application#index' #don't remove these two lines
 
  post 'users/login' => "users#login"
+ post 'users/logout' => "users#logout"
  post '/search' => "search#search"
+
 
   resources :users do
     resources :user_votes, only: [:create]

@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:user_id] = @user.id
-        format.html { render :index }
+        format.js { render :created_user }
       else
         session[:errors] = @user.errors.full_messages
         format.js { render :signup_error }
@@ -49,14 +49,25 @@ class UsersController < ApplicationController
   end
 
   def login
+    p params
+    p "1" * 100
+    @user = User.find_by_email(params[:email])
+    p @user
     respond_to do |format|
-      if @user = User.find_by_email(params[:email]) == nil
+      if (@user != nil) && (@user.password == params[:password] )
         session[:user_id] = @user.id
-        format.html { render :index }
+        format.js { render :created_user }
       else
         session[:errors] = "Invalid username or password :("
         format.js { render :login_error }
       end
+    end
+  end
+
+  def logout
+    session[:user_id] = nil
+    respond_to do |format|
+      format.js { render :logout }
     end
   end
 

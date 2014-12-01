@@ -249,3 +249,7 @@ h1 {
 hr {
   margin-left: -2.5em;
   width: 1em; }
+
+#login_form {
+  border: 2px red solid;
+  margin-top: 40em; }
