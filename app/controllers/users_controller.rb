@@ -35,8 +35,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    p "*"*100
-    p params
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
@@ -52,7 +50,7 @@ class UsersController < ApplicationController
 
   def login
     respond_to do |format|
-      if @user = User.find_by(email: params[:email])
+      if @user = User.find_by_email(params[:email]) == nil
         session[:user_id] = @user.id
         format.html { render :index }
       else
