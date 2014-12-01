@@ -2,7 +2,17 @@
 
 app.controller('HomeCtrl', function ($scope) {
 
-   $("#hide_button").on("click", function() {
+   // $("#hide_button").on("click", function() {
+   //      if ( $("#login_menu").css('top') != '0px' ) {
+   //        $("#login_menu").animate({top: 0}, 500);
+   //        $("#hide_button").html("hide");
+   //      } else  {
+   //        $("#login_menu").animate({top: -163}, 500);
+   //        $("#hide_button").html("login");
+   //      }
+   //  });
+
+  function show() {
         if ( $("#login_menu").css('top') != '0px' ) {
           $("#login_menu").animate({top: 0}, 500);
           $("#hide_button").html("hide");
@@ -10,7 +20,8 @@ app.controller('HomeCtrl', function ($scope) {
           $("#login_menu").animate({top: -163}, 500);
           $("#hide_button").html("login");
         }
-    });
+    };
+
 
    $("#show_signup_form_button").on("click", function() {
       if ( $("#signup_menu").css('display') === 'none' ) {
