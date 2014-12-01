@@ -1,0 +1,31 @@
+
+<h1>Welcome to the room view</h1>
+
+
+<div ng-controller="SoundcloudCtrl">
+  <form ng-submit="submit(search)">
+    <input type="string" name="query" placeholder="Search for songs" ng-model="search.query" id="song_search_bar">
+    <input type="submit">
+  </form>
+</div>
+
+<div ng-controller="SoundcloudCtrl as sound">
+  <ul id="query_song_list" class="bd-sm dsp-n wdt-l">
+    <!-- <li  ng-repeat="song in sound.songs">{{ song }}</li> -->
+  </ul>
+</div>
+
+<div ng-controller="YoutubeCtrl">
+  <form ng-submit="submit()">
+    <input type="string" name="query" placeholder="Search for songs">
+
+<h1>Create a new room</h1>
+
+<div>
+  <form ng-submit="submit(roomInformation)">
+    <input type="string" name="name" placeholder="Name of your room" ng-model="roomInformation.name">
+    <input type="string" name="description" placeholder="About your room!" ng-model="roomInformation.description">
+    Private Room<input type="checkbox" ng-model="roomInformation.publicness">
+    <input type="submit">
+  </form>
+</div>

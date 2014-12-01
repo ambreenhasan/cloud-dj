@@ -1,8 +1,213 @@
 $black:#080308;
-$beige:#ECE2C6;
+$white:#FFFFFF;
+$beige:#FFFFEC;
 $dblue:#75ACD1;
 $lblue:#BAE7E8;
-$gray:#A8A8A8;
+$gray:#333333;
+$medium:12em;
 
-body {background-color: $beige;}
+
+body {margin:0; padding:0;}
+body {background-color:$white;}
+.bk-b {background-color: $black;}
+.bk-g {background-color: $gray;}
+
+.blk {color: $black;}
+
+.dsp-n {display: none;}
+
+.bd-sm {border: 1px black solid;}
+.bd-m {border: 2px black solid;}
+.br-c {border-radius: 100px; width: 8em; height:8em;}
+.br-s {border-radius: 2px;}
+
+.c-db {color: $dblue;}
+.c-lb {color: $lblue;}
+.c-g {color: $gray;}
+
+.ff-g {font-family:Garamond;}
+
+.p-l {padding: 3px;}
+.p-n {padding: 0;}
+.pt-m {padding-top: 5em;}
+.pt-i {padding-top: -10em;}
+.pl-r {padding-left: 40em;}
+.pl-c {padding-left: 25em;}
+.pl-l {padding-left: 10em;}
+.p-in {padding-left: 1em; padding-right: 1em;}
+.mg-n {margin: 0;}
+.mgr-s {margin-right: 20em; }
+.mgl-r {margin-left: 50em;}
+.mt-s {margin-top: 3.5em;}
+
+.ht-l {height: 100em;}
+.ht-sig {height: $medium + 2em}
+.ht-log {height: $medium;}
+.ht-m {height: 25em;}
+.ht-b {height: 60em;}
+.ht-s {height: 10em;}
+
+.wdt-l {width: 25em}
+
+.ps-f {position: fixed;}
+.ps-r {position: relative; width: 100%;}
+
+t-t {top: 0}
+.t-h {top: -10em;}
+
+.hvr:hover {border: 3px black solid}
+
+.input {
+  padding: 3px;
+  height: 1.5em;
+  border-radius: 4%;
+  font-size: 15px;
+  width: 10em;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+#hide_button{
+  height: 1em;
+  width: 3em;
+  border: 1px $lblue solid;
+  border-radius: 4px;
+  background-color: black;
+  color: $lblue;
+  text-align: center;
+}
+
+#hide_button:hover {
+  border: 2px $dblue solid;
+  color: $dblue;
+}
+
+#show_signup_form_button {
+  float:right;
+}
+
+#show_signup_form_button:hover {
+  color: $dblue;
+}
+
+#trending_carousel {
+  border: 2px purple solid;
+  height: 20em;
+  width: 50em;
+  margin-left: 30em;
+  text-align: center;
+  padding-top: 10em;
+  margin-top: 4em;
+}
+
+#hello {
+  height: 5em;
+  width: 5em;
+  background-color: blue;
+}
+
+#new_room_form_div {
+  float: right;
+  margin-right: 2em;
+  top: -12em;
+  position: relative;
+}
+
+#text_area {
+  width: 80%;
+  height: 10em;
+  border: 2px $dblue solid;
+  color: $gray;
+  font-size: 20px;
+  border-radius: 2px;
+  margin-left: 1.5em;
+}
+
+#text_field {
+  width: 80%;
+  border: 2px $dblue solid;
+  color: $gray;
+  font-size: 20px;
+  margin: 1em;
+  margin-left: 1.5em;
+  text-align: center;
+}
+
+#hide_new_room_form_button {
+  width: 5em;
+  margin: 2px;
+  margin-left: 6em;
+  text-align: center;
+  float: left;
+  display:inline-block;
+  }
+
+#save_new_room_form_button {
+  width: 5em;
+  margin: 2px;
+  margin-left: 15em;
+  text-align: center;
+  top: 1.5em;
+  position:relative;
+}
+
+  #hide_new_room_form_button:hover {
+    background-color: $dblue;
+    border: 2px $black solid;
+  }
+
+  #check_box {
+    margin: 1em;
+    margin-left: 1.5em;
+    font-size: 20px;
+    color: $gray;
+  }
+
+#submit {
+  width: 8em;
+  text-align: center;
+  color: $black;
+  }
+
+#submit:hover {
+  background-color: $dblue;
+  border: 2px $black solid;
+  height: 2em;
+  border-radius: 2px;
+}
+
+#list_menu_div {
+  float:right;
+  position: relative;
+  top: -15em;
+  margin-right: 10em;
+}
+
+#list_menu {
+  list-style-type: none;
+  border-left: 2px black solid;
+
+}
+
+#list_menu li {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-length: 1em;
+  margin-left: -2.5em;
+  padding-left: 2em;
+  color: $black;
+}
+
+#list_menu li:hover {
+  color: $dblue;
+}
+
+hr {
+  margin-left: -2.5em;
+  width: 1em;
+}
+
 

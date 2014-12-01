@@ -1,1 +1,49 @@
-<div ng-view=""></div>
+<div id="body" class="p-n mg-n ht-l bd-sm">
+
+  <%= render "homepage/top_bar" %>
+
+  <div id="home_body" class="ht-m bd-r">
+
+    <div class="pl-l pt-i icon">
+      <% if @user %>
+        <h1>CLOUD DJ WELCOMES <br> YOU, <%= @user.first_name.upcase %>.</h1>
+     <% else %>
+        <h1 class="blk fc">Cloud DJ</h1>
+      <% end %>
+      <p> This is an awesome description of the project.</p>
+      <p> So cool.</p>
+    </div>
+
+    <% if @user %>
+      <div id="list_menu_div">
+        <ul id="list_menu">
+          <li>Home</li>
+          <hr>
+          <li id="new_room_tab">New Room</li>
+          <hr>
+          <li>My Profile</li>
+          <hr>
+          <li>Logout</li>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= render 'rooms/new_room_form' %>
+  </div>
+
+  <div id="home_trending_section" class="bd-sm bk-b ht-b">
+    <div id="trending">
+      <h1 class="c-g ff-g p-in">HEY YOU ARE SO COOL CHECKOUT THESE SPIFFY TRENDING ROOMS SCROLL DOWN DO IT YOU COOL KID.</h1>
+      <div id="trending_carousel">
+        <h1 class="c-db">NOTHING HERE OH NO</h1>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+</div>
+
