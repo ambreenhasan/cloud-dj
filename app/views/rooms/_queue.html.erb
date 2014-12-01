@@ -1,1 +1,4 @@
-<li>@streamable_songs.title</li>
+<% if !@streamable_songs.nil? %>
+
+<li> <%= @streamable_songs.first.title %></li>
+<% end %>
