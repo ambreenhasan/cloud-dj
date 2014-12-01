@@ -1,23 +1,23 @@
 <div id="body" class="p-n mg-n ht-l bd-sm">
 
-  <div id="login_menu" class="bd-sm ht-log bk-b t-h ps-r" ng-controller="HomeCtrl">
-    <form ng-submit="submit(user)" class="pt-m pl-r">
-        <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
-        <input type="password" placeholder="password" ng-model="user.password" class="input">
+  <div id="login_menu" class="bd-sm ht-log bk-b t-h ps-r" >
+    <form  class="pt-m pl-r">
+        <input type="email" name="email" placeholder="alex@alex.alex" value="blah@blah.com" class="input">
+        <input type="password" placeholder="password" class="input">
         <input type="submit" class="input">
 
     </form>
-      <div id="show_signup_form_button" ng-click="showSignup()" class="c-lb mgr-s">Not a member?</div>
-      <div id="hide_button" ng-click="showLogin()" class="mgl-r mt-s">login</div>
+      <div id="show_signup_form_button" class="c-lb mgr-s">Not a member?</div>
+      <div id="hide_button" class="mgl-r mt-s">login</div>
   </div>
 
   <div id="signup_menu" class="bd-sm ht-sig bk-g dsp-n ps-a">
     <div>
-      <form ng-submit="submit(user)" class="pt-m pl-r">
-        <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
-        <input type="string" placeholder="firstname" ng-model="user.first_name" class="input">
-        <input type="string" placeholder="lastname" ng-model="user.last_name" class="input">
-        <input type="password" placeholder="password" ng-model="user.password" class="input">
+      <form class="pt-m pl-r">
+        <input type="email" name="email" placeholder="alex@alex.alex" value="blah@blah.com" class="input">
+        <input type="string" placeholder="firstname" class="input">
+        <input type="string" placeholder="lastname" class="input">
+        <input type="password" placeholder="password" class="input">
         <input type="submit" class="input">
       </form>
     </div>
@@ -25,7 +25,7 @@
 
   <div id="home_body" class="ht-m bd-r">
     <div>
-      <p><a ng-href="/room">Create room</a></p>
+      <p><a href="/room">Create room</a></p>
     </div>
     <div class="pl-c pt-i icon">
       <h1 class="blk fc">Cloud DJ</h1>
