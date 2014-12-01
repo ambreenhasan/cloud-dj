@@ -3,7 +3,7 @@
       <%= f.text_field :name, :class => "bd-s p-l", :id => "text_field", :placeholder => "give you room a name" %>
       <%= f.text_area :description, :class => "bd-s p-l", :id => "text_area", :placeholder => "what's your room all about?" %>
       <div id="check_box">Make this room private: <%= check_box_tag :publicness %> </div>
-      <div id="save_new_room_form_button"><%= f.submit %> </div>
+      <div id="save_new_room_form_button"><%= f.submit :id => "submit" %> </div>
 
 
   <div id="hide_new_room_form_button" class="bd-sm p-l br-s">Cancel</div>
