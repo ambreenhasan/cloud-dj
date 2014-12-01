@@ -53,13 +53,14 @@ class UsersController < ApplicationController
   end
 
   def login
-    user = User.find_by_email(params[:user][:email])
-    if user == user.authenticate(params[:user][:password])
-      session = UsersController.create_session(user)
-      render json: {user: user, session: session}
-    else
-      # render  {error: "User not found"}
-    end
+    p params
+    p "8" * 100
+    @user = User.find_by_email(params[:email])
+    # if user == user.authenticate(params[:user][:password])
+    #   session[:user_id] = @user.id
+    # else
+    #   # render  {error: "User not found"}
+    # end
   end
 
   def self.create_session(user)
