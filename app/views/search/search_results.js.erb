@@ -1,5 +1,5 @@
 <% @streamable_songs.each do |track| %>
-  $("#sc_song_list").append('<li><%= link_to track.title, remote: true %></li>')
+  $("#sc_song_list").append('<li><%= link_to track.title, track.title, method: :get, url: search_path, remote: true %></li>')
 <% end %>
 
 //for soundcloud: track.permalink_url
