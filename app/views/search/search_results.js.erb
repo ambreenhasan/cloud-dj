@@ -1,5 +1,5 @@
 <% @streamable_songs.each do |track| %>
-  $("#sc_song_list").append('<li><%= link_to track.title, track.title, method: :get, url: search_path, remote: true %></li>')
+  $("#sc_song_list").append('<li id="<%=track.id%>" data-track-link="<%= track.stream_url %>" data-track-title="<%= track.title %>"> <button class="track_title"> <%= track.title %> </button> </li>')
 <% end %>
 
 //for soundcloud: track.permalink_url
@@ -10,3 +10,5 @@
 
 // attributes of video: http://ruby-doc.org/gems/docs/n/nddrylliog_youtube_it-2.1.4/YouTubeIt/Model/Video.html
 // video.video_id for identifier
+
+
