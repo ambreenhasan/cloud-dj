@@ -190,14 +190,31 @@ h1 {
   color: #333333;
   font-size: 20px;
   margin: 1em;
-  margin-left: 1.5em; }
+  margin-left: 1.5em;
+  text-align: center; }
 
 #hide_new_room_form_button {
   width: 5em;
   margin: 2px;
-  margin-left: 9em;
-  text-align: center; }
+  margin-left: 7em;
+  text-align: center;
+  float: left;
+  display: inline-block; }
+
+#save_new_room_form_button {
+  width: 5em;
+  margin: 2px;
+  margin-left: 12em;
+  text-align: center;
+  float: right;
+  display: inline-block; }
 
 #hide_new_room_form_button:hover {
   background-color: #75acd1;
   border: 2px #080308 solid; }
+
+#check_box {
+  margin: 1em;
+  margin-left: 1.5em;
+  font-size: 20px;
+  color: #333333; }
