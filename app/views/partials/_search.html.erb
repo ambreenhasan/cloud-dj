@@ -1,0 +1,11 @@
+<%= form_for :search, remote:true, url: youtube_search_path do |f| %>
+
+  <p>
+    <%= f.label :search %><br>
+    <%= f.text_field :query %>
+  </p>
+
+  <p>
+    <%= f.submit "Submit search"%>
+  </p>
+<% end %>
