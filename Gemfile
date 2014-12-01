@@ -17,6 +17,8 @@ gem 'jquery-rails'
 
 gem 'rb-fsevent', '~> 0.9'
 
+gem 'turbolinks'
+
 # gem 'devise'
 
 # gem 'bower-rails'

@@ -14,7 +14,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require turbolinks
 //= require ../../../vendor/assets/javascripts/soundcloud_sdk
 
 //= require_tree .
