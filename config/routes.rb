@@ -12,12 +12,10 @@ Rails.application.routes.draw do
   # root 'application#index' #don't remove these two lines
   # get '*path' => 'application#index' #don't remove these two lines
 
- post 'soundcloud/search' => "soundcloud#search"
- post 'youtube/search' => "youtube#search"
  post 'users/login' => "users#login"
  post 'users/logout' => "users#logout"
+ post '/search' => "search#search"
 
-resources :sessions, only: [:create, :index, :destory]
 
   resources :users do
     resources :user_votes, only: [:create]
