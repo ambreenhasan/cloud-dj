@@ -18,7 +18,7 @@
             <hr>
             <li>My Profile</li>
             <hr>
-            <li>Logout</li>
+            <li><%= link_to 'Logout', users_logout_path, method: :post, remote: true %></li>
           </ul>
         </div>
       <% end %>

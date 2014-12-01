@@ -61,6 +61,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def logout
+    p "1" * 100
+    session[:user_id] = nil
+    respond_to do |format|
+      format.js { render :logout }
+    end
+  end
+
   def self.create_session(user)
     session_key = "#{SecureRandom.base64}"
     user.session_key = session_key
