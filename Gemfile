@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.8'
 
-gem 'rails-api'
+# gem 'rails-api'
 
 gem 'spring', :group => :development
 
@@ -19,8 +19,8 @@ gem 'rb-fsevent', '~> 0.9'
 
 # gem 'devise'
 
-gem 'bower-rails'
-gem 'angular-rails-templates'
+# gem 'bower-rails'
+# gem 'angular-rails-templates'
 gem 'soundcloud'
 gem 'youtube_it'
 

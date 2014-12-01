@@ -5,13 +5,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
   # root 'application#index'
-  # root 'users#index'
+  root 'users#index'
 
   # get '*path' => 'application#index'
 
-  root 'application#index' #don't remove these two lines
-  get '*path' => 'application#index' #don't remove these two lines
-
+  # root 'application#index' #don't remove these two lines
+  # get '*path' => 'application#index' #don't remove these two lines
 
  post 'soundcloud/search' => "soundcloud#search"
  post 'youtube/search' => "youtube#search"
