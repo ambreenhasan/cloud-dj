@@ -17,7 +17,7 @@ body {background-color:$white;}
 .dsp-n {display: none;}
 
 .bd-sm {border: 1px black solid;}
-.br-c {border-radius: 10px;}
+.br-c {border-radius: 100px; width: 8em; height: 8em;}
 
 .c-db {color: $dblue;}
 .c-lb {color: $lblue;}
@@ -42,6 +42,8 @@ body {background-color:$white;}
 .ht-log {height: $medium;}
 .ht-m {height: 25em;}
 .ht-b {height: 60em;}
+.ht-s {height: 10em;}
+
 .wdt-l {width: 25em}
 
 .ps-f {position: fixed;}
@@ -102,6 +104,13 @@ h1 {
   height: 5em;
   width: 5em;
   background-color: blue;
+}
+
+#new_room_button {
+  background-color: $black;
+  text-align: center;
+  color: $dblue;
+  margin: 1em;
 }
 
 

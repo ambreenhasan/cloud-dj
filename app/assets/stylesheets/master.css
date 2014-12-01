@@ -21,7 +21,9 @@ body {
   border: 1px black solid; }
 
 .br-c {
-  border-radius: 10px; }
+  border-radius: 100px;
+  width: 8em;
+  height: 8em; }
 
 .c-db {
   color: #75acd1; }
@@ -83,6 +85,9 @@ body {
 
 .ht-b {
   height: 60em; }
+
+.ht-s {
+  height: 10em; }
 
 .wdt-l {
   width: 25em; }
@@ -146,3 +151,9 @@ h1 {
   height: 5em;
   width: 5em;
   background-color: blue; }
+
+#new_room_button {
+  background-color: #080308;
+  text-align: center;
+  color: #75acd1;
+  margin: 1em; }

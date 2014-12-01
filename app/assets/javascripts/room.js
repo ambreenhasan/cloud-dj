@@ -21,4 +21,12 @@ $(document).ready(function() {
         $("#hide_button").css("display", "block");
       }
    });
+
+    $("#new_room_button").on("click", function(){
+        $("#new_room_form_div").slideDown(500);
+    })
+
+    $("#hide_new_room_form_button").on("click", function() {
+      $("#new_room_form_div").slideUp(500);
+    })
 })

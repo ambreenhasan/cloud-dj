@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
   def index
+    # @rooms = Room.all
+    # @room = Room.new
     @users = User.all
     @user = User.new
     # if session[:user_id]

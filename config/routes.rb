@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :user_votes, only: [:create]
     resources :friends, only: [:index, :create, :destroy]
     resources :room_invites, only: [:index, :create, :destroy]
-    resources :rooms, except: [:new, :edit]
+    resources :rooms, except: [:edit]
     resources :songs, except: [:new, :edit, :update]
     resources :user_stars, only: [:create, :index]
   end
