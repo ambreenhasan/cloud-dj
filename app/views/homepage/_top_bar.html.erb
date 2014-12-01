@@ -1,0 +1,34 @@
+  <div>
+    <% if !@user %>
+      <div id="login_menu" class="bd-sm ht-log bk-b t-h ps-r" >
+
+        <div>
+          <div id="login_error_target_div"></div>
+          <%= form_for :users, url: users_login_path, method: :post, :html => {:class=>"pt-m pl-r", :id=>"signin_form"}, remote: true do |f| %>
+            <%= f.text_field :email, :placeholder => "alex@alex.alex" %>
+            <%= f.password_field :password, :placeholder => "password, shhh" %>
+            <%= f.submit %>
+          <% end %>
+        </div>
+
+          <div id="show_signup_form_button" class="c-lb mgr-s">Not a member?</div>
+          <div id="hide_button" class="mgl-r mt-s">login</div>
+      </div>
+
+      <div id="signup_menu" class="bd-sm ht-sig bk-g dsp-n ps-a">
+        <div>
+            <div id="sign_in_error_target_div"></div>
+        <%= form_for :user, url: users_path, :html => {:class=>"pt-m pl-r", :id=>"signin_form"}, method: :post, remote: true do |f| %>
+          <%= f.text_field :email, :placeholder => "alex@alex.alex" %>
+          <%= f.text_field :first_name, :placeholder => "firstname buddy!" %>
+          <%= f.text_field :last_name, :placeholder => "lastname, champ" %>
+          <%= f.password_field :password, :placeholder => "password, shhh" %>
+          <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    <% else %>
+      <div id="login_menu" class="bd-sm ht-log bk-b t-h ps-r" >
+      </div>
+    <% end %>
+  </div>

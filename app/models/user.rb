@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :user_votes
 
   validates :first_name, presence: true
-  validates :last_name, presence:true
+  validates :email, presence: true
 
   def invites_extended
     RoomInvite.where(inviter_id: self.id, accepted: 'false')

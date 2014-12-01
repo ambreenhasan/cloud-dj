@@ -40,6 +40,9 @@ body {
 .c-g {
   color: #333333; }
 
+.c-r {
+  color: #9c1616; }
+
 .ff-g {
   font-family: Garamond; }
 
@@ -60,6 +63,9 @@ body {
 
 .pl-c {
   padding-left: 25em; }
+
+.pl-l {
+  padding-left: 10em; }
 
 .p-in {
   padding-left: 1em;

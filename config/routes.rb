@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # root 'application#index' #don't remove these two lines
   # get '*path' => 'application#index' #don't remove these two lines
 
+ post 'users/login' => "users#login"
  post '/search' => "search#search"
 
   resources :users do
