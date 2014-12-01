@@ -1,41 +1,55 @@
-<h1 class="lb fc">The Home View!</h1>
-<ul>
-    <li ng-repeat="thing in things" >
-        {{thing}}
-    </li>
-</ul>
-<div>
-  <p><a href="#/room">Create room</a></p>
+<<<<<<< HEAD
+<div id="body" class="p-n mg-n ht-l bd-sm">
 
-  <div>
-    <form ng-submit="submit(user)">
-      <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com">
-      <input type="string" placeholder="firstname" ng-model="user.first_name">
-      <input type="string" placeholder="lastname" ng-model="user.last_name">
-      <input type="password" placeholder="password" ng-model="user.password">
-      <input type="submit">
+  <div id="login_menu" class="bd-sm ht-log bk-b t-h ps-r" ng-controller="HomeCtrl">
+    <form ng-submit="submit(user)" class="pt-m pl-r">
+        <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
+        <input type="password" placeholder="password" ng-model="user.password" class="input">
+        <input type="submit" class="input">
+
     </form>
+      <div id="show_signup_form_button" class="c-lb mgr-s">Not a member?</div>
+      <div id="hide_button" class="mgl-r mt-s">login</div>
   </div>
+
+  <div id="signup_menu" class="bd-sm ht-sig bk-g dsp-n ps-a">
+    <div>
+      <form ng-submit="submit(user)" class="pt-m pl-r">
+        <input type="email" name="email" placeholder="alex@alex.alex" ng-model="user.email" value="blah@blah.com" class="input">
+        <input type="string" placeholder="firstname" ng-model="user.first_name" class="input">
+        <input type="string" placeholder="lastname" ng-model="user.last_name" class="input">
+        <input type="password" placeholder="password" ng-model="user.password" class="input">
+        <input type="submit" class="input">
+      </form>
+    </div>
+  </div>
+
+  <div id="home_body" class="ht-m bd-r">
+    <div>
+      <p><a ng-href="/room">Create room</a></p>
+    </div>
+    <div class="pl-c pt-i icon">
+      <h1 class="blk fc">Cloud DJ</h1>
+      <p> This is an awesome description of the project.</p>
+      <p> So cool.</p>
+    </div>
+  </div>
+
+  <div id="home_trending_section" class="bd-sm bk-b ht-b">
+    <div id="trending">
+      <h1 class="c-g ff-g p-in">HEY YOU ARE SO COOL CHECKOUT THESE SPIFY TRENDING ROOMS SCROLL DOWN DO IT YOU COOL KID.</h1>
+      <div id="trending_carousel">
+        <h1 class="c-db">NOTHING HERE OH NO</h1>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
 </div>
 
-<!-- <button action="/soundcloud/search">YooHoo</button> -->
-<div ng-controller="SoundcloudCtrl">
-  <form ng-submit="submit(search)">
-    <input type="string" name="query" placeholder="Search for songs" ng-model="search.query" id="song_search_bar">
-    <input type="submit">
-  </form>
-</div>
 
-<div ng-controller="SoundcloudCtrl as sound">
-  <ul id="query_song_list" class="bd-sm dsp-n wdt-l">
-    <!-- <li  ng-repeat="song in sound.songs">{{ song }}</li> -->
-  </ul>
-</div>
-
-<div ng-controller="YoutubeCtrl">
-  <form ng-submit="submit()">
-    <input type="string" name="query" placeholder="Search for songs">
-    <input type="submit">
-  </form>
-</div>
 
