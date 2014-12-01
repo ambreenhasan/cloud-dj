@@ -43,14 +43,13 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         format.html { render :index }
       else
-        # session[:errors] = @user.errors.full_messages
-        # p "fail" * 20
-       # p session[:errors]
-
-        format.js { render :error}
+        session[:errors] = @user.errors.full_messages
+        p "fail" * 20
+       p session[:errors]
+        format.js { render :error }
       end
     end
-    session[:errors] = nil
+    # session[:errors] = nil
   end
 
   def login
