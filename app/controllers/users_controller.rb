@@ -1,14 +1,23 @@
 class UsersController < ApplicationController
 
   def index
+    # @rooms = Room.all
+    # @room = Room.new
     @users = User.all
-    # render json: @users
+    @user = User.new
+    # if session[:user_id]
+    #   @user = User.find(session[:user_id])
+    # end
   end
 
   def create
     @user = User.new(user_params)
       if @user.save
-        render json: @user
+        session[:user_id] = @user.id
+        respond_to do |format|
+          format.js { render :user }
+        end
+      else (alert("fail"))
       end
   end
 
@@ -19,7 +28,7 @@ class UsersController < ApplicationController
       flash[:notice] = "User Successfully Updated"
       redirect_to @user
     else
-      flash[:notice] = "User FAILed to update"
+      flash[:notice] = "User failed to update"
       redirect_to @user
     end
   end
@@ -32,8 +41,8 @@ class UsersController < ApplicationController
 
 
   def current_user
-    user = User.find_by(session_key: params[:session_key])
-    render json: user
+    session[:user_id]
+    # @user = User.find(session[:user_id])
   end
 
   # def create
@@ -70,9 +79,10 @@ class UsersController < ApplicationController
 
 
   def logout
-    user = User.find_by_session_key(params[:session_key])
-    user.session_key = nil
+    # user = User.find_by_session_key(params[:session_key])
+    # user.session_key = nil
     user.save
+    # session[:user_id] = nil
     #clear session key, unset in user's table
   end
 
