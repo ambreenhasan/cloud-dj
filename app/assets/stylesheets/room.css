@@ -244,4 +244,20 @@ hr {
   margin-left: -2.5em;
   width: 1em; }
 
+#video_container {
+  background-color: black;
+  width: 450px;
+  height: 350px;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+#song_search_bar {
+  margin-left: 2%;
+  margin-top: 1%;
+
+}
+
+
+
 /*# sourceMappingURL=room.css.map */
