@@ -4,9 +4,9 @@
 
         <div>
           <div id="login_error_target_div"></div>
-          <%= form_tag users_login_path, method: :post, :html => {:class=>"pt-m pl-r", :id=>"signin_form"}, remote: true do %>
-            <%= text_field_tag :email, :placeholder => "alex@alex.alex" %>
-            <%= password_field_tag :password, :placeholder => "password, shhh" %>
+          <%= form_tag users_login_path, method: :post, class: "pt-m pl-r", id: "signin_form", remote: true do %>
+            <%= text_field_tag :email, "", placeholder: 'alex@alex.alex' %>
+            <%= password_field_tag :password, "", placeholder: "password, shhh" %>
             <%= submit_tag("login") %>
           <% end %>
         </div>
