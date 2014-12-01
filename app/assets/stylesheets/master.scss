@@ -108,18 +108,6 @@ h1 {
   background-color: blue;
 }
 
-#new_room_button {
-  background-color: $black;
-  text-align: center;
-  color: $dblue;
-  font-size: 18px;
-  margin: 1em;
-  position: relative;
-  float: right;
-  margin-right: 14em;
-  top: -15em;
-}
-
 #new_room_form_div {
   float: right;
   margin-right: 2em;
@@ -188,5 +176,36 @@ h1 {
   border: 2px $black solid;
   height: 2em;
   border-radius: 2px;
+}
+
+#list_menu_div {
+  float:right;
+  position: relative;
+  top: -15em;
+  margin-right: 10em;
+}
+
+#list_menu {
+  list-style-type: none;
+  border-left: 2px black solid;
+
+}
+
+#list_menu li {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-length: 1em;
+  margin-left: -2.5em;
+  padding-left: 2em;
+  color: $black;
+}
+
+#list_menu li:hover {
+  color: $dblue;
+}
+
+hr {
+  margin-left: -2.5em;
+  width: 1em;
 }
 
