@@ -21,24 +21,17 @@
       <%= f.password_field :password, :placeholder => "password, shhh" %>
       <%= f.submit %>
       <% end %>
-
-      <!-- <form class="pt-m pl-r">
-        <input type="email" name="email" placeholder="alex@alex.alex" value="blah@blah.com" class="input">
-        <input type="string" placeholder="firstname" class="input">
-        <input type="string" placeholder="lastname" class="input">
-        <input type="password" placeholder="password" class="input">
-        <input type="submit" class="input">
-      </form> -->
     </div>
   </div>
 
   <div id="home_body" class="ht-m bd-r">
 
-
-
-
-    <div class="pl-c pt-i icon">
-      <h1 class="blk fc">Cloud DJ</h1>
+    <div class="pl-l pt-i icon">
+      <% if @user %>
+        <h1>CLOUD DJ WELCOMES <br> YOU, <%= @user.first_name %>.</h1>
+     <% else %>
+        <h1 class="blk fc">Cloud DJ</h1>
+      <% end %>
       <p> This is an awesome description of the project.</p>
       <p> So cool.</p>
     </div>
