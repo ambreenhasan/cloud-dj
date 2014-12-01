@@ -44,23 +44,22 @@ class UsersController < ApplicationController
         format.html { render :index }
       else
         session[:errors] = @user.errors.full_messages
-        p "fail" * 20
-       p session[:errors]
-        format.js { render :error }
+        format.js { render :signup_error }
       end
     end
     # session[:errors] = nil
   end
 
   def login
-    p params
-    p "8" * 100
-    @user = User.find_by_email(params[:email])
-    # if user == user.authenticate(params[:user][:password])
-    #   session[:user_id] = @user.id
-    # else
-    #   # render  {error: "User not found"}
-    # end
+    respond_to do |format|
+      if @user = User.find_by(email: params[:email])
+        session[:user_id] = @user.id
+        format.html { render :index }
+      else
+        session[:errors] = "Invalid username or password :("
+        format.js { render :login_error }
+      end
+    end
   end
 
   def self.create_session(user)

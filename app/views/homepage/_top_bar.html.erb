@@ -3,11 +3,11 @@
       <div id="login_menu" class="bd-sm ht-log bk-b t-h ps-r" >
 
         <div>
-            <div id="sign_in_error_target_div"></div>
-        <%= form_for :users, url: users_login_path, method: :post, :html => {:class=>"pt-m pl-r", :id=>"signin_form"} do |f| %>
-          <%= f.text_field :email, :placeholder => "alex@alex.alex" %>
-          <%= f.password_field :password, :placeholder => "password, shhh" %>
-          <%= f.submit %>
+          <div id="login_error_target_div"></div>
+          <%= form_for :users, url: users_login_path, method: :post, :html => {:class=>"pt-m pl-r", :id=>"signin_form"} do |f| %>
+            <%= f.text_field :email, :placeholder => "alex@alex.alex" %>
+            <%= f.password_field :password, :placeholder => "password, shhh" %>
+            <%= f.submit %>
           <% end %>
         </div>
 
