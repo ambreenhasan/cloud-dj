@@ -144,5 +144,17 @@ h1 {
   font-size: 20px;
   margin: 1em;
   margin-left: 1.5em;
-
 }
+
+#hide_new_room_form_button {
+  width: 5em;
+  margin: 2px;
+  margin-left: 9em;
+  text-align: center;
+  }
+
+  #hide_new_room_form_button:hover {
+    background-color: $dblue;
+    border: 2px $black solid;
+  }
+
