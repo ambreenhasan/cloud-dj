@@ -10,17 +10,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def create
-    @user = User.new(user_params)
-      if @user.save
-        session[:user_id] = @user.id
-        respond_to do |format|
-          format.js { render :user }
-        end
-      else (alert("fail"))
-      end
-  end
-
   def update
     @user = User.find_by(id: params[:id])
     @user.update(user_params)
@@ -49,19 +38,21 @@ class UsersController < ApplicationController
     p "*"*100
     p params
     # if params[:user][:password] == params[:user][:password_confirm]
-      @user = User.new(params)
-      if user.save
+    @user = User.new(email: params[:email], first_name: params[:first_name], last_name: params[:last_name], password: params[:password])
+      if @user.save
         session[:user_id] = @user.id
+        render(:action => 'index')
         # session = UsersController.create_session(user)
         # render json: { session: session, user: user, success: "You have logged in!"}
       # else
         # render json: {error: "Error has occured. Please try again."}
       # end
       else
+        session[:errors] = @user.errors.full_messages
         p "fail" * 20
+        p session[:errors]
     end
   end
-
 
   def login
     user = User.find_by_email(params[:user][:email])
