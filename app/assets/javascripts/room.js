@@ -22,9 +22,14 @@ $(document).ready(function() {
       }
    });
 
-    $("#new_room_button").on("click", function(){
+    $("#new_room_tab").on("click", function(){
+      if ($("#new_room_form_div").css("display") === "none") {
         $("#new_room_form_div").slideDown(500);
-    })
+        $("#new_room_tab").css("color", "#75acd1");
+      } else
+        $("#new_room_form_div").slideUp(500);
+        $("#new_room_tab").css("color", "#080308");
+    });
 
     $("#hide_new_room_form_button").on("click", function() {
       $("#new_room_form_div").slideUp(500);
