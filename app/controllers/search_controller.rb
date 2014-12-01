@@ -15,7 +15,14 @@ class SearchController < ApplicationController
     sc_client = SoundCloud.new(:client_id => "90bd68b0531687cfd7e24ede5bb5c013")
 
     sc_query = params[:search][:query]
-    @sc_tracks = sc_client.get('/tracks', :q => sc_query, :limit => 5)
+    @sc_tracks = sc_client.get('/tracks', :q => sc_query, :limit => 15)
+    @streamable_songs = []
+    @sc_tracks.each do |track|
+      if track.streamable == true && @streamable_songs.length < 5
+        @streamable_songs << track
+      end
+    end
+    @streamable_songs
   end
 
   def yt_search
