@@ -8,6 +8,7 @@ app.controller("UserCtrl", ["$scope", "$http", function($scope, $http) {
         password: user.password }
     }).success(function(data){
       console.log(data)
+
       //create session
       // redirect to user room page
     })

@@ -6,9 +6,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-      if @user.save
-        render json: @user
+    user = User.new(user_params)
+      if user.save
+        session = UsersController.create_session(user)
+        render json: { session: session, user: user, success: "You have logged in!"}
       end
   end
 
@@ -60,14 +61,6 @@ class UsersController < ApplicationController
       render json: {error: "User not found"}
     end
   end
-
-  def self.create_session(user)
-    session_key = "#{SecureRandom.base64}"
-    user.session_key = session_key
-    user.save
-    session_key
-  end
-
 
   def logout
     user = User.find_by_session_key(params[:session_key])
