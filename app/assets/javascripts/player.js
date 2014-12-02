@@ -1,11 +1,17 @@
 $(document).on("page:change", function(){
 
   SC.initialize({
-    client_id: "YOUR_CLIENT_ID",
+    client_id: "90bd68b0531687cfd7e24ede5bb5c013",
   });
 
-  SC.stream("/tracks/293", function(sound){
+  $(".track_title").attr("id")
+
+  SC.stream("/tracks/", function(sound){
     sound.play();
   });
 
+  $("queue_container")
+
 });
+
+// get id
