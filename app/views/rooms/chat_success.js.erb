@@ -3,4 +3,6 @@ var content = $("#chat_text_field").val()
 $("#chat_text_field").val("")
 
 
-$("#chat_bubble_area").append(content)
+$("#chat_bubble_area").append("<div id='chat_bubble' class='bd-sm'>" + content + "</div>")
+$("#chat_bubble").animate({ "top": 50 }, "slow" ).delay(2000);
+$("#chat_bubble").fadeOut();
