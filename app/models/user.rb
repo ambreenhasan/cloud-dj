@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   has_many :user_votes
 
   validates :first_name, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, format: { with: ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$ },
+    message: "only allows letters" }
 
   def invites_extended
     RoomInvite.where(inviter_id: self.id, accepted: 'false')
