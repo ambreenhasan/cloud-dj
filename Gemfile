@@ -19,6 +19,8 @@ gem 'rb-fsevent', '~> 0.9'
 
 gem 'turbolinks'
 
+gem 'owlcarousel-rails'
+
 # gem 'devise'
 
 # gem 'bower-rails'
