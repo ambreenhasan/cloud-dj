@@ -40,6 +40,17 @@ class RoomsController < ApplicationController
   def chat
     p params
     p "9" * 100
+    @chat = Chat.new(chat_params)
+    @chat.user_id = session[:user_id]
+    @chat.room_id = session[:room_id]
+    p @chat
+    respond_to do |format|
+      if @chat.save
+        format.js { :chat_success}
+      else
+        format.js { :chat_failure }
+      end
+    end
   end
 
 
@@ -47,7 +58,10 @@ class RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit(:name, :description, :publicness, :user_id)
-    params.requre(:chat).permit(:user_id, :room_id, :content)
+  end
+
+  def chat_params
+    params.require(:chat).permit(:user_id, :room_id, :content)
   end
 
 end

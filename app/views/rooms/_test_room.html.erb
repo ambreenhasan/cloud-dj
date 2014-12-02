@@ -5,8 +5,7 @@
 </ul>
 
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<%= form_for :chat, :html => {:method => :post}, :url => '/rooms/chat', remote: true do |f| %>
+      <%= f.text_field :content, :class => "bd-s p-l", :id => "text_field", :placeholder => "chat it up yo" %>
+      <div id="save_new_room_form_button"><%= f.submit :id => "submit" %> </div>
+  <% end %>
