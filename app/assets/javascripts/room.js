@@ -40,6 +40,12 @@ $(document).ready(function() {
       $("#ajax_home_thing").slideDown();
     })
 
+    $("#home_tab").on("click", function() {
+      $("#room").css("display", "none");
+      $('#profile_page').css("display", "none");
+      $("#ajax_home_thing").slideDown();
+    })
+
       $(".bounce").exBounce();
 
 
