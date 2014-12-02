@@ -1,0 +1,26 @@
+<div id="ajax_home_thing">
+      <div class="pl-l pt-i icon">
+        <% if @user %>
+          <h1>CLOUD DJ WELCOMES <br> YOU, <%= @user.first_name.upcase %>.</h1>
+       <% else %>
+          <h1>Cloud DJ</h1>
+        <% end %>
+        <p> This is an awesome description of the project.</p>
+        <p> So cool.</p>
+      </div>
+
+      <% if @user %>
+        <div id="list_menu_div">
+          <ul id="list_menu">
+            <li>Home</li>
+            <hr>
+            <li id="new_room_tab">New Room</li>
+            <hr>
+            <li>My Profile</li>
+            <hr>
+            <li><%= link_to 'Logout', users_logout_path, method: :post, remote: true %></li>
+          </ul>
+        </div>
+      <% end %>
+      <%= render 'rooms/new_room_form' %>
+    </div>

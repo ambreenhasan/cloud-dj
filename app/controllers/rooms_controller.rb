@@ -2,30 +2,21 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = Room.all
+    @room = Room.new
     render json: @rooms
   end
 
   def create
+    p params
+    p "$" *100
     @room = Room.new(room_params)
     respond_to do |f|
       if @room.save
-        f.json { render json: @room }
+        f.js { render :new_room }
       else
         f.json { render :index }
       end
     end
-  end
-
-  # def new
-  #   @room = Room.new
-  # end
-
-  def edit
-    @room = Room.find(params[:id])
-  end
-
-  def show
-    @room = Room.find(params[:id])
   end
 
   def update
@@ -35,7 +26,7 @@ class RoomsController < ApplicationController
       flash[:notice] = "Room updated!"
       redirect_to user_room_path
     else
-      flash[:notice] = "Room FAILed to update"
+      flash[:notice] = "Room failed to update"
       redirect_to user_room_path
     end
   end

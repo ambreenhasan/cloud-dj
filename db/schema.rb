@@ -17,14 +17,18 @@ ActiveRecord::Schema.define(version: 20141128224437) do
   enable_extension "plpgsql"
 
   create_table "friends", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "inviter_id"
+    t.integer  "invitee_id"
+    t.string   "accepted",   default: "false"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "room_invites", force: true do |t|
-    t.integer  "user_id"
+    t.integer  "inviter_id"
+    t.integer  "invitee_id"
     t.integer  "room_id"
+    t.string   "accepted",   default: "false"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -73,6 +77,7 @@ ActiveRecord::Schema.define(version: 20141128224437) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "password_hash"
+    t.string   "session_key"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
