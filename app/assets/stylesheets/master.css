@@ -253,3 +253,9 @@ hr {
 #login_form {
   border: 2px red solid;
   margin-top: 40em; }
+
+#avatar_list {
+  list-style-type: none; }
+
+#avatar_list li {
+  display: inline; }
