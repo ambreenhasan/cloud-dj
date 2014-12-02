@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
     if params
       session[:room_id] = params[:id]
+      # doesn't add user to this room in DB yet.
     end
   end
 
@@ -93,6 +94,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
+
 
 end
 
