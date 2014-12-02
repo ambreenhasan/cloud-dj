@@ -14,9 +14,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require angular
-//= require angular-route
-//= require angular-rails-templates
-//= require_tree ../templates
-// require ../../../vendor/assets/javascripts/soundcloud_sdk
+//= require turbolinks
+//= require jquery-ui
+//= require jquery-ui/effect-bounce
+//= require jquery-ui/effect-shake
+//= require owl.carousel
+//= require ../../../vendor/assets/javascripts/soundcloud_sdk
+//= require ../../../vendor/assets/javascripts/waveform.js
+
 //= require_tree .

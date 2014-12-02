@@ -16,13 +16,6 @@ class SongsController < ApplicationController
     end
   end
 
-  # def new
-  # end
-
-  def show
-    @song = Song.find_by(id: params[:id])
-  end
-
   def destroy
     song = Song.find(params[:id])
     song.destroy
