@@ -1,8 +1,7 @@
-
 <div id="my_rooms_carousel_div" class="bd-sm">
 
   <div id="my_rooms_carousel" class="owl-carousel owl-theme">
-    <% @joined_rooms.each do |roomuser| %>
+    <% @my_rooms.each do |roomuser| %>
       <div class="item"><h4><%= roomuser.room.name %></h4><br><h5><%= roomuser.room.description %></h5></div>
     <% end %>
 
