@@ -3,10 +3,10 @@ $(document).on("page:change", function(){
   var queue = [];
 
   var addSongsToQueue = function(){
-    var id = $("#queue_container ul button").attr("id")
-    var type = $("#queue_container ul button").attr("data-type")
-    var audio = $("#queue_container ul button").attr("data-track-link");
-    var trackTitle = $("#queue_container ul button").attr("data-track-title");
+    var id = $("#queue_container ul button").last().attr("id")
+    var type = $("#queue_container ul button").last().attr("data-type")
+    var audio = $("#queue_container ul button").last().attr("data-track-link");
+    var trackTitle = $("#queue_container ul button").last().attr("data-track-title");
 
 
     queue.push({
@@ -36,6 +36,7 @@ $(document).on("page:change", function(){
 
   $("#query_song_list").on("click", ".track_title", function() {
     var $deleteListTag = $(this).parent();
+
     $("#queue_container ul").append($(this))
     $deleteListTag.remove()
     addSongsToQueue();
