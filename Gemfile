@@ -15,6 +15,8 @@ gem 'httparty'
 
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails'
+
 gem 'rb-fsevent', '~> 0.9'
 
 gem 'turbolinks'
