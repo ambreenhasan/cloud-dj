@@ -1,1 +1,6 @@
-chat_success.js.erb
+// chat = @chat.content
+var content = $("#chat_text_field").val()
+$("#chat_text_field").val("")
+
+
+$("#chat_bubble_area").append(content)
