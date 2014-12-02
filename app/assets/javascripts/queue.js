@@ -22,14 +22,16 @@ $(document).on("page:change", function(){
 
   $("#fav_button").on("click", function(event){
     if ($(this).is(":checked")) {
-      var userid = 1
-      var songid = 2
-      var apiid = 3
+      var userid = 1//hardcoded
+      var apiid = 3//hardcoded
+      var roomid = 4//hardcoded
       var songtitle = $("#fav_button").attr("title")
       var songdesc = $("#fav_button").attr("description")
-      var pass_to_user_stars = {user_star: {user_id: userid, song_id: songid}}
-      var pass_to_songs = {songs: {user_id: userid, room_id: roomid, api_id: apiid, title: songtitle, description: songdesc}}
+      var pass_to_songs = {song: {user_id: userid, room_id: roomid, api_id: apiid, title: songtitle, description: songdesc}}
       console.log(pass_to_songs);
+
+      var songid = 0
+      var pass_to_user_stars = {user_star: {user_id: userid, song_id: songid}}
 
       $.ajax({
         url: '/users/'+userid+'/songs',//what is :user_id???, hardcoded in show.html.erb
@@ -37,25 +39,30 @@ $(document).on("page:change", function(){
         data: pass_to_songs
       })
       .done(function(response){
-        console.log('GOT A RESPONSE OMG!!!');
         console.log(response);
+        console.log(response.id);
+        songid = response.id;//not working
+        console.log('SONG SAVED TO DATABASE!');
+        save_user_star();
       })
       .fail(function(event){
-        console.log('YOURE A LOSER AND GET NO RESPONSE');
+        console.log('YOU FAILED BECAUSE YOURE A LOSER');
       })
 
-      $.ajax({
-        url: '/users/'+userid+'/user_stars',//what is :user_id???
-        type: 'post',
-        data: pass_to_user_stars
-      })
-      .done(function(response){
-        console.log(response);
-        console.log('FAVORITED THIS SONG!');
-      })
-      .fail(function(event){
-        console.log('YOURE A LOSER AND GET NO RESPONSE');
-      })
+      function save_user_star() {
+        $.ajax({
+          url: '/users/'+userid+'/user_stars',//what is :user_id???
+          type: 'post',
+          data: pass_to_user_stars
+        })
+        .done(function(response){
+          console.log(response);
+          console.log('FAVORITED THIS SONG!');
+        })
+        .fail(function(event){
+          console.log('YOURE A LOSER AND GET NO RESPONSE');
+        })
+      }
     }
   });
 });

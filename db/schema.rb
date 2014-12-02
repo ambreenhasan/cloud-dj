@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20141202153120) do
     t.integer  "user_id"
     t.integer  "room_id"
     t.string   "api_id"
+    t.text     "title"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
