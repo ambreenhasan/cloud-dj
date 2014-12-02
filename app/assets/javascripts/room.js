@@ -34,4 +34,18 @@ $(document).ready(function() {
     $("#hide_new_room_form_button").on("click", function() {
       $("#new_room_form_div").slideUp(500);
     })
+
+
+      $(".bounce").exBounce();
+
+
+
 })
+  $.fn.exBounce = function(){
+      var self = this;
+      (function runEffect(){
+          self.effect("bounce", { times:3 }, 300, runEffect);
+      })();
+     return this;
+
+  };
