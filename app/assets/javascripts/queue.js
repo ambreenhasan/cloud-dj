@@ -1,6 +1,8 @@
 $(document).on("page:change", function(){
   $("#query_song_list").on("click", ".track_title", function() {
+    var $deleteListTag = $(this).parent();
     $("#queue_container ul").append($(this))
+    $deleteListTag.remove()
   })
 
   $("#queue_container").on("click", ".track_title", function() {
