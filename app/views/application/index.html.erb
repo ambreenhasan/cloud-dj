@@ -1,1 +1,24 @@
-<div ng-view=""></div>
+ <div id="body" class="p-n mg-n ht-l bd-sm">
+
+  <%= render "homepage/top_bar" %>
+
+  <div id="home_body" class="ht-m bd-r">
+    <%= render "main_div" %>
+
+
+
+    <%= render :partial => "homepage/joined_rooms_carousel" %>
+  </div>
+
+
+<!-- need to move this somewhere better -->
+
+  <div id="home_trending_section" class="bd-sm bk-b ht-b">
+  <%= render :partial => 'homepage/trending_carousel' %>
+  </div>
+
+
+
+
+</div>
+
