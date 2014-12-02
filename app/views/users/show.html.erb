@@ -1,5 +1,5 @@
 <!-- when completed, this should be in room view -->
-
+<div id="sessionuserid" sessionid=""></div>
 <div id="song_search_bar">
    <%= render :partial => 'partials/search' %>
   <div id="query_song_list">
@@ -8,7 +8,7 @@
 </div>
 
 <div id="nowplaying">Now playing: <span id="currently_playing"></span>
-  <form action="/users/1/user_stars" method="post">
+  <form>
     <label>Favorite this song:</label>
     <input type="checkbox" id="fav_button" title="" description="" song_id="" >
   </form>
