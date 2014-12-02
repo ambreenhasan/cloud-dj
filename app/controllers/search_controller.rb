@@ -35,6 +35,6 @@ class SearchController < ApplicationController
     yt_videos.videos.each do |v|
       @yt_videos << v
     end
-   p @yt_videos
+   @yt_videos
   end
 end
