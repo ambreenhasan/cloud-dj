@@ -1,5 +1,28 @@
-# 10.times do
-#   User.create(email: Faker::Internet.email, encrypted_password: generated_password, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, username: Faker::Internet.user_name, location: Faker::Address.city)
+
+room_names = ["Cool Partay Room", "Welcome to the Fun", "Room 3", "Beep Bop", "Room 5", "Chill like Alex", "Alex's Dream", "Alex, the Cool", "Alex al Ex?", "Kangaroos Do's", "TeeHee For Me"]
+
+room_names.each do |name|
+  Room.create(name: name, description: "Blowing the roof off of quiet personal gatherings", publicness: true, user_id: 1)
+end
+
+people_names = ["Alex", "Ambreen", "Daniel", "Michael"]
+
+people_names.each do |name|
+  email = name + "@alex.alex"
+  User.create(first_name: name, email: email, password: "alex")
+end
+#   User.create(email: Faker::Internet.email, password_hash: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+
+#   RoomInvite.create(inviter_id: User.all.sample.id, invitee_id: User.all.sample.id, room_id: rand(1..10))
+
+#   Song.create(user_id: User.all.sample.id, room_id: rand(1..5), api_id: "#{rand(1..100)}")
+
+#   UserStar.create(song_id: rand(1..20), user_id: User.all.sample.id)
+
+# end
+
+# 100.times do
+#   UserVote.create(user_id: User.all.sample.id, song_id: Song.all.sample.id, room_id: rand(1..5))
 # end
 
 # 100.times do
