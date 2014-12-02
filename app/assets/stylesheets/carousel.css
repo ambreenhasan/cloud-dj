@@ -1,12 +1,16 @@
 #owl-demo .item {
   background: #3fbf79;
-  padding: 30px 0px;
+  height: 12em;
+  width: 12em;
   margin: 10px;
   color: #FFF;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  text-align: center; }
+  text-align: center;
+  border: 1px purple solid;
+  margin: 10px;
+  font-size: 18px; }
 
 .customNavigation {
   text-align: center; }
