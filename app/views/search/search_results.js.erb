@@ -8,7 +8,7 @@ $("#yt_song_list").empty();
 //for soundcloud: track.permalink_url
 
 <% @yt_videos.each do |video| %>
-  $("#yt_song_list").append('<li><button class="track_title" id="<%= video.video_id %>" data-type="yt" video_id="<%= video.video_id %>" data-track-title="<%= video.title %>"><%= video.title %></button></li>')
+  $("#yt_song_list").append('<li><button class="track_title" id="<%= video.video_id %>" data-type="yt" data-track-link="<%= video.video_id %>" data-track-title="<%= video.title %>"><%= video.title %></button></li>')
 <% end %>
 
 // attributes of video: http://ruby-doc.org/gems/docs/n/nddrylliog_youtube_it-2.1.4/YouTubeIt/Model/Video.html

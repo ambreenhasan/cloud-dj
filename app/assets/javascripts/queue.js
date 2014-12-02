@@ -55,13 +55,10 @@ $(document).on("page:change", function(){
 // get elements and push objects into queue that are put into
 // get duration for youtube and soundcloud
 // get stream or whatever of youtube
-// queue container
-// have controls for when a song is finished playing
-// the next song in the queue plays
+
+// when a song is finished playing the next song in the queue plays
 // songs can only be played one after the other
 // moderator can skip songs (i.e. next)
-
-// add data types for yt and sc to template
 
 // toggle between soundcloud player and youtube player
 
