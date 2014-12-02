@@ -9,8 +9,10 @@ $(document).on("page:change", function(){
     var currentItem = $("#queue_container .track_title").attr("id")
     SC.stream("/tracks/" + currentItem, function(sound){
     sound.play();
-  });
-
+    });
   })
 
+
 });
+
+

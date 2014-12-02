@@ -16,5 +16,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ../../../vendor/assets/javascripts/soundcloud_sdk
+//= require ../../../vendor/assets/javascripts/dancer.min.js
 
 //= require_tree .
