@@ -4,6 +4,8 @@ class CreateSongs < ActiveRecord::Migration
       t.references :user
       t.references :room
       t.string :api_id
+      t.text :title
+      t.text :description
 
       t.timestamps
     end
