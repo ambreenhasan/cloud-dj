@@ -33,7 +33,7 @@ $(document).on("page:change", function(){
     waveform.dataFromSoundCloudTrack(track);
     var streamOptions = waveform.optionsForSyncedStream();
     SC.stream(track.uri, streamOptions, function(stream){
-    $("#video_container").append(window.exampleStream = stream.play());
+    window.exampleStream = stream.play();
   });
 });
 });
