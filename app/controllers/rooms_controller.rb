@@ -9,14 +9,14 @@ class RoomsController < ApplicationController
   def create
     p params
     p "$" *100
-    # @room = Room.new(room_params)
-    # respond_to do |f|
-    #   if @room.save
-    #     f.json { render json: @room }
-    #   else
-    #     f.json { render :index }
-    #   end
-    # end
+    @room = Room.new(room_params)
+    respond_to do |f|
+      if @room.save
+        f.js { render :new_room }
+      else
+        f.json { render :index }
+      end
+    end
   end
 
   def update
