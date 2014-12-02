@@ -15,6 +15,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require owl.carousel
 //= require ../../../vendor/assets/javascripts/soundcloud_sdk
 
 //= require_tree .
