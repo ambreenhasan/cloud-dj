@@ -9,6 +9,11 @@ class UsersController < ApplicationController
       @my_rooms = Room.where(user_id: session[:user_id])
       @user = User.find(session[:user_id])
     end
+
+
+    if params
+      session[:room_id] = params[:id]
+    end
   end
 
   def update
@@ -70,6 +75,11 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.js { render :logout }
     end
+  end
+
+  def room_session
+    p "win" * 100
+    p params
   end
 
   def self.create_session(user)

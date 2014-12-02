@@ -1,9 +1,7 @@
 class RoomsController < ApplicationController
 
   def index
-    @rooms = Room.all
-    @room = Room.new
-    render json: @rooms
+    @room = Room.find(session[:room_id])
   end
 
   def create

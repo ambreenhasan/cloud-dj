@@ -1,15 +1,18 @@
 $(document).ready(function() {
 
   $(".item").on("click", function() {
-    var id = this.id
-    alert(id)
+    var room_id = this.id
+    // alert(room_id)
 
     $.ajax ({
       url: "/users",
-      type: "GET"
-    }).done(function() {alert("win")}).fail(function(){alert("fail")})
+      type: "GET",
+      data: {room_id: room_id}
+    }).done(renderRoom).fail(function(){alert("fail")})
   })
 
 
+  function renderRoom() {
 
+  }
 });
