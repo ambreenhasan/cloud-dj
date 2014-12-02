@@ -11,6 +11,9 @@ $(document).on("page:change", function(){
     var identifier = vid_id.substr(-11,11);
     var add_html = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+identifier+"?rel=0&autoplay=1' ></iframe>";
 
+    $("#fav_button").attr("title", title);
+    $("#fav_button").attr("song_id", identifier);
+
     $("#video_container").html(add_html);
     $('#currently_playing').text(title);
   });
