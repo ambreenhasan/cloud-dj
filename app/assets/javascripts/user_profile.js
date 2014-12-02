@@ -1,9 +1,17 @@
 $(document).ready(function(){
+
+  $("#user_profile").on("click", function(){
+    $(this).css("color", "blue");
+    $("#ajax_home_thing").hide();
+    $("#profile_page").slideDown()
+  })
+
+
   bindEvents();
 });
 
 function bindEvents() {
-  $('li#user_profile').on('click', Profile.showProfile)
+  // $('li#user_profile').on('click', Profile.showProfile)
   $('#accordion ul > li ul').click(function(event){
     event.stopPropagation();
   })

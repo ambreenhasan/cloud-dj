@@ -7,6 +7,9 @@
 
     <%= render :partial => "rooms/room" %>
 
+    <% if @user %>
+      <%= render 'users/side_bar' %>
+    <% end %>
   </div>
 
 
