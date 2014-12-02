@@ -1,12 +1,14 @@
-<% @sc_tracks.each do |track| %>
-  $("#sc_song_list").append('<li><%= track.title %></li>')
+<% @streamable_songs.each do |track| %>
+  $("#sc_song_list").append('<li > <button class="track_title" id="<%=track.id%>" data-track-link="<%= track.stream_url %>" data-track-title="<%= track.title %>"> <%= track.title %> </button> </li>')
 <% end %>
 
 //for soundcloud: track.permalink_url
 
 <% @yt_videos.each do |video| %>
-  $("#yt_song_list").append('<li><%= video.title %><br><%= video.description %></li>')
+  $("#yt_song_list").append('<li><%= video.title %><br><%= video.video_id %></li>')
 <% end %>
 
 // attributes of video: http://ruby-doc.org/gems/docs/n/nddrylliog_youtube_it-2.1.4/YouTubeIt/Model/Video.html
 // video.video_id for identifier
+
+
