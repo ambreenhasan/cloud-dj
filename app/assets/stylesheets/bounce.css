@@ -1,0 +1,19 @@
+/*.lights {
+  width:100%;
+  padding:10% 0;
+  background-color:red;
+}*/
+.bounce {
+  color: green;
+  width:30px; height:30px;
+  border-radius:2px;
+  /*call animation*/
+  animation:flashing 2s infinite;
+}
+
+@keyframes flashing {
+   0%   { opacity: 0; }
+  50%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
