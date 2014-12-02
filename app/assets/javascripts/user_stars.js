@@ -3,10 +3,9 @@ $(document).on("page:change", function(){
     if ($(this).is(":checked")) {
       var userid = 1//hardcoded
       var apiid = 3//hardcoded
-      var roomid = 4//hardcoded
       var songtitle = $("#fav_button").attr("title")
       var songdesc = $("#fav_button").attr("description")
-      var pass_to_songs = {song: {user_id: userid, room_id: roomid, api_id: apiid, title: songtitle, description: songdesc}}
+      var pass_to_songs = {song: {user_id: userid, api_id: apiid, title: songtitle, description: songdesc}}
       console.log(pass_to_songs);
 
       var songid = 0
