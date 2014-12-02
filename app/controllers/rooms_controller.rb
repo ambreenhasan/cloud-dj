@@ -7,8 +7,6 @@ class RoomsController < ApplicationController
   end
 
   def create
-    p params
-    p "$" *100
     @room = Room.new(room_params)
     respond_to do |f|
       if @room.save

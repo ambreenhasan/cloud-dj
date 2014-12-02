@@ -2,12 +2,11 @@
 <div id="my_rooms_carousel_div" class="bd-sm">
 
   <div id="my_rooms_carousel" class="owl-carousel owl-theme">
-    <div class="item"><h1>1</h1></div>
-    <div class="item"><h1>2</h1></div>
-    <div class="item"><h1>3</h1></div>
-    <div class="item"><h1>4</h1></div>
-    <div class="item"><h1>5</h1></div>
-  </div>
+    <% @joined_rooms.each do |room| %>
+      <div class="item"><h4><%= room.room.name %></h4><br><h5><%= room.room.description %></h5></div>
+    <% end %>
+
+
 
   <div class="customNavigation">
     <a class="btn prev">Previous</a>
