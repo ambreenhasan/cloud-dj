@@ -4,6 +4,8 @@ class UsersController < ApplicationController
       @users = User.all
       @rooms = Room.where(publicness: "t")
     if session[:user_id]
+      @joined_rooms = RoomUser.where(user_id: session[:user_id])
+      @my_rooms = Room.where(user_id: session[:user_id])
       @user = User.find(session[:user_id])
     end
   end
