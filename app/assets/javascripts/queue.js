@@ -12,8 +12,8 @@ $(document).on("page:change", function(){
     var add_html = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+identifier+"?rel=0&autoplay=1' ></iframe>";
 
     $("#video_container").html(add_html);
-
     $('#currently_playing').text(title);
-  })
-})
+  });
+});
+
 
