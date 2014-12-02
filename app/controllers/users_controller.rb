@@ -4,7 +4,16 @@ class UsersController < ApplicationController
       @users = User.all
       @rooms = Room.where(publicness: "t")
     if session[:user_id]
+      p RoomUser.where(user_id: session[:user_id])
+      @joined_rooms = RoomUser.where(user_id: session[:user_id])
+      @my_rooms = Room.where(user_id: session[:user_id])
       @user = User.find(session[:user_id])
+    end
+
+
+    if params
+      session[:room_id] = params[:id]
+      # doesn't add user to this room in DB yet.
     end
   end
 
@@ -69,6 +78,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def room_session
+    p "win" * 100
+    p params
+  end
+
   def self.create_session(user)
     session_key = "#{SecureRandom.base64}"
     user.session_key = session_key
@@ -80,6 +94,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
+
 
 end
 
