@@ -10,15 +10,6 @@ $(document).on("page:change", function(){
     SC.stream("/tracks/" + currentItem, function(sound){
     sound.play();
     });
-
-  var dancer = new Dancer();
-
-  // Using an audio object
-  var a = new Audio();
-  dancer.load(document.getElementsByTagName('audio')[0] );
-  })
-
-
+  });
 });
-
 
