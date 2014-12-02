@@ -19,25 +19,25 @@ $(document).on("page:change", function(){
   });
 
   $("#fav_button").on("click", function(event){
-    event.preventDefault();
+    if ($(this).is(":checked")) {
+      var userid = 1
+      var songid = 2
+      var pass_this = {user_star: {user_id: userid, song_id: songid}}
+      console.log(pass_this);
 
-    var userid = 1
-    var pass_this = {title: $(this).attr('title'), song_id: $(this).attr('song_id')}
-    console.log(pass_this);
-
-    $.ajax({
-      url: '/users/'+userid+'/user_stars',//what is :user_id???
-      type: 'post',
-      data: pass_this
-    })
-    .done(function(response){
-      console.log('GOT A RESPONSE OMG!!!');
-      console.log(response);
-    })
-    .fail(function(event){
-      console.log('YOURE A LOSER AND GET NO RESPONSE');
-    })
-
+      $.ajax({
+        url: '/users/'+userid+'/user_stars',//what is :user_id???
+        type: 'post',
+        data: pass_this
+      })
+      .done(function(response){
+        console.log('GOT A RESPONSE OMG!!!');
+        console.log(response);
+      })
+      .fail(function(event){
+        console.log('YOURE A LOSER AND GET NO RESPONSE');
+      })
+    }
   });
 });
 

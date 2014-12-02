@@ -8,7 +8,9 @@
 </div>
 
 <div id="nowplaying">Now playing: <span id="currently_playing"></span>
-<button id="fav_button" title="" song_id="">Favorite this song</button>
+  <form action="/users/1/user_stars" method="post">
+    <input type="checkbox" id="fav_button" title="" song_id="" value="Favorite this song">
+  </form>
 </div>
 
 <div id="video_container" class="">

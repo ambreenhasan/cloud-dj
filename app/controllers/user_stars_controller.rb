@@ -1,5 +1,9 @@
 class UserStarsController < ApplicationController
   def create
+    p 'params is:'
+    p params
+    p 'user_star_params is:'
+    p user_star_params
     @user_star = UserStar.new(user_star_params)
     render json: @user_star if @user_star.save
   end
