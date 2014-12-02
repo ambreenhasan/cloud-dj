@@ -5,6 +5,10 @@ $(document).on("page:change", function(){
 
 
 
+
+
+
+
   // $("#query_song_list").on("click", ".track_title", function() {
   //   var $deleteListTag = $(this).parent();
   //   $("#queue_container ul").append($(this))
@@ -22,15 +26,13 @@ $(document).on("page:change", function(){
   // });
 });
 
-// add a queue array
 // get elements and push objects into queue that are put into
 // queue container
 // have controls for when a song is finished playing
 // the next song in the queue plays
-// if another song is clicked, the song before it is
 // songs can only be played one after the other
-// moderator can skip songs
+// moderator can skip songs (i.e. next)
 
-// add data types
+// add data types for yt and sc to template
 
 
