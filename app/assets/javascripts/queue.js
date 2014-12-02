@@ -6,6 +6,7 @@ $(document).on("page:change", function(){
     var id = $("#queue_container ul button").last().attr("id")
     var type = $("#queue_container ul button").last().attr("data-type")
     var audio = $("#queue_container ul button").last().attr("data-track-link");
+    var duration = $("#queue_container ul button").last().attr("data-track-duration");
     var trackTitle = $("#queue_container ul button").last().attr("data-track-title");
 
 
@@ -13,13 +14,15 @@ $(document).on("page:change", function(){
       id: id,
       type: type,
       audio: audio,
+      duration: duration,
       trackTitle: trackTitle
     })
 
     console.log(queue)
   }
 
-  var playSong = function(){
+  var playSong = function() {
+
 
   }
 
@@ -52,9 +55,6 @@ $(document).on("page:change", function(){
   // });
 });
 
-// get elements and push objects into queue that are put into
-// get duration for youtube and soundcloud
-// get stream or whatever of youtube
 
 // when a song is finished playing the next song in the queue plays
 // songs can only be played one after the other
