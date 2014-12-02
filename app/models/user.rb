@@ -2,13 +2,17 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   has_many :friends
   has_many :rooms
+  has_many :chats
   has_many :room_invites
   has_many :user_stars
   has_many :user_votes
 
   validates :first_name, presence: true
-  validates :email, presence: true, format: { with: ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$ },
-    message: "only allows letters" }
+
+  validates :email, presence: true
+  validates :email, uniqueness: true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
+  validates :password, presence: true
 
   def invites_extended
     RoomInvite.where(inviter_id: self.id, accepted: 'false')

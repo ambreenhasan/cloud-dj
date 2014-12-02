@@ -1,10 +1,8 @@
 class UsersController < ApplicationController
 
   def index
-    # @rooms = Room.all
-    # @room = Room.new
-    # session[:user_id] = 1
-    # @user = User.new
+      @users = User.all
+      @rooms = Room.where(publicness: "t")
     if session[:user_id]
       @user = User.find(session[:user_id])
     end
