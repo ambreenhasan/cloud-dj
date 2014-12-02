@@ -156,10 +156,25 @@ h1 {
   position:relative;
 }
 
-  #hide_new_room_form_button:hover {
-    background-color: $dblue;
-    border: 2px $black solid;
-  }
+#hide_new_room_form_button:hover {
+  background-color: $dblue;
+  border: 2px $black solid;
+}
+
+#home_button {
+  width: 5em;
+  margin: 1em;
+  margin-left: 15em;
+  float:right;
+  text-align: center;
+  top: -10em;
+  position:relative;
+}
+
+#home_button:hover {
+  background-color: $dblue;
+  border: 2px $black solid;
+}
 
 #check_box {
   margin: 1em;

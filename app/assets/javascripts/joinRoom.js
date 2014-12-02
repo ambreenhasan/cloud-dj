@@ -12,7 +12,6 @@ $(document).ready(function() {
   })
 
   function renderRoom() {
-    alert("hohohho");
     $("#ajax_home_thing").remove();
     $("#room").slideDown(1000)
   }
