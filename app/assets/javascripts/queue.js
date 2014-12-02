@@ -36,7 +36,6 @@ $(document).on("page:change", function(){
 
   $("#query_song_list").on("click", ".track_title", function() {
     var $deleteListTag = $(this).parent();
-
     $("#queue_container ul").append($(this))
     $deleteListTag.remove()
     addSongsToQueue();
@@ -54,6 +53,8 @@ $(document).on("page:change", function(){
 });
 
 // get elements and push objects into queue that are put into
+// get duration for youtube and soundcloud
+// get stream or whatever of youtube
 // queue container
 // have controls for when a song is finished playing
 // the next song in the queue plays
@@ -61,5 +62,8 @@ $(document).on("page:change", function(){
 // moderator can skip songs (i.e. next)
 
 // add data types for yt and sc to template
+
+// toggle between soundcloud player and youtube player
+
 
 
