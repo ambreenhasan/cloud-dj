@@ -46,7 +46,7 @@ class RoomsController < ApplicationController
     p @chat
     respond_to do |format|
       if @chat.save
-        format.js { :chat_success}
+        format.js { :chat_success, :locals => {chat: @chat} }
       else
         format.js { :chat_failure }
       end
