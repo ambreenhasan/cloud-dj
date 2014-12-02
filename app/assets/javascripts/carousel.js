@@ -29,5 +29,7 @@ $(document).ready(function() {
 }
 
 carouselMagic("#trending_carousel", 3)
+carouselMagic("#my_rooms_carousel", 3)
+carouselMagic("#joined_rooms_carousel", 3)
 
 });
