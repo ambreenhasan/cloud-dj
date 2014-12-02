@@ -246,8 +246,8 @@ hr {
 
 #video_container {
   background-color: black;
-  width: 450px;
-  height: 350px;
+  width: 480px;
+  height: 390px;
   margin: 0 auto;
   margin-top: 2%;
 }
@@ -257,7 +257,4 @@ hr {
   margin-top: 1%;
 
 }
-
-
-
 /*# sourceMappingURL=room.css.map */
