@@ -37,10 +37,17 @@ class RoomsController < ApplicationController
     redirect_to user_rooms_path
   end
 
+  def chat
+    p params
+    p "9" * 100
+  end
+
+
   private
 
   def room_params
     params.require(:room).permit(:name, :description, :publicness, :user_id)
+    params.requre(:chat).permit(:user_id, :room_id, :content)
   end
 
 end
