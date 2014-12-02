@@ -2,18 +2,44 @@ $(document).on("page:change", function(){
 
   var queue = [];
 
+  var addSongsToQueue = function(){
+    var id = $("#queue_container ul button").attr("id")
+    var type = $("#queue_container ul button").attr("data-type")
+    var audio = $("#queue_container ul button").attr("data-track-link");
+    var trackTitle = $("#queue_container ul button").attr("data-track-title");
+
+
+    queue.push({
+      id: id,
+      type: type,
+      audio: audio,
+      trackTitle: trackTitle
+    })
+
+    console.log(queue)
+  }
+
+  var playSong = function(){
+
+  }
+
+  var playNextSong = function(){
+
+  }
+
+  var skipSong = function(){
+
+  }
 
 
 
 
-
-
-
-  // $("#query_song_list").on("click", ".track_title", function() {
-  //   var $deleteListTag = $(this).parent();
-  //   $("#queue_container ul").append($(this))
-  //   $deleteListTag.remove()
-  // })
+  $("#query_song_list").on("click", ".track_title", function() {
+    var $deleteListTag = $(this).parent();
+    $("#queue_container ul").append($(this))
+    $deleteListTag.remove()
+    addSongsToQueue();
+  })
 
   // $("#queue_container").on("click", ".track_title", function() {
   //   var title = $(this).attr('data-track-title');
