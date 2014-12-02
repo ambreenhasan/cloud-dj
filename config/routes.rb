@@ -15,6 +15,10 @@ Rails.application.routes.draw do
 get '/search' => "search#search"
 post '/search' => "search#search"
 
+ post 'users/login' => "users#login"
+ post 'users/logout' => "users#logout"
+
+
   resources :users do
     resources :user_votes, only: [:create]
     resources :friends, only: [:index, :create, :destroy]

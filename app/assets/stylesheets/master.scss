@@ -4,6 +4,7 @@ $beige:#FFFFEC;
 $dblue:#75ACD1;
 $lblue:#BAE7E8;
 $gray:#333333;
+$red:#9C1616;
 $medium:12em;
 
 
@@ -24,6 +25,7 @@ body {background-color:$white;}
 .c-db {color: $dblue;}
 .c-lb {color: $lblue;}
 .c-g {color: $gray;}
+.c-r {color: $red;}
 
 .ff-g {font-family:Garamond;}
 
@@ -33,6 +35,7 @@ body {background-color:$white;}
 .pt-i {padding-top: -10em;}
 .pl-r {padding-left: 40em;}
 .pl-c {padding-left: 25em;}
+.pl-l {padding-left: 10em;}
 .p-in {padding-left: 1em; padding-right: 1em;}
 .mg-n {margin: 0;}
 .mgr-s {margin-right: 20em; }
@@ -158,12 +161,12 @@ h1 {
     border: 2px $black solid;
   }
 
-  #check_box {
-    margin: 1em;
-    margin-left: 1.5em;
-    font-size: 20px;
-    color: $gray;
-  }
+#check_box {
+  margin: 1em;
+  margin-left: 1.5em;
+  font-size: 20px;
+  color: $gray;
+}
 
 #submit {
   width: 8em;
@@ -208,4 +211,10 @@ hr {
   margin-left: -2.5em;
   width: 1em;
 }
+
+#login_form {
+  border: 2px red solid;
+  margin-top: 40em;
+}
+
 
