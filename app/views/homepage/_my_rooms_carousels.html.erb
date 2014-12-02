@@ -1,0 +1,17 @@
+<div id="my_rooms_carousel_div" class="bd-sm">
+
+  <div id="my_rooms_carousel" class="owl-carousel owl-theme">
+    <% @my_rooms.each do |roomuser| %>
+       <% id = roomuser.room.id %>
+      <div class="item" id=<%="#{id}" %>><h4><%= roomuser.room.name %></h4><br><h5><%= roomuser.room.description %></h5></div>
+    <% end %>
+
+
+
+  <div class="customNavigation">
+    <a class="btn prev">Previous</a>
+    <a class="btn next">Next</a>
+    <a class="btn play">Autoplay</a>
+    <a class="btn stop">Stop</a>
+  </div>
+</div>
