@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_hash
       t.string :session_key
 
-
       t.timestamps
     end
   end
