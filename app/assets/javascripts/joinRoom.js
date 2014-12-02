@@ -12,7 +12,7 @@ $(document).ready(function() {
   })
 
   function renderRoom() {
-    $("#ajax_home_thing").remove();
+    $("#ajax_home_thing").css("display", "none");
     $("#room").slideDown(1000)
   }
 
