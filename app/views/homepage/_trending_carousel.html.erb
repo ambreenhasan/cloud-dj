@@ -1,0 +1,21 @@
+<div id="trending">
+      <h1 class="c-g ff-g p-in">HEY YOU ARE SO COOL CHECKOUT THESE SPIFFY TRENDING ROOMS SCROLL DOWN DO IT YOU COOL KID.</h1>
+      <div id="trending_carousel_div">
+        <h1 class="c-db">TRENDING PUBLIC ROOMS</h1>
+
+        <div id="trending_carousel" class="owl-carousel owl-theme">
+          <% @rooms.each do |room| %>
+          <% id = room.id %>
+          <div class="item" id=<%="#{id}" %>><h4><%= room.name %></h4><br><h5><%= room.description %></h5></div>
+          <% end %>
+        </div>
+
+        <div class="customNavigation">
+          <a class="btn prev">Previous</a>
+          <a class="btn next">Next</a>
+          <a class="btn play">Autoplay</a>
+          <a class="btn stop">Stop</a>
+        </div>
+
+      </div>
+    </div>

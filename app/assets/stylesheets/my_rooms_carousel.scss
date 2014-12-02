@@ -1,0 +1,29 @@
+#my_rooms_carousel .item{
+  background: #3fbf79;
+  padding: 3px 0px;
+  margin: 5px;
+  color: black;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  height: 80%;
+}
+.custom Navigation{
+  text-align: center;
+}
+//use styles below to disable ugly selection
+.custom Navigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#my_rooms_carousel_div {
+  background-color: yellow;
+  height: 15em;
+  width: 45em;
+}
