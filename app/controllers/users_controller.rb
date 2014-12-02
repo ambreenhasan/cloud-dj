@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-      @rooms = Room.all
+      @rooms = Room.where(publicness: "t")
     if session[:user_id]
       @user = User.find(session[:user_id])
     end
