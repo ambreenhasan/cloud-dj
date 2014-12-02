@@ -1,3 +1,6 @@
+$("#sc_song_list").empty();
+$("#yt_song_list").empty();
+
 <% @streamable_songs.each do |track| %>
   $("#sc_song_list").append('<li> <button class="track_title" id="<%=track.id%>" data-track-link="<%= track.stream_url %>" data-track-title="<%= track.title %>"> <%= track.title %> </button> </li>')
 <% end %>
