@@ -7,9 +7,35 @@ $(document).on("page:change", function(){
 
   $("#queue_container").on("click", ".track_title", function(){
     var currentItem = $("#queue_container .track_title").attr("id")
-    SC.stream("/tracks/" + currentItem, function(sound){
-    sound.play();
-    });
+    SC.get("/tracks/" + currentItem, function(track){
+      var waveform = new Waveform({
+      container: document.getElementById(track.id),
+      innerColor: "#333",
+      interpolate: false
   });
+    var data = [];
+
+    var ctx = waveform.context;
+
+    var gradient = ctx.createLinearGradient(0, 0, 0, waveform.height);
+    gradient.addColorStop(0.0, "#f60");
+    gradient.addColorStop(1.0, "#ff1b00");
+    waveform.innerColor = gradient;
+
+    var i=0;
+    setInterval(function(){
+      data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
+      waveform.update({
+        data: data
+      });
+    }, 50);
+
+    waveform.dataFromSoundCloudTrack(track);
+    var streamOptions = waveform.optionsForSyncedStream();
+    SC.stream(track.uri, streamOptions, function(stream){
+    $("#video_container").append(window.exampleStream = stream.play());
+  });
+});
+});
 });
 
