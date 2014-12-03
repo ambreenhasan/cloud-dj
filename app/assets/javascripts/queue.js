@@ -63,6 +63,7 @@ $(document).on("page:change", function(){
     // var streamOptions = waveform.optionsForSyncedStream();
     SC.stream(track.uri, {onfinish: function(){
         isPlaying = false;
+        $("#soundcloud").empty();
         $("#queue_container ul button:first-child").remove();
         queue.shift();
         playSong();
