@@ -27,10 +27,18 @@ class RoomsController < ApplicationController
     end
   end
 
+  def join
+    user = User.find_by(id: params[:user_id])
+    room = Room.find_by(id: params[:id])
+    @join = RoomUser.new(user_id: user.id, room_id: room.id)
+    format.js { render :join_room, :locals => {room: @join } if @join.save
+  end
+
   def destroy
     room = Room.find(params[:id])
     room.destroy
-    # {room_id: params[:id]}.to_json
+    @room = room
+    format.js { render :my_rooms_carousels, :locals => {room: @room} }
   end
 
   def chat
