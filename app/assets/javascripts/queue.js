@@ -1,6 +1,7 @@
 $(document).on("page:change", function(){
   var isPlaying = false;
   var queue = [];
+  var deleteFromQueueMode = false;
 
   var addSongsToQueue = function(){
     var id = $("#queue_container ul button").last().attr("id")
@@ -20,8 +21,6 @@ $(document).on("page:change", function(){
       duration: parseInt(duration),
       trackTitle: trackTitle
     })
-
-    console.log(queue)
   }
 
   var playSong = function(id) {
@@ -42,7 +41,6 @@ $(document).on("page:change", function(){
     });
 
     var data = [];
-
     var ctx = waveform.context;
 
     var gradient = ctx.createLinearGradient(0, 0, 0, waveform.height);
@@ -60,7 +58,6 @@ $(document).on("page:change", function(){
 
     waveform.dataFromSoundCloudTrack(track);
     isPlaying = true;
-    // var streamOptions = waveform.optionsForSyncedStream();
     SC.stream(track.uri, {onfinish: function(){
         isPlaying = false;
         $("#soundcloud").empty();
@@ -75,25 +72,10 @@ $(document).on("page:change", function(){
   }
   }
 
-  var playVideo = function() {
-    var vidId = queue[0].id;
-    var identifier = vidId.substr(-11,11);
-    var addHtml = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+ identifier +"?rel=0&autoplay=1' ></iframe>";
-    $("#youtube").html(addHtml);
-}
-
-  var skipSong = function(){
+  var removeSongFromQueue = function(){
     // when a button is toggled
-
+    $("#queue_container ul").on("click", ".track_title", )
   }
-//soundcloud duration
-// 457368 / 1000 = 457
-// 457 / 60 = minutes
-// 457 % 60 = seconds
-
-//youtube duration
-// 457 / 60 = minutes
-// 457 % 60 = seconds
 
   $("#query_song_list").on("click", ".track_title", function() {
     var $deleteListTag = $(this).parent();
@@ -104,15 +86,25 @@ $(document).on("page:change", function(){
     if ((queue.length === 1) || (isPlaying === false)) {
       playSong();
     }
-    // if ($.trim($("#youtube").html()) == "") {
-    //    playVideo();
-    // }
   })
 });
+//   var playVideo = function() {
+//     var vidId = queue[0].id;
+//     var identifier = vidId.substr(-11,11);
+//     var addHtml = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+ identifier +"?rel=0&autoplay=1' ></iframe>";
+//     $("#youtube").html(addHtml);
+// }
 
 
 // songs can only be played one after the other
 // when a song is finished playing the next song in the queue plays
 // moderator can skip songs (i.e. next)
 
-// toggle between soundcloud player and youtube player
+//soundcloud duration
+// 457368 / 1000 = 457
+// 457 / 60 = minutes
+// 457 % 60 = seconds
+
+//youtube duration
+// 457 / 60 = minutes
+// 457 % 60 = seconds
