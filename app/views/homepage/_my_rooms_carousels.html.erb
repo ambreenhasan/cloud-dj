@@ -2,13 +2,12 @@
 
   <div id="my_rooms_carousel" class="owl-carousel owl-theme">
     <% @my_rooms.each do |room| %>
-      <div class="item" id=<%="#{room.id}" %>>
+      <div class="item" id="<%= room.id %>">
         <h4><%= room.name %></h4><br>
         <h5><%= room.description %></h5>
-        <%= link_to url: "/users/#{room.user_id}/rooms/#{room.id}", method: :delete, remote: true do %>
-          <button>Delete!</button>
+        <%= form_tag("/users/#{room.user_id}/rooms/#{room.id}", method: :delete, remote: true) do %>
+          <%= submit_tag "delete" %>
         <% end %>
-
       </div>
     <% end %>
 
