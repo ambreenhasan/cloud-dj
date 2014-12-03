@@ -2,8 +2,8 @@ $(document).on("page:change", function(){
   $("#fav_button").on("click", function(event){
     if ($(this).is(":checked")) {
       var userid = $("#sessionuserid").attr("sessionid")
-      var apiid = $("#queue_container ul").first().attr("id")
-      var songtitle = $("#queue_container ul").first().attr("data-title-title")
+      var apiid = $("#queue_container ul button").first().attr("id")
+      var songtitle = $("#queue_container ul button").first().attr("data-track-title")
       var pass_to_songs = {song: {user_id: userid, api_id: apiid, title: songtitle}}
 
       var songid = 0
