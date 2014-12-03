@@ -73,6 +73,7 @@ $(document).on("page:change", function(){
 
     waveform.dataFromSoundCloudTrack(track);
     isPlaying = true;
+    $("#currently_playing").text(queue[0].trackTitle);
     SC.stream(track.uri, {onfinish: function(){
         isPlaying = false;
         $("#soundcloud").empty();
