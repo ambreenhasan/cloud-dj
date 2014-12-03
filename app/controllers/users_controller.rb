@@ -4,7 +4,19 @@ class UsersController < ApplicationController
       @users = User.all
       @rooms = Room.where(publicness: "t")
     if session[:user_id]
+      p RoomUser.where(user_id: session[:user_id])
+      @joined_rooms = RoomUser.where(user_id: session[:user_id])
+      @my_rooms = Room.where(user_id: session[:user_id])
       @user = User.find(session[:user_id])
+    end
+
+
+    if params
+      session[:room_id] = params[:id]
+      # doesn't add user to this room in DB yet.
+      # respond_to do |format|
+      #   format.js { render 'rooms/render_room' }
+      # end
     end
   end
 
@@ -64,9 +76,15 @@ class UsersController < ApplicationController
 
   def logout
     session[:user_id] = nil
+    @user = nil
     respond_to do |format|
       format.js { render :logout }
     end
+  end
+
+  def room_session
+    p "win" * 100
+    p params
   end
 
   def self.create_session(user)
@@ -80,6 +98,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
   end
+
 
 end
 

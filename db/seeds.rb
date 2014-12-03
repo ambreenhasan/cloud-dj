@@ -5,11 +5,15 @@ room_names.each do |name|
   Room.create(name: name, description: "Blowing the roof off of quiet personal gatherings", publicness: true, user_id: 1)
 end
 
-people_names = ["Alex", "Ambreen", "Daniel", "Michael"]
+people_names = ["alex", "Ambreen", "Daniel", "Michael"]
 
 people_names.each do |name|
   email = name + "@alex.alex"
   User.create(first_name: name, email: email, password: "alex")
+end
+
+100.times do
+  RoomUser.create(room_id: rand(1..10), user_id: 1)
 end
 #   User.create(email: Faker::Internet.email, password_hash: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
 

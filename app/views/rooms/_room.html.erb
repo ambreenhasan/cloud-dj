@@ -1,4 +1,11 @@
-<% if @room %>
-  <%= @room.name %>
-  <%= @room.description %>
-<% end %>
+<div id="room" class="dsp-n">
+  <div id="home_button" class="bd-sm pd-l ">
+    Home
+  </div>
+
+  <% if @room %>
+    <%= @room.name %>
+    <%= @room.description %>
+  <% end %>
+
+</div>
