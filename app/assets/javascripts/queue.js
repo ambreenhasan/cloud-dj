@@ -27,11 +27,10 @@ $(document).on("page:change", function(){
         soundManager.stopAll();
     }
 
-    // $("#queue_container ul button").find()
-
     if (queue[0].type == "sc") {
       var currentItem = queue[0].id
       SC.get("/tracks/" + currentItem, function(track){
+        $("#soundcloud").empty();
       var waveform = new Waveform({
       container: document.getElementById("soundcloud"),
       innerColor: "#333",
@@ -67,32 +66,15 @@ $(document).on("page:change", function(){
   var playVideo = function() {
 
     var vidId = queue[0].id;
-    console.log(vidId)
     var identifier = vidId.substr(-11,11);
-    console.log(identifier)
     var addHtml = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+ identifier +"?rel=0&autoplay=1' ></iframe>";
-      $("#youtube").html(addHtml);
+    $("#youtube").html(addHtml);
 }
-
-
-
-  var playNextSong = function(){
-    // if (queue[0].duration) {
-    //     queue.shift();
-    //     playSong()
-    //   // if sc, something, else (something else)
-    //  // when the duration of song is equal to the duration
-    //  // pop the song off and play song
-
-    // }
-
-  }
 
   var skipSong = function(){
     // when a button is toggled
 
   }
-
 
 // 457368 / 1000 = 457
 // 457 / 60 = minutes
@@ -106,23 +88,24 @@ $(document).on("page:change", function(){
 
     if ($.trim($("#soundcloud").html()) == "") {
        playSong();
+      $("#soundcloud").empty();
     }
 
     if ($.trim($("#youtube").html()) == "") {
        playVideo();
     }
+
+      var iterate = setInterval(function(){
+
+      if (queue.length > 0 ) {
+        playVideo();
+        playSong();
+        queue.shift();
+      }
+    }, queue[0].duration)
   })
 
 
-  // $("#queue_container").on("click", ".track_title", function() {
-  //   var title = $(this).attr('data-track-title');
-  //   var vid_id = $(this).attr('video_id');
-  //   var identifier = vid_id.substr(-11,11);
-  //   var add_html = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+identifier+"?rel=0&autoplay=1' ></iframe>";
-
-  //   $("#video_container").html(add_html);
-  //   $('#currently_playing').text(title);
-  // });
 });
 
 
