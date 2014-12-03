@@ -218,28 +218,44 @@ hr {
 }
 
 #profile_page {
-  height: 20em;
-  width: 66em;
-  margin-left: 25em;
+  border: 2px blue solid;
+  height: 26em;
+  width: 80em;
   position: relative;
 }
 
 
-#accordion{
-  margin-left: -25px;
-  width: 67em;
+#accordion {
+  width: 79em;
+  border: 5px green solid;
+  height: 25em;
+  overflow: scroll;
 }
 
 #accordion ul {
   list-style-type: none;
+  margin: 0 0 0 0;
+  background-color: $dblue;
 }
 
 #accordion ul li {
   border: 2px black solid;
-  padding: 3px;
+  margin: 2px 10px 4px -35px;
+  padding-left: 3px;
   background-color: $lblue;
+  border-radius: 20px 20px 0px 0px;
 }
 
+#accordion ul li ul {
+  background-color: $lblue;
+  border: 4px pink solid;
+}
+
+#accordion ul li h6 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 6px;
+}
 
 #list_menu_div {
   margin-top: -8em;
