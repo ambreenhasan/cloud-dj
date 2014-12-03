@@ -35,6 +35,7 @@ $(document).on("page:change", function(){
           data: pass_to_user_stars
         })
         .done(function(response){
+
           console.log('FAVORITED THIS SONG!');
         })
         .fail(function(event){

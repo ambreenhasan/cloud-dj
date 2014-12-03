@@ -6,8 +6,6 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
-    p "Printing params:"
-    p params
     respond_to do |f|
       if @song.save
 
