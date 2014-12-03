@@ -3,8 +3,10 @@
   <%= render "homepage/top_bar" %>
 
   <div id="home_body" class="ht-m bd-r">
-    <!-- < %= render "main_div" % >  broken -->
+    <%= render "main_div" %>
+
     <%= render "user_profile" %>
+
     <%= render :partial => "rooms/room" %>
 
     <% if @user %>

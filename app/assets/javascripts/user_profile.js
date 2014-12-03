@@ -3,7 +3,8 @@ $(document).ready(function(){
   $("#user_profile").on("click", function(){
     alert("Hello");
     $(this).css("color", "blue");
-    // $("#ajax_home_thing").hide();
+    // $("#ajax_home_thing").css("display", "none");
+    $("#ajax_home_thing").remove();
     $("#profile_page").slideDown();
   })
 

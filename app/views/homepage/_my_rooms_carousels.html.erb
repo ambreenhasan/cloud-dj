@@ -3,8 +3,8 @@
   <div id="my_rooms_carousel" class="owl-carousel owl-theme">
     <% if @my_rooms %>
       <% @my_rooms.each do |roomuser| %>
-         <% id = roomuser.room.id %>
-        <div class="item" id=<%="#{id}" %>><h4><%= roomuser.room.name %></h4><br><h5><%= roomuser.room.description %></h5></div>
+         <% id = roomuser.id %>
+        <div class="item" id=<%="#{id}" %>><h4><%= roomuser.name %></h4><br><h5><%= roomuser.description %></h5></div>
       <% end %>
     <% else %>
       <h3>You don't have any rooms yet!</h3>
