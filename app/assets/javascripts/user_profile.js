@@ -2,8 +2,8 @@ $(document).ready(function(){
 
   $("#user_profile").on("click", function(){
     $(this).css("color", "blue");
-    $("#ajax_home_thing").css("display", "none");
-    // $("#ajax_home_thing").remove();
+    // $("#ajax_home_thing").css("display", "none");
+    $("#ajax_home_thing").slideUp();
     $("#profile_page").slideDown();
   })
 
