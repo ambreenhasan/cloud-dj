@@ -39,10 +39,12 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+    id = params[:id]
     room = Room.find(params[:id])
     room.destroy
-    @room = room
-    format.js { render :my_rooms_carousels, :locals => {room: @room} }
+    respond_to do |format|
+      format.js { render :my_rooms_carousel, :locals => {id: id} }
+    end
   end
 
   def chat
