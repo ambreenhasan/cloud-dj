@@ -3,6 +3,7 @@ class SearchController < ApplicationController
   def search
     sc_search
     yt_search
+    @user_id = session[:user_id]
 
     respond_to do |format|
       format.js { render :search_results }
@@ -35,6 +36,5 @@ class SearchController < ApplicationController
     yt_videos.videos.each do |v|
       @yt_videos << v
     end
-    @yt_tracks
   end
 end
