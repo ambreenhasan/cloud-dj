@@ -5,7 +5,11 @@ class RoomsController < ApplicationController
   end
 
   def create
+    p params
+    p "3" * 100
     @room = Room.new(room_params)
+    p @room
+    @room.user_id = session[:user_id]
     respond_to do |f|
       if @room.save
         f.js { render :new_room }
@@ -31,7 +35,7 @@ class RoomsController < ApplicationController
     user = User.find_by(id: params[:user_id])
     room = Room.find_by(id: params[:id])
     @join = RoomUser.new(user_id: user.id, room_id: room.id)
-    format.js { render :join_room, :locals => {room: @join } if @join.save
+    format.js { render :join_room, :locals => {room: @join } } if @join.save
   end
 
   def destroy
