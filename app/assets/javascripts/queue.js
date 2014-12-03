@@ -2,6 +2,18 @@ $(document).on("page:change", function(){
   var isPlaying = false;
   var queue = [];
   var deleteFromQueueMode = false;
+  var muted = false;
+  var currentTrack = "";
+
+  $(document).on("click", "#mute_button", function() {
+    if (muted === false) {
+      muted = true;
+      currentTrack.mute();
+    } else {
+      muted = false;
+      currentTrack.unmute();
+    };
+  });
 
   $(document).on("click", "#delete_button", function() {
     if (deleteFromQueueMode === false) {
@@ -72,6 +84,8 @@ $(document).on("page:change", function(){
         playSong();
       }
     }, function(stream){
+      console.log(stream);
+      currentTrack = stream;
     window.exampleStream = stream.play();
     });
   });
@@ -94,4 +108,8 @@ $(document).on("page:change", function(){
       playSong();
     }
   })
+
+  var skipCurrentSong = function() {
+
+  }
 });
