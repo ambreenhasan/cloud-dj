@@ -3,12 +3,12 @@
 
   <div id="my_rooms_carousel" class="owl-carousel owl-theme">
     <p>my joined rooms</p>
-    <% @joined_rooms.each do |roomuser| %>
-      <% id = roomuser.room.id %>
+    <% @joined_rooms.each do |room| %>
+      <% id = room.id %>
       <div class="item" id=<%="#{id}" %> >
-        <h4><%= roomuser.room.name %></h4>
+        <h4><%= room.name %></h4>
         <br>
-        <h5><%= roomuser.room.description %></h5>
+        <h5><%= room.description %></h5>
       </div>
     <% end %>
 
