@@ -17,7 +17,6 @@
 //= require turbolinks
 //= require jquery-ui
 //= require jquery-ui/effect-bounce
-//= require jquery-ui/effect-shake
 //= require owl.carousel
 //= require ../../../vendor/assets/javascripts/soundcloud_sdk
 //= require ../../../vendor/assets/javascripts/waveform.js

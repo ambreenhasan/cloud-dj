@@ -1,14 +1,10 @@
 class RoomsController < ApplicationController
 
   def index
-    @rooms = Room.all
-    @room = Room.new
-    render json: @rooms
+    @room = Room.find(session[:room_id])
   end
 
   def create
-    p params
-    p "$" *100
     @room = Room.new(room_params)
     respond_to do |f|
       if @room.save
@@ -34,7 +30,7 @@ class RoomsController < ApplicationController
   def destroy
     room = Room.find(params[:id])
     room.destroy
-    redirect_to user_rooms_path
+    # {room_id: params[:id]}.to_json
   end
 
   def chat
