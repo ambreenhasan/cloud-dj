@@ -10,7 +10,9 @@ class SongsController < ApplicationController
     p params
     respond_to do |f|
       if @song.save
+
         flash[:notice] = "Song added to database"
+        f.json { render json: @song }
       else
         f.json { redirect_to user_songs_path }
         f.html { redirect_to user_songs_path, notice: "Failed to save"}
