@@ -1,8 +1,9 @@
 <div id="accordion">
   <ul>
-    <li><h6 id='users_own_rooms'>Rooms you created</h6>
-      <ul>
+    <li><h6>Rooms you created</h6>
+      <ul id='users_own_rooms'>
         <li>Room I created</li>
+        <li><%= render 'homepage/my_rooms_carousels' %></li>
       </ul>
     </li>
     <li><h6 id='users_rooms_joined'>Rooms you are a part of</h6>

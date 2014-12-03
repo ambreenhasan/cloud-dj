@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 
 function bindEvents() {
-  $('li#user_profile').on('click', Profile.showProfile)
+  $('#user_profile').on('click', Profile.showProfile)
   $('#accordion ul > li ul').click(function(event){
     event.stopPropagation();
   })
