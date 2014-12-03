@@ -33,7 +33,8 @@ $(document).on("page:change", function() {
               var waveform = new Waveform({
                 container: document.getElementById("soundcloud"),
                 innerColor: "#333",
-                width: ($('#player_container').width()) * 0.9,
+                width: ($('#player_container').width()) * 1.0,
+                height: ($('#player_container').height()) * 0.2,
                 interpolate: false
               });
 
