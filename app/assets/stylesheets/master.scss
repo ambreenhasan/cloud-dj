@@ -113,9 +113,10 @@ h1 {
 }
 
 #new_room_form_div {
-  float: right;
-  margin-right: 2em;
-  top: -12em;
+  width: 35em;
+  height: 28em;
+  top: -5em;
+  margin-left: 23em;
   position: relative;
 }
 
@@ -244,7 +245,6 @@ hr {
 #profile_page {
   height: 20em;
   width: 66em;
-
   margin-left: 25em;
   position: relative;
 }
