@@ -4,13 +4,12 @@ $(document).on("page:change", function(){
   var deleteFromQueueMode = false;
 
   $(document).on("click", "#delete_button", function() {
-    console.log("toggling the delete mode!");
     if (deleteFromQueueMode === false) {
       deleteFromQueueMode = true;
-      console.log('delete mode ON');
+      $("#delete_mode_toggle").text("ON");
     } else {
       deleteFromQueueMode = false;
-      console.log('delete mode OFF');
+      $("#delete_mode_toggle").text("OFF");
     };
   });
 
@@ -20,10 +19,6 @@ $(document).on("page:change", function(){
     var audio = $("#queue_container ul button").last().attr("data-track-link");
     var duration = $("#queue_container ul button").last().attr("data-track-duration");
     var trackTitle = $("#queue_container ul button").last().attr("data-track-title");
-
-    if (type === "yt") {
-      duration *= 1000
-    }
 
     queue.push({
       id: id,
@@ -84,7 +79,6 @@ $(document).on("page:change", function(){
   }
 
   $("#queue_container ul").on("click", ".track_title", function(){
-    console.log('HI!!!');
     if (deleteFromQueueMode === true) {
       $(this).remove();
     }
@@ -101,23 +95,3 @@ $(document).on("page:change", function(){
     }
   })
 });
-//   var playVideo = function() {
-//     var vidId = queue[0].id;
-//     var identifier = vidId.substr(-11,11);
-//     var addHtml = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+ identifier +"?rel=0&autoplay=1' ></iframe>";
-//     $("#youtube").html(addHtml);
-// }
-
-
-// songs can only be played one after the other
-// when a song is finished playing the next song in the queue plays
-// moderator can skip songs (i.e. next)
-
-//soundcloud duration
-// 457368 / 1000 = 457
-// 457 / 60 = minutes
-// 457 % 60 = seconds
-
-//youtube duration
-// 457 / 60 = minutes
-// 457 % 60 = seconds
