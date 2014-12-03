@@ -1,5 +1,5 @@
 $(document).on("page:change", function(){
-
+  var isPlaying = false;
   var queue = [];
 
   var addSongsToQueue = function(){
@@ -9,6 +9,9 @@ $(document).on("page:change", function(){
     var duration = $("#queue_container ul button").last().attr("data-track-duration");
     var trackTitle = $("#queue_container ul button").last().attr("data-track-title");
 
+    if (type === "yt") {
+      duration *= 1000
+    }
 
     queue.push({
       id: id,
@@ -28,9 +31,9 @@ $(document).on("page:change", function(){
     }
 
     if (queue[0].type == "sc") {
+      $("#soundcloud").empty();
       var currentItem = queue[0].id
       SC.get("/tracks/" + currentItem, function(track){
-        $("#soundcloud").empty();
       var waveform = new Waveform({
       container: document.getElementById("soundcloud"),
       innerColor: "#333",
@@ -55,8 +58,14 @@ $(document).on("page:change", function(){
     }, 50);
 
     waveform.dataFromSoundCloudTrack(track);
-    var streamOptions = waveform.optionsForSyncedStream();
-    SC.stream(track.uri, streamOptions, function(stream){
+    isPlaying = true;
+    // var streamOptions = waveform.optionsForSyncedStream();
+    SC.stream(track.uri, {onfinish: function(){
+        isPlaying = false;
+        queue.shift();
+        playSong();
+      }
+    }, function(stream){
     window.exampleStream = stream.play();
     });
   });
@@ -64,7 +73,6 @@ $(document).on("page:change", function(){
   }
 
   var playVideo = function() {
-
     var vidId = queue[0].id;
     var identifier = vidId.substr(-11,11);
     var addHtml = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+ identifier +"?rel=0&autoplay=1' ></iframe>";
@@ -75,8 +83,12 @@ $(document).on("page:change", function(){
     // when a button is toggled
 
   }
-
+//soundcloud duration
 // 457368 / 1000 = 457
+// 457 / 60 = minutes
+// 457 % 60 = seconds
+
+//youtube duration
 // 457 / 60 = minutes
 // 457 % 60 = seconds
 
@@ -86,26 +98,13 @@ $(document).on("page:change", function(){
     $deleteListTag.remove()
     addSongsToQueue();
 
-    if ($.trim($("#soundcloud").html()) == "") {
-       playSong();
-      $("#soundcloud").empty();
+    if ((queue.length === 1) || (isPlaying === false)) {
+      playSong();
     }
-
-    if ($.trim($("#youtube").html()) == "") {
-       playVideo();
-    }
-
-      var iterate = setInterval(function(){
-
-      if (queue.length > 0 ) {
-        playVideo();
-        playSong();
-        queue.shift();
-      }
-    }, queue[0].duration)
+    // if ($.trim($("#youtube").html()) == "") {
+    //    playVideo();
+    // }
   })
-
-
 });
 
 
@@ -114,6 +113,3 @@ $(document).on("page:change", function(){
 // moderator can skip songs (i.e. next)
 
 // toggle between soundcloud player and youtube player
-
-
-
