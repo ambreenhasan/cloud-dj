@@ -1,13 +1,15 @@
 <!-- when completed, this should be in room view -->
 <div id="sessionuserid" sessionid=""></div>
 <div id="song_search_bar">
-   <%= render :partial => 'partials/search' %>
+  <%= render :partial => 'partials/search' %>
   <div id="query_song_list">
-  <%= render :partial => 'partials/search_results' %>
+    <%= render :partial => 'partials/search_results' %>
   </div>
 </div>
 
-<div id="nowplaying">Now playing: <span id="currently_playing"></span>
+
+<div id="nowplaying">
+  Now playing: <span id="currently_playing"></span>
   <form>
     <label>Favorite this song:</label>
     <input type="checkbox" id="fav_button" title="" description="" song_id="" >
@@ -16,10 +18,10 @@
 
 <div id="video_container" class="">
 
+<div id="video_container" class="">
 </div>
 
 <div id="queue_container" class="">
   <ul>
-
   </ul>
 </div>

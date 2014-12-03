@@ -1,0 +1,13 @@
+<% if @user %>
+  <div id="list_menu_div" class="ps-a">
+    <ul id="list_menu">
+      <li id="home_tab">Home</li>
+      <hr>
+      <li id="new_room_tab">New Room</li>
+      <hr>
+      <li id='user_profile'>My Profile</li>
+      <hr>
+      <li><%= link_to 'Logout', users_logout_path, method: :post, remote: true %></li>
+    </ul>
+  </div>
+<% end %>
