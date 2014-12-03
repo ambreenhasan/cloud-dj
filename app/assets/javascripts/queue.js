@@ -23,7 +23,7 @@ $(document).on("page:change", function(){
 
   var playSong = function(id) {
     // prevents two songs from playing at the same time
-     if(typeof(soundManager) !== 'undefined'){
+     if(typeof(soundManager) !== "undefined"){
         soundManager.stopAll();
     }
 
@@ -63,9 +63,10 @@ $(document).on("page:change", function(){
   });
   }
     else {
-      // problems: starts drawing the second song but doesnt play(that is good)
-      // and resets the play of the first song when another song is added
-
+    var title = $(this).attr('data-track-title');
+    var vid_id = $(this).attr('video_id');
+    var identifier = vid_id.substr(-11,11);
+    var add_html = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+identifier+"?rel=0&autoplay=1' ></iframe>";
 
     }
   }
@@ -97,8 +98,12 @@ $(document).on("page:change", function(){
     $("#queue_container ul").append($(this))
     $deleteListTag.remove()
     addSongsToQueue();
-    playSong();
+
+    if ($.trim($("#soundcloud").html()) == "") {
+       playSong();
+    }
   })
+
 
   // $("#queue_container").on("click", ".track_title", function() {
   //   var title = $(this).attr('data-track-title');
