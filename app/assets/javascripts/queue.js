@@ -44,7 +44,6 @@ $(document).on("page:change", function(){
         soundManager.stopAll();
     }
 
-    if (queue[0].type == "sc") {
       $("#soundcloud").empty();
       var currentItem = queue[0].id
       SC.get("/tracks/" + currentItem, function(track){
@@ -74,7 +73,10 @@ $(document).on("page:change", function(){
     waveform.dataFromSoundCloudTrack(track);
     isPlaying = true;
     $("#currently_playing").text(queue[0].trackTitle);
-    SC.stream(track.uri, {onfinish: function(){
+    SC.stream(track.uri, {onplay:function(){
+        console.log('Playing a song!');
+        //onplay, start dancing!
+      }, onfinish: function(){
         isPlaying = false;
         $("#soundcloud").empty();
         $("#queue_container ul button:first-child").remove();
@@ -86,7 +88,6 @@ $(document).on("page:change", function(){
     window.exampleStream = stream.play();
     });
   });
-  }
   }
 
   $("#queue_container ul").on("click", ".track_title", function(){
