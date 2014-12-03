@@ -5,9 +5,10 @@
       <div class="item" id="<%= room.id %>">
         <h4><%= room.name %></h4><br>
         <h5><%= room.description %></h5>
-        <%= form_tag("/users/#{room.user_id}/rooms/#{room.id}", method: :delete, remote: true) do %>
-          <%= submit_tag "delete" %>
-        <% end %>
+        <form class='delete_my_room' action="<%= "/users/#{room.user_id}/rooms/#{room.id}" %>" method="post" data-no-turbolink>
+          <input type="hidden" name="_method" value="delete">
+          <input type='submit' value='delete'>
+        </form>
       </div>
     <% end %>
 
