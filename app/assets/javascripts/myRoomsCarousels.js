@@ -3,19 +3,22 @@ $(document).ready(function() {
 });
 
 function bindEvents() {
-  $('div.delete_my_room').on('submit', Server.deleteRoom)
+  alert('ohh')
+  $('.item').on('click', '.delete' Server.deleteRoom)
 }
 
 var Server = (function() {
   function deleteRoom(e) {
+    alert('fak')
     e.preventDefault();
-    $url = $('form.delete_my_room').attr('action')
+    var url = $(this).attr('id');
     var ajaxRequest = $.ajax({
-      url: $url,
+      url: url,
       type: 'DELETE'
     })
     ajaxRequest.done(View.deleteRoom).fail(function(){alert('fuckoff')});
     }
+
     return {
       deleteRoom: deleteRoom
   }
@@ -23,11 +26,12 @@ var Server = (function() {
 
 var View = (function() {
   function deleteRoom(data){
-    var roomId = data.room_id;
-    alert('fak')
+    alert('ew')
+    var roomId = data.id;
     $roomSelector = $('div.item#'+roomId);
     $roomSelector.remove();
   }
+
   return {
     deleteRoom: deleteRoom
   }

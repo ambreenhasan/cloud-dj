@@ -30,7 +30,8 @@ class RoomsController < ApplicationController
   def destroy
     room = Room.find(params[:id])
     room.destroy
-    # {room_id: params[:id]}.to_json
+    @room = room
+    render json: @room
   end
 
   def chat

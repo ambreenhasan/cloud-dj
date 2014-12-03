@@ -4,10 +4,7 @@
       <div class="item" id="<%= room.id %>">
         <h4><%= room.name %></h4><br>
         <h5><%= room.description %></h5>
-        <form class='delete_my_room' action="<%= "/users/#{room.user_id}/rooms/#{room.id}" %>" method="post" data-no-turbolink>
-          <input type="hidden" name="_method" value="delete">
-          <input type='submit' value='delete'>
-        </form>
+        <button class='delete' id="<%= "/users/#{room.user_id}/rooms/#{room.id}" %>">delete</button></a>
       </div>
     <% end %>
   </div>
