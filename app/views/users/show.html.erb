@@ -8,7 +8,12 @@
 </div>
 
 
-<div>Now playing: <span id="currently_playing"></span></div>
+<div>Now playing: <span id="currently_playing"></span>
+  <form>
+    <label>Favorite this song:</label>
+    <input type="checkbox" id="fav_button" title="" description="" song_id="" >
+  </form>
+</div>
 
 <div id="player_container">
   <ul>
@@ -22,20 +27,7 @@
   </div>
 </div>
 
-<div id="nowplaying">
-  Now playing: <span id="currently_playing"></span>
-  <form>
-    <label>Favorite this song:</label>
-    <input type="checkbox" id="fav_button" title="" description="" song_id="" >
-  </form>
-</div>
-
-
-
-<div id="video_container" class="">
-</div>
-
-<div id="delete"></div>
+<div id="delete_button">Toggle Delete mode: <img src="../../assets/images/skipbutton.png" /><span id="delete_mode_toggle">OFF</span></div>
 <div id="queue_container" class="">
   <ul>
   </ul>

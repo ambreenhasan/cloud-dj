@@ -3,6 +3,17 @@ $(document).on("page:change", function(){
   var queue = [];
   var deleteFromQueueMode = false;
 
+  $(document).on("click", "#delete_button", function() {
+    console.log("toggling the delete mode!");
+    if (deleteFromQueueMode === false) {
+      deleteFromQueueMode = true;
+      console.log('delete mode ON');
+    } else {
+      deleteFromQueueMode = false;
+      console.log('delete mode OFF');
+    };
+  });
+
   var addSongsToQueue = function(){
     var id = $("#queue_container ul button").last().attr("id")
     var type = $("#queue_container ul button").last().attr("data-type")
@@ -72,10 +83,12 @@ $(document).on("page:change", function(){
   }
   }
 
-  var removeSongFromQueue = function(){
-    // when a button is toggled
-    $("#queue_container ul").on("click", ".track_title", )
-  }
+  $("#queue_container ul").on("click", ".track_title", function(){
+    console.log('HI!!!');
+    if (deleteFromQueueMode === true) {
+      $(this).remove();
+    }
+  })
 
   $("#query_song_list").on("click", ".track_title", function() {
     var $deleteListTag = $(this).parent();
