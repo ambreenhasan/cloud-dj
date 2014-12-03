@@ -81,7 +81,6 @@ $(document).on("page:change", function(){
         playSong();
       }
     }, function(stream){
-      console.log(stream);
       currentTrack = stream;
     window.exampleStream = stream.play();
     });
@@ -105,8 +104,4 @@ $(document).on("page:change", function(){
       playSong();
     }
   })
-
-  var skipCurrentSong = function() {
-
-  }
 });
