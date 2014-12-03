@@ -19,6 +19,7 @@ post '/search' => "search#search"
  post 'users/logout' => "users#logout"
  post 'rooms/chat' => "rooms#chat"
  post 'users/room_session' => "user#session"
+ post 'users/:user_id/rooms/:id/join' => "rooms#join"
 
   resources :users do
     resources :user_votes, only: [:create]
