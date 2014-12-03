@@ -45,9 +45,11 @@ $(document).ready(function() {
     $item.addClass('sti-current');
 
 
-      $wrapper.animate({"background-color": "000"}, 300);
-      $movingItems.animate({"color": "purple"}, 300);
-      $wrapper.animate({"top": "-15px"}, 200);
+      $wrapper.animate({"background-color": "yellow"}, 200);
+      // $wrapper.css("border", "5px purple dotted");
+      $wrapper.css("box-shadow", "1px 1px 2px purple");
+      $movingItems.animate({"color": "purple"}, 200);
+      $wrapper.animate({"top": "-15px"}, 100);
 
     // $movingItems.each(function(i) {
     //     var $item           = $(this),
@@ -91,9 +93,9 @@ $(document).ready(function() {
         hovercolor  = $item.data('hovercolor');
     $item.removeClass('sti-current');
 
-    $wrapper.animate({"background-color": "#fff"}, 500);
-    $movingItems.animate({"color": "#000"}, 500);
-    $wrapper.animate({"top": "0px"}, 200);
+    $wrapper.animate({"background-color": "#fff"}, 300);
+    $movingItems.animate({"color": "#000"}, 300);
+    $wrapper.animate({"top": "0px"}, 100);
 
     // $movingItems.each(function(i) {
     //   var $item           = $(this),
