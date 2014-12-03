@@ -37,6 +37,7 @@ $(document).on("page:change", function(){
       var waveform = new Waveform({
       container: document.getElementById("soundcloud"),
       innerColor: "#333",
+      width: ($('#player_container').width()) * 0.9,
       interpolate: false
     });
 
@@ -62,6 +63,7 @@ $(document).on("page:change", function(){
     // var streamOptions = waveform.optionsForSyncedStream();
     SC.stream(track.uri, {onfinish: function(){
         isPlaying = false;
+        $("#queue_container ul button:first-child").remove();
         queue.shift();
         playSong();
       }
