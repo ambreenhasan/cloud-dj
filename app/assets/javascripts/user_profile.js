@@ -4,6 +4,7 @@ $(document).ready(function(){
     $(this).css("color", "blue");
     // $("#ajax_home_thing").css("display", "none");
     $("#ajax_home_thing").slideUp();
+    $("#new_room_form_div").slideUp(500);
     $("#profile_page").slideDown();
   })
 

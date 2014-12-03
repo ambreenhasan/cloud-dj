@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   function renderRoom() {
     $("#ajax_home_thing").css("display", "none");
+    $("#profile_page").css("display", "none");
     $("#room").slideDown(1000)
   }
 
