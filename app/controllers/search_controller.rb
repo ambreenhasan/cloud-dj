@@ -2,7 +2,6 @@ class SearchController < ApplicationController
 
   def search
     sc_search
-    # yt_search
     @user_id = session[:user_id]
 
     respond_to do |format|
@@ -25,17 +24,4 @@ class SearchController < ApplicationController
     end
     @streamable_songs
   end
-
-  # def yt_search
-  #   yt_client = YouTubeIt::Client.new(:dev_key => "AIzaSyAnhBoT9bDXfFK7hOJ6faQhb8lD45Tza8o")
-
-  #   yt_query = params[:search][:query]
-
-  #   yt_videos = yt_client.videos_by(:query => yt_query, :page => 1, :per_page => 5)
-  #   @yt_videos = []
-  #   yt_videos.videos.each do |v|
-  #     @yt_videos << v
-  #   end
-  #  @yt_videos
-  # end
 end

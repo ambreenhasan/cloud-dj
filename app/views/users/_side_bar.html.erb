@@ -1,13 +1,65 @@
-<% if @user %>
+<!-- < % if @user % >
   <div id="list_menu_div" class="ps-a">
     <ul id="list_menu">
       <li id="home_tab">Home</li>
       <hr>
-      <li id="new_room_tab">New Room</li>
+      <li id="new_room_tab" >New Room</li>
       <hr>
-      <li id='user_profile'>My Profile</li>
+      <li id='user_profile' >My Profile</li>
       <hr>
-      <li><%= link_to 'Logout', users_logout_path, method: :post, remote: true %></li>
+      <li>< %= link_to 'Logout', users_logout_path, method: :post, remote: true % ></li>
     </ul>
   </div>
-<% end %>
+< % end % >
+ -->
+
+<ul id="sti-menu" class="sti-menu">
+    <li data-hovercolor="#37c5e9">
+        <a href="#" id="home_tab">
+            <h2 data-type="mText" class="sti-item">
+                Home
+            </h2>
+            <h3 data-type="sText" class="sti-item">
+                It's just our logo.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-home sti-item">
+            </span>
+        </a>
+    </li>
+    <li data-hovercolor="#37c5e9">
+        <a href="#" id="new_room_tab">
+            <h2 data-type="mText" class="sti-item">
+                New Room
+            </h2>
+            <h3 data-type="sText" class="sti-item">
+                Be the best host ever.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-room sti-item">
+            </span>
+        </a>
+    </li>
+    <li data-hovercolor="#37c5e9">
+        <a href="#" id='user_profile'>
+            <h2 data-type="mText" class="sti-item">
+                Profile
+            </h2>
+            <h3 data-type="sText" class="sti-item">
+                Who are you?
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-profile sti-item">
+            </span>
+        </a>
+    </li>
+    <li data-hovercolor="#37c5e9">
+        <a href="#">
+            <h2 data-type="mText" class="sti-item">
+                Logout
+            </h2>
+            <h3 data-type="sText" class="sti-item">
+                Go outside.
+            </h3>
+            <span data-type="icon" class="sti-icon sti-icon-logout sti-item">
+            </span>
+        </a>
+    </li>
+</ul>

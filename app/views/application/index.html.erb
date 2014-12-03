@@ -1,23 +1,25 @@
 <div id="body" class="p-n mg-n ht-l bd-sm">
   <%= render "homepage/top_bar" %>
 
-  <div id="home_body" class="ht-m bd-r">
-    <%= render "main_div" %>
-    <%= render "user_profile" %>
-    <%= render :partial => "rooms/room" %>
+  <div id="body_main">
+    <div id="home_body" >
+      <%= render "main_div" %>
 
-    <div class='user_profile' style="display:none;">
-      <%= render 'users/user_profile' %>
+      <% if @user %>
+        <%= render "user_profile" %>
+        <%= render :partial => "rooms/room" %>
+        <div class='user_profile' style="display:none;">
+          <%= render 'users/user_profile' %>
+        </div>
+        <%= render 'rooms/new_room_form' %>
+      <% end %>
     </div>
-
-    <%= render 'rooms/new_room_form' %>
-
-    <% if @user %>
-      <%= render 'users/side_bar' %>
-    <% end %>
   </div>
 
   <div id="home_trending_section" class="bd-sm bk-b ht-b">
+    <% if @user %>
+      <%= render 'users/side_bar' %>
+    <% end %>
     <%= render :partial => 'homepage/trending_carousel' %>
   </div>
 </div>

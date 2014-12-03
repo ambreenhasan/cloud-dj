@@ -1,14 +1,19 @@
 <div id="my_rooms_carousel_div" class="bd-sm">
   <div id="my_rooms_carousel" class="owl-carousel owl-theme">
-    <% @my_rooms.each do |room| %>
-      <div class="item" id="<%= room.id %>">
-        <h4><%= room.name %></h4><br>
-        <h5><%= room.description %></h5>
-        <form class='delete_my_room' action="<%= "/users/#{room.user_id}/rooms/#{room.id}" %>" method="post" data-no-turbolink>
-          <input type="hidden" name="_method" value="delete">
-          <input type='submit' value='delete'>
-        </form>
-      </div>
+    <% if @my_rooms %>
+      <% @my_rooms.each do |room| %>
+        <div class="item" id="<%= room.id %>">
+          <h4><%= room.name %></h4>
+          <br>
+          <h5><%= room.description %></h5>
+          <%= form_tag("/users/#{room.user_id}/rooms/#{room.id}", method: :delete, remote: true) do %>
+            <div class="delete"><%= submit_tag 'Delete' %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% else %>
+      <h3>You don't have any rooms yet!</h3>
     <% end %>
   </div>
 

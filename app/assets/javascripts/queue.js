@@ -51,6 +51,7 @@ $(document).on("page:change", function(){
       container: document.getElementById("soundcloud"),
       innerColor: "#333",
       width: ($('#player_container').width()) * 0.9,
+      height: ($('#player_container').height()) * 0.2,
       interpolate: false
     });
 
