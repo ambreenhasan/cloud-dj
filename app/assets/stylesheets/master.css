@@ -5,7 +5,7 @@ body {
 body {
   background-color: white; }
 
- .bk-b {
+.bk-b {
   background-color: #080308; }
 
 .bk-g {
@@ -298,3 +298,15 @@ hr {
 
 #list_menu li:hover {
   color: #75acd1; }
+
+#home_body {
+  border: 2px red solid;
+  height: 26em;
+  width: 80em;
+  margin: 0 auto 0 auto; }
+
+#body_main {
+  border: 7px green solid;
+  height: 27em;
+  position: relative;
+  margin-top: -3em; }
