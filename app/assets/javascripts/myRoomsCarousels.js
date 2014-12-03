@@ -1,34 +1,38 @@
-$(document).ready(function() {
-  bindEvents();
-});
+// $(document).ready(function() {
+//   bindEvents();
+// });
 
-function bindEvents() {
-  $('div.delete_my_room').on('submit', Server.deleteRoom)
-}
+// function bindEvents() {
+//   alert('ohh')
+//   $('.item').on('click', '.delete' Server.deleteRoom)
+// }
 
-var Server = (function() {
-  function deleteRoom(e) {
-    e.preventDefault();
-    $url = $('form.delete_my_room').attr('action')
-    var ajaxRequest = $.ajax({
-      url: $url,
-      type: 'DELETE'
-    })
-    ajaxRequest.done(View.deleteRoom).fail(function(){alert('fuckoff')});
-    }
-    return {
-      deleteRoom: deleteRoom
-  }
-})();
+// var Server = (function() {
+//   function deleteRoom(e) {
+//     alert('fak')
+//     e.preventDefault();
+//     var url = $(this).attr('id');
+//     var ajaxRequest = $.ajax({
+//       url: url,
+//       type: 'DELETE'
+//     })
+//     ajaxRequest.done(View.deleteRoom).fail(function(){alert('fuckoff')});
+//     }
 
-var View = (function() {
-  function deleteRoom(data){
-    var roomId = data.room_id;
-    alert('fak')
-    $roomSelector = $('div.item#'+roomId);
-    $roomSelector.remove();
-  }
-  return {
-    deleteRoom: deleteRoom
-  }
-})();
+//     return {
+//       deleteRoom: deleteRoom
+//   }
+// })();
+
+// var View = (function() {
+//   function deleteRoom(data){
+//     alert('ew')
+//     var roomId = data.id;
+//     $roomSelector = $('div.item#'+roomId);
+//     $roomSelector.remove();
+//   }
+
+//   return {
+//     deleteRoom: deleteRoom
+//   }
+// })();

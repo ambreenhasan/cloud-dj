@@ -6,9 +6,12 @@
     <%= render "user_profile" %>
     <%= render :partial => "rooms/room" %>
 
-    <div class='user_profile' style="display:none;">
-      <%= render 'users/user_profile' %>
-    </div>
+    <% if @user %>
+      <div class='user_profile' style="display:none;">
+        <%= render 'users/user_profile' %>
+      </div>
+    <% end %>
+
 
     <%= render 'rooms/new_room_form' %>
 
