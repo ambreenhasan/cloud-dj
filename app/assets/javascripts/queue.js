@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).on("page:change", function(){
   var isPlaying = false;
   var queue = [];
