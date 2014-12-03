@@ -35,8 +35,10 @@ $(document).on("page:change", function(){
           data: pass_to_user_stars
         })
         .done(function(response){
-
+          $('#fav_button').attr('checked', false);
+          $("#favorited").append("Song has been added to your favorites.").fadeOut(5000)
           console.log('FAVORITED THIS SONG!');
+
         })
         .fail(function(event){
           console.log('YOURE A LOSER AND GET NO RESPONSE');
