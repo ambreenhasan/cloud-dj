@@ -62,24 +62,29 @@ $(document).on("page:change", function(){
     });
   });
   }
-    else {
-    var title = $(this).attr('data-track-title');
-    var vid_id = $(this).attr('video_id');
-    var identifier = vid_id.substr(-11,11);
-    var add_html = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+identifier+"?rel=0&autoplay=1' ></iframe>";
-
-    }
   }
 
-  var playNextSong = function(){
-    if (queue[0].duration) {
-        queue.shift();
-        playSong()
-      // if sc, something, else (something else)
-     // when the duration of song is equal to the duration
-     // pop the song off and play song
+  var playVideo = function() {
 
-    }
+    var vidId = queue[0].id;
+    console.log(vidId)
+    var identifier = vidId.substr(-11,11);
+    console.log(identifier)
+    var addHtml = "<iframe width='480' height='390' frameborder='0' allowfullscreen src='http://www.youtube.com/embed/"+ identifier +"?rel=0&autoplay=1' ></iframe>";
+      $("#youtube").html(addHtml);
+}
+
+
+
+  var playNextSong = function(){
+    // if (queue[0].duration) {
+    //     queue.shift();
+    //     playSong()
+    //   // if sc, something, else (something else)
+    //  // when the duration of song is equal to the duration
+    //  // pop the song off and play song
+
+    // }
 
   }
 
@@ -101,6 +106,10 @@ $(document).on("page:change", function(){
 
     if ($.trim($("#soundcloud").html()) == "") {
        playSong();
+    }
+
+    if ($.trim($("#youtube").html()) == "") {
+       playVideo();
     }
   })
 

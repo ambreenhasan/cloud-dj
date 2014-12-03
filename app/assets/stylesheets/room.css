@@ -261,8 +261,8 @@ hr {
   display: inline; }
 
 #player_container {
-  width: 50%;
-  height: 50%;
+  width: 480px;
+  height: 390px;
   margin: 0 auto;
 }
 
