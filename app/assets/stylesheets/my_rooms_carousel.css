@@ -1,6 +1,5 @@
-
 #my_rooms_carousel .item {
-  background: #3fbf79;
+  background: white;
   padding: 3px 0px;
   margin: 5px;
   color: black;
@@ -22,7 +21,14 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 #my_rooms_carousel_div {
-  background-color: yellow;
+  background-color: #080308;
   height: 15em;
-  width: 45em; }
+  width: 75.5em;
+  margin-left: -38px; }
 
+.customNavigation a {
+  padding-left: 4px;
+  color: white; }
+
+.customNavigation a:hover {
+  color: #75acd1; }

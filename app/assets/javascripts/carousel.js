@@ -40,8 +40,8 @@ $(document).ready(function() {
 
   }
 
-carouselMagic("#trending_carousel", 3)
-carouselMagic("#my_rooms_carousel", 3)
-carouselMagic("#joined_rooms_carousel", 3)
+carouselMagic("#trending_carousel", 6)
+carouselMagic("#my_rooms_carousel", 5)
+carouselMagic("#joined_rooms_carousel", 5)
 
 });

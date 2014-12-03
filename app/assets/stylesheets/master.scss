@@ -45,7 +45,7 @@ body {background-color:$white;}
 .ht-l {height: 100em;}
 .ht-sig {height: $medium + 2em}
 .ht-log {height: $medium;}
-.ht-m {height: 25em;}
+.ht-m {height: 20em;}
 .ht-b {height: 60em;}
 .ht-s {height: 10em;}
 
@@ -97,7 +97,6 @@ h1 {
 }
 
 #trending_carousel_div {
-  border: 2px purple solid;
   height: 30em;
   width: 90em;
   margin-left: 15em;
@@ -113,35 +112,37 @@ h1 {
 }
 
 #new_room_form_div {
-  float: right;
-  margin-right: 2em;
-  top: -12em;
+  width: 60em;
+  height: 25em;
+  margin: 0 auto;
   position: relative;
+  border: 4px $black solid;
+  border-radius: 4px;
+
 }
 
 #text_area {
   width: 80%;
-  height: 10em;
-  border: 2px $dblue solid;
+  height: 7em;
+  border: 2px $black solid;
   color: $gray;
   font-size: 20px;
-  border-radius: 2px;
-  margin-left: 1.5em;
+  border-radius: 4px;
+  margin: 30px 0px 15px 85px;
 }
 
 #text_field {
   width: 80%;
-  border: 2px $dblue solid;
+  border: 2px $black solid;
   color: $gray;
   font-size: 20px;
   margin: 1em;
   margin-left: 1.5em;
-  text-align: center;
+   margin: 40px 0px 0px 85px;
 }
 
 #hide_new_room_form_button {
   width: 5em;
-  margin: 2px;
   margin-left: 6em;
   text-align: center;
   float: left;
@@ -178,9 +179,9 @@ h1 {
 }
 
 #check_box {
-  margin: 1em;
+  margin: 5px;
   margin-left: 1.5em;
-  font-size: 20px;
+  font-size: 15px;
   color: $gray;
 }
 
@@ -197,31 +198,6 @@ h1 {
   border-radius: 2px;
 }
 
-#list_menu_div {
-  float:right;
-  position: relative;
-  top: -15em;
-  margin-right: 10em;
-}
-
-#list_menu {
-  list-style-type: none;
-  border-left: 2px black solid;
-
-}
-
-#list_menu li {
-  padding-bottom: 1em;
-  padding-top: 1em;
-  border-length: 1em;
-  margin-left: -2.5em;
-  padding-left: 2em;
-  color: $black;
-}
-
-#list_menu li:hover {
-  color: $dblue;
-}
 
 hr {
   margin-left: -2.5em;
@@ -242,11 +218,41 @@ hr {
 }
 
 #profile_page {
-  height: 20em;
-  width: 66em;
-
-  margin-left: 25em;
+  height: 26em;
+  width: 80em;
   position: relative;
+}
+
+
+#accordion {
+  width: 79em;
+  height: 25em;
+  overflow: scroll;
+}
+
+#accordion ul {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  background-color: $dblue;
+}
+
+#accordion ul li {
+  border: 2px black solid;
+  margin: 2px 10px 4px -35px;
+  padding-left: 3px;
+  background-color: $lblue;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#accordion ul li ul {
+  background-color: $lblue;
+  border: 4px pink solid;
+}
+
+#accordion ul li h6 {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 6px;
 }
 
 #list_menu_div {
@@ -254,17 +260,40 @@ hr {
   float:right;
 }
 
-#accordion{
-  margin-left: -25px;
-  width: 67em;
+
+#list_menu_div {
+  float:right;
+  position: relative;
+  top: -15em;
+  margin-right: 10em;
 }
 
-#accordion ul {
+#list_menu {
   list-style-type: none;
+  border-left: 2px black solid;
 }
 
-#accordion ul li {
-  border: 2px black solid;
-  padding: 3px;
-  background-color: $lblue;
+#list_menu li {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-length: 1em;
+  margin-left: -2.5em;
+  padding-left: 2em;
+  color: $black;
+}
+
+#list_menu li:hover {
+  color: $dblue;
+}
+
+#home_body {
+  height: 26em;
+  width: 80em;
+  margin: 0 auto 0 auto;
+}
+
+#body_main {
+  height: 27em;
+  position: relative;
+  margin-top: -3em;
 }
