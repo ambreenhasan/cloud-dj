@@ -36,12 +36,11 @@ $(document).on("page:change", function(){
         })
         .done(function(response){
           $('#fav_button').attr('checked', false);
-          $("#favorited").append("Song has been added to your favorites.").fadeOut(5000)
-          console.log('FAVORITED THIS SONG!');
-
+          $("#favorited").append("Song has been added to your favorites.").css('color', 'green').fadeOut(5000)
         })
         .fail(function(event){
-          console.log('YOURE A LOSER AND GET NO RESPONSE');
+          $('#fav_button').attr('checked', false);
+           $("#favorited").append("Song was not successfully saved. Try again later.").css('color', 'red').fadeOut(5000)
         })
       };
     };
