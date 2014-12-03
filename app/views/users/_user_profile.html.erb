@@ -1,14 +1,14 @@
 <div id="profile_page" class="bd-sm">
   <div id="accordion">
     <ul>
-      <li><h6 id='users_own_rooms'>Rooms you created</h6>
+      <li><h6 id='users_own_rooms'>My created</h6>
         <ul>
-          <li>Room I created</li>
+          <%= render partial: 'homepage/my_rooms_carousels' %>
         </ul>
       </li>
-      <li><h6 id='users_rooms_joined'>Rooms you are a part of</h6>
+      <li><h6 id='users_rooms_joined'>Rooms I've Joined</h6>
         <ul>
-          <li>Room I'm apart of</li>
+          <%= render partial: 'homepage/joined_rooms_carousels' %>
         </ul>
       </li>
       <li><h6 id='users_friends'>your friends</h6></li>

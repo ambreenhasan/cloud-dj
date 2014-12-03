@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
   $("#user_profile").on("click", function(){
+    alert("Hello");
     $(this).css("color", "blue");
-    $("#ajax_home_thing").hide();
-    $("#profile_page").slideDown()
+    // $("#ajax_home_thing").hide();
+    $("#profile_page").slideDown();
   })
 
 

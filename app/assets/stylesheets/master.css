@@ -111,6 +111,9 @@ body {
   position: relative;
   width: 100%; }
 
+.ps-a {
+  position: absolute; }
+
 t-t {
   top: 0; }
 
@@ -272,3 +275,14 @@ hr {
 
 #avatar_list li {
   display: inline; }
+
+#profile_page {
+  height: 20em;
+  width: 66em;
+  background-color: yellow;
+  margin-left: 25em;
+  position: relative; }
+
+#list_menu_div {
+  margin-top: -20em;
+  float: right; }
