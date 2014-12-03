@@ -55,21 +55,23 @@ body { font-family: 'Wire One', arial, serif; text-shadow: 0px .5px 0px black;}
     position:absolute;
     background-position:top left;
     background-repeat:no-repeat;
-    background-color:transparent;
+    background-size: 100%;
+    background-color:tranparent;
     left:50px;
-    top:30px;
+    top:10px;
 }
 .sti-icon-home{
-    background-image:url(../images/care.png);
+    background-image:asset-data-url('icon-home.png');
+
 }
 .sti-icon-room{
-    background-image:url(../images/alternative.png);
+    background-image:image-url('room-icon.png');
 }
 .sti-icon-profile{
-    background-image:url(../images/family.png);
+    background-image:image-url(('face-icon.png') image);
 }
 .sti-icon-logout{
-    background-image:url(../images/info.png);
+    background-image:image-url('logout-icon.png');
 }
 
 
