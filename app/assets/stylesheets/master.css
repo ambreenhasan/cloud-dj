@@ -242,27 +242,6 @@ h1 {
   height: 2em;
   border-radius: 2px; }
 
-#list_menu_div {
-  float: right;
-  position: relative;
-  top: -15em;
-  margin-right: 10em; }
-
-#list_menu {
-  list-style-type: none;
-  border-left: 2px black solid; }
-
-#list_menu li {
-  padding-bottom: 1em;
-  padding-top: 1em;
-  border-length: 1em;
-  margin-left: -2.5em;
-  padding-left: 2em;
-  color: #080308; }
-
-#list_menu li:hover {
-  color: #75acd1; }
-
 hr {
   margin-left: -2.5em;
   width: 1em; }
@@ -283,10 +262,6 @@ hr {
   margin-left: 25em;
   position: relative; }
 
-#list_menu_div {
-  margin-top: -8em;
-  float: right; }
-
 #accordion {
   margin-left: -25px;
   width: 67em; }
@@ -298,3 +273,28 @@ hr {
   border: 2px black solid;
   padding: 3px;
   background-color: #bae7e8; }
+
+#list_menu_div {
+  margin-top: -8em;
+  float: right; }
+
+#list_menu_div {
+  float: right;
+  position: relative;
+  top: -15em;
+  margin-right: 10em; }
+
+#list_menu {
+  list-style-type: none;
+  border-left: 2px black solid; }
+
+#list_menu li {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  border-length: 1em;
+  margin-left: -2.5em;
+  padding-left: 2em;
+  color: #080308; }
+
+#list_menu li:hover {
+  color: #75acd1; }
