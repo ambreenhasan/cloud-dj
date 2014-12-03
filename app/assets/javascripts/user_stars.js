@@ -9,6 +9,7 @@ $(document).on("page:change", function(){
       var songid = 0
 
       save_song();
+      console.log(userid)
       var pass_to_user_stars = {user_star: {user_id: userid, song_id: songid}}
       save_user_star();
 
@@ -20,9 +21,6 @@ $(document).on("page:change", function(){
           async: false
         })
         .done(function(response){
-          console.log(response)
-          songid = response.id;
-          console.log(songid)
           console.log('SONG SAVED TO DATABASE!');
         })
         .fail(function(event){
