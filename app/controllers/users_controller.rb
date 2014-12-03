@@ -76,6 +76,7 @@ class UsersController < ApplicationController
 
   def logout
     session[:user_id] = nil
+    @user = nil
     respond_to do |format|
       format.js { render :logout }
     end

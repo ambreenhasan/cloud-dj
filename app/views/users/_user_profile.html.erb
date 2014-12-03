@@ -1,23 +1,25 @@
-<div id="accordion">
-  <ul>
-    <li><h6>Rooms you created</h6>
-      <ul id='users_own_rooms'>
-        <li>Room I created</li>
-        <li><%= render 'homepage/my_rooms_carousels' %></li>
-      </ul>
-    </li>
-    <li><h6 id='users_rooms_joined'>Rooms you are a part of</h6>
-      <ul>
-        <li>Room I'm apart of</li>
-      </ul>
-    </li>
-    <li><h6 id='users_friends'>your friends</h6></li>
-      <ul>
-        <li>My Friends</li>
-      </ul>
-    </li>
-  </ul>
+<div id="profile_page" class="bd-sm dsp-n">
+  <div id="accordion">
+    <ul>
+      <li>
+        <h6 id='users_own_rooms'>My created</h6>
+        <ul>
+          <%= render partial: 'homepage/my_rooms_carousels' %>
+        </ul>
+      </li>
+      <li>
+        <h6 id='users_rooms_joined'>Rooms I've Joined</h6>
+        <ul>
+          <%= render partial: 'homepage/joined_rooms_carousel' %>
+        </ul>
+      </li>
+      <li>
+        <h6 id='users_friends'>your friends</h6>
+        <ul>
+          My Friends: 0 sad day.
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
-
-
 

@@ -1,9 +1,20 @@
 $(document).ready(function(){
+
+  $("#user_profile").on("click", function(){
+    $(this).css("color", "blue");
+    // $("#ajax_home_thing").css("display", "none");
+    $("#ajax_home_thing").slideUp();
+    $("#new_room_form_div").slideUp(500);
+    $("#profile_page").slideDown();
+  })
+
+
   bindEvents();
 });
 
 function bindEvents() {
   $('#user_profile').on('click', Profile.showProfile)
+  // $('li#user_profile').on('click', Profile.showProfile)
   $('#accordion ul > li ul').click(function(event){
     event.stopPropagation();
   })

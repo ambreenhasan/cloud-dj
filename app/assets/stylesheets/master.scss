@@ -53,6 +53,7 @@ body {background-color:$white;}
 
 .ps-f {position: fixed;}
 .ps-r {position: relative; width: 100%;}
+.ps-a {position: absolute;}
 
 t-t {top: 0}
 .t-h {top: -10em;}
@@ -240,3 +241,30 @@ hr {
   display: inline;
 }
 
+#profile_page {
+  height: 20em;
+  width: 66em;
+
+  margin-left: 25em;
+  position: relative;
+}
+
+#list_menu_div {
+  margin-top: -8em;
+  float:right;
+}
+
+#accordion{
+  margin-left: -25px;
+  width: 67em;
+}
+
+#accordion ul {
+  list-style-type: none;
+}
+
+#accordion ul li {
+  border: 2px black solid;
+  padding: 3px;
+  background-color: $lblue;
+}
