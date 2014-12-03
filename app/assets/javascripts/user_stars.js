@@ -2,9 +2,9 @@ $(document).on("page:change", function(){
   $("#fav_button").on("click", function(event){
     if ($(this).is(":checked")) {
       var userid = $("#sessionuserid").attr("sessionid")
-      var apid = $("#queue_container ul").first().attr("id")
+      var apiid = $("#queue_container ul").first().attr("id")
       var songtitle = $("#queue_container ul").first().attr("data-title-title")
-      var pass_to_songs = {song: {user_id: userid, api_id: apiid, title: songtitle, description: songdesc}}
+      var pass_to_songs = {song: {user_id: userid, api_id: apiid, title: songtitle}}
 
       var songid = 0
 
@@ -20,7 +20,9 @@ $(document).on("page:change", function(){
           async: false
         })
         .done(function(response){
+          console.log(response)
           songid = response.id;
+          console.log(songid)
           console.log('SONG SAVED TO DATABASE!');
         })
         .fail(function(event){
