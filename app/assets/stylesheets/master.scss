@@ -97,7 +97,6 @@ h1 {
 }
 
 #trending_carousel_div {
-  border: 2px purple solid;
   height: 30em;
   width: 90em;
   margin-left: 15em;
@@ -113,36 +112,37 @@ h1 {
 }
 
 #new_room_form_div {
-  width: 35em;
-  height: 28em;
-  top: -5em;
-  margin-left: 23em;
+  width: 60em;
+  height: 25em;
+  margin: 0 auto;
   position: relative;
+  border: 4px $black solid;
+  border-radius: 4px;
+
 }
 
 #text_area {
   width: 80%;
-  height: 10em;
-  border: 2px $dblue solid;
+  height: 7em;
+  border: 2px $black solid;
   color: $gray;
   font-size: 20px;
-  border-radius: 2px;
-  margin-left: 1.5em;
+  border-radius: 4px;
+  margin: 30px 0px 15px 85px;
 }
 
 #text_field {
   width: 80%;
-  border: 2px $dblue solid;
+  border: 2px $black solid;
   color: $gray;
   font-size: 20px;
   margin: 1em;
   margin-left: 1.5em;
-  text-align: center;
+   margin: 40px 0px 0px 85px;
 }
 
 #hide_new_room_form_button {
   width: 5em;
-  margin: 2px;
   margin-left: 6em;
   text-align: center;
   float: left;
@@ -179,9 +179,9 @@ h1 {
 }
 
 #check_box {
-  margin: 1em;
+  margin: 5px;
   margin-left: 1.5em;
-  font-size: 20px;
+  font-size: 15px;
   color: $gray;
 }
 
@@ -218,7 +218,6 @@ hr {
 }
 
 #profile_page {
-  border: 2px blue solid;
   height: 26em;
   width: 80em;
   position: relative;
@@ -227,7 +226,6 @@ hr {
 
 #accordion {
   width: 79em;
-  border: 5px green solid;
   height: 25em;
   overflow: scroll;
 }
@@ -289,14 +287,12 @@ hr {
 }
 
 #home_body {
-  border: 2px red solid;
   height: 26em;
   width: 80em;
   margin: 0 auto 0 auto;
 }
 
 #body_main {
-  border: 7px green solid;
   height: 27em;
   position: relative;
   margin-top: -3em;
