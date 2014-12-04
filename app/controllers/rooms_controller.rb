@@ -10,6 +10,7 @@ class RoomsController < ApplicationController
     @room.user_id = session[:user_id]
     @id = @room.id
     @name = @room.name
+    @user_id = session[:user_id]
     @description = @room.description
     respond_to do |f|
       if @room.save
