@@ -1,7 +1,7 @@
 #favorite_songs_carousel .item {
   padding: 3px 0px;
   margin: 5px;
-  color: white;
+  color: #080308;
   width: 10em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -47,6 +47,11 @@
   padding-left: 4px;
   color: white;
   text-shadow: 0.1em 0.1em 0.1em black; }
+
+#favorite_songs_carousel .item h4 {
+  font-size: 20px;
+  color: #080308;
+  text-shadow: 0.01em 0.01em #333333; }
 
 .customNavigation a:hover {
   color: #75acd1; }
