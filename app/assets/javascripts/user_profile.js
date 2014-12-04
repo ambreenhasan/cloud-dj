@@ -1,11 +1,20 @@
+function roomOutTransition() {
+  $("#room").css("display", "none");
+  $(".sti-menu").animate({"top": 0}, 500);
+  $("#trending_carousel_div").css("display", "block");
+  $("#home_trending_section").animate({"top": 0}, 500);
+  $("#home_trending_section").animate({"height": "960px"}, 500);
+}
+
 $(document).ready(function(){
 
   $("#user_profile").on("click", function(){
     $("#ajax_home_thing").css("display", "none");
     $("#new_room_form_div").css("display", "none");
+    $("#room").css("display", "none");
+    roomOutTransition()
     $("#profile_page").slideDown();
   })
-
 
   bindEvents();
 });
