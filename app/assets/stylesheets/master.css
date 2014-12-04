@@ -331,4 +331,5 @@ hr {
   outline: none; }
 
 #song_search_bar {
-  margin-left: -5em; }
+  margin-left: -16em;
+  margin-top: -8em; }
