@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
 
   def index
+    @user = User.find(session[:user_id])
     @room = Room.find(session[:room_id])
   end
 

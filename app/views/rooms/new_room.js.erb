@@ -7,10 +7,11 @@ alert("hello");
 // $('textarea#text_area').val('');
 
  $("#new_room_form_div").css("display", "none");
-    $("#profile_page").slideDown();
+ $("#profile_page").slideDown();
 
-$("#recent_rooms_list").append("<%= j (render "room_box") %>");
 
-trending_carousel
+$("#trending_carousel").append("<%= j (render "room_box") %>");
 
-my_rooms_carousel
+$("#my_rooms_carousel").append("<%= j (render "room_box") %>");
+
+$("#joined_rooms_carousel").append("<%= j (render "room_box") %>");
