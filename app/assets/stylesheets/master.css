@@ -17,6 +17,9 @@ body {
 .dsp-n {
   display: none; }
 
+.z-2 {
+  z-index: 2; }
+
 .bd-sm {
   border: 1px black solid; }
 
@@ -157,12 +160,15 @@ h1 {
   color: #75acd1; }
 
 #trending_carousel_div {
-  height: 30em;
+  position: relative;
+  height: 40em;
   width: 90em;
-  margin-left: 15em;
+  margin: 0 40em 0 0;
   text-align: center;
-  padding-top: 3em;
-  margin-top: 4em; }
+  top: 7em; }
+
+#trending_carousel_div .customNavigation {
+  color: white; }
 
 #hello {
   height: 5em;
@@ -172,10 +178,10 @@ h1 {
 #new_room_form_div {
   width: 60em;
   height: 25em;
-  margin: 0 auto;
   position: relative;
   border: 4px #080308 solid;
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin-left: -40em; }
 
 #text_area {
   width: 80%;
@@ -281,8 +287,7 @@ hr {
   border-radius: 20px 20px 0px 0px; }
 
 #accordion ul li ul {
-  background-color: #bae7e8;
-  border: 4px pink solid; }
+  background-color: #bae7e8; }
 
 #accordion ul li h6 {
   text-align: center;
@@ -322,5 +327,4 @@ hr {
 #body_main {
   height: 27em;
   position: relative;
-  margin-top: -3em;
-  z-index: -1; }
+  margin-top: -3em; }
