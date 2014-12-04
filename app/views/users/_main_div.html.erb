@@ -1,13 +1,14 @@
 <div id="ajax_home_thing">
-  <div class="pl-l pt-i icon" id='user_home'>
+  <div class="icon" id='user_home'>
+     <%= image_tag("cloud-2.gif", :id => "cloud_image") %>
     <% if @user %>
       <h1>CLOUD DJ WELCOMES <br> YOU, <%= @user.first_name.upcase %>.</h1>
+       <p class="app_description">Create rooms and playlists to get started!</p>
     <% else %>
-      <h1>Cloud DJ</h1>
+      <h1 class="header">Cloud DJ</h1>
+      <p class="app_description">A cloud party where you can create rooms and share playlists with your friends and others.</p>
     <% end %>
 
-    <p> This is an awesome description of the project.</p>
-    <p> So cool.</p>
   </div>
 
 </div>
