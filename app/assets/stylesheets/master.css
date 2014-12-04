@@ -17,6 +17,9 @@ body {
 .dsp-n {
   display: none; }
 
+.z-2 {
+  z-index: 2; }
+
 .bd-sm {
   border: 1px black solid; }
 
@@ -172,10 +175,10 @@ h1 {
 #new_room_form_div {
   width: 60em;
   height: 25em;
-  margin: 0 auto;
   position: relative;
   border: 4px #080308 solid;
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin-left: -40em; }
 
 #text_area {
   width: 80%;
@@ -281,8 +284,7 @@ hr {
   border-radius: 20px 20px 0px 0px; }
 
 #accordion ul li ul {
-  background-color: #bae7e8;
-  border: 4px pink solid; }
+  background-color: #bae7e8; }
 
 #accordion ul li h6 {
   text-align: center;
@@ -322,5 +324,4 @@ hr {
 #body_main {
   height: 27em;
   position: relative;
-  margin-top: -3em;
-  z-index: -1; }
+  margin-top: -3em; }

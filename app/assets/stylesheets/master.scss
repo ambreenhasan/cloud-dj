@@ -17,6 +17,8 @@ body {background-color:$white;}
 
 .dsp-n {display: none;}
 
+.z-2  {z-index: 2;}
+
 .bd-sm {border: 1px black solid;}
 .bd-m {border: 2px black solid;}
 .br-c {border-radius: 100px; width: 8em; height:8em;}
@@ -115,11 +117,10 @@ h1 {
 #new_room_form_div {
   width: 60em;
   height: 25em;
-  margin: 0 auto;
   position: relative;
   border: 4px $black solid;
   border-radius: 4px;
-
+  margin-left: -40em;
 }
 
 #text_area {
@@ -247,7 +248,6 @@ hr {
 
 #accordion ul li ul {
   background-color: $lblue;
-  border: 4px pink solid;
 }
 
 #accordion ul li h6 {
@@ -297,5 +297,4 @@ hr {
   height: 27em;
   position: relative;
   margin-top: -3em;
-  z-index: -1;
 }

@@ -36,8 +36,8 @@ var Profile = (function() {
   function showProfile() {
     var $userHomeSelector = $('div#user_home');
     var $userProfileSelector = $('div.user_profile');
-    $userHomeSelector.hide();
-    $userProfileSelector.css("display", "");
+    // $userHomeSelector.hide();
+    // $userProfileSelector.css("display", "");
   };
 
   return {
