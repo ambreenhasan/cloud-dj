@@ -110,14 +110,15 @@ $(document).on("page:change", function(){
   })
 
 setInterval(function(){
-                $(objectID).animate({backgroundColor: colours[tempID]},2000);
+                $(objectID).animate({backgroundColor: colours[tempID]},1000);
                 tempID=tempID+1;
                 if (tempID>colours.length-1) tempID=0;
             },changeInterval);
 
-  var colours=[ '#000000','#ffffff'];  // List of colors
+
+  var colours=[ '#333333','#ffffff'];  // List of colors
     var tempID=0;
-    var changeInterval=3000;    // Change interval in miliseconds
+    var changeInterval=500;    // Change interval in miliseconds
     var objectID='#dance_floor';
 
 });
