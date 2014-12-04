@@ -58,4 +58,14 @@ body {
   left: 50px;
   top: 10px; }
 
+
+.header {
+  margin-top: 20px;
+  font-size: 5em;
+}
+
+#cloud_image {
+  float: left;
+}
+
 /*# sourceMappingURL=menu.css.map */
