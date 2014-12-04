@@ -1,0 +1,13 @@
+#room_black_bar {
+  height: 27em;
+  margin-top: 17em;
+  padding-top: 8em;
+  background-color: black;
+}
+
+
+#room_black_bar #sti-menu {
+  position:absolute;
+  margin-left: 20em;
+  z-index: 20;
+}

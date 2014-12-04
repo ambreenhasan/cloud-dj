@@ -17,6 +17,7 @@ $(document).ready(function() {
     $("#room").slideDown(1000)
     // $("#trending_carousel_div").css("display", "none");
     $("#home_trending_section").css("display", "none");
+    $("#room_black_bar").css("display", "block");
     // $(".sti-menu").animate({"top": "3em"}, 500);
     // $("#home_trending_section").animate({"height": "28em"}, 500);
     $(body).css("height", "1000px");

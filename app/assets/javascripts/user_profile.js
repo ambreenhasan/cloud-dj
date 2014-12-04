@@ -9,6 +9,7 @@
 
 $(document).ready(function(){
 
+
   $("#user_profile").on("click", function(){
     $("#ajax_home_thing").css("display", "none");
     $("#new_room_form_div").css("display", "none");
