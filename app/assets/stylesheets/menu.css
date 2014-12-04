@@ -54,18 +54,8 @@ body {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: tranparent;
+  background-color: transparent;
   left: 50px;
   top: 10px; }
 
-.sti-icon-home {
-  background-image: asset-data-url("icon-home.png"); }
-
-.sti-icon-room {
-  background-image: image-url("room-icon.png"); }
-
-.sti-icon-profile {
-  background-image: image-url("face-icon.png" image); }
-
-.sti-icon-logout {
-  background-image: image-url("logout-icon.png"); }
+/*# sourceMappingURL=menu.css.map */

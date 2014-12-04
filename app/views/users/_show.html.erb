@@ -1,5 +1,7 @@
 <!-- when completed, this should be in room view -->
-<div id="sessionuserid" sessionid=""></div>
+<div id="sessionuserid" sessionid="">
+</div>
+
 <div id="song_search_bar">
   <%= render :partial => 'partials/search' %>
   <div id="query_song_list">
@@ -8,7 +10,7 @@
 </div>
 
 
-<div>Now playing: <span id="currently_playing"></span>
+<div id="now_playing_div">Now playing: <span id="currently_playing"></span>
   <form>
     <label>Favorite this song:</label>
     <input type="checkbox" id="fav_button" title="" description="" song_id="" >
@@ -16,11 +18,17 @@
   <div id="favorited"></div>
   <button id="mute_button"><%= image_tag 'mutebutton.png' %></button>
   <button id="skip_button"><%= image_tag 'skipbutton.png' %></button>
-</div>
 
 <div id="player_container">
  <div id="soundcloud"></div>
 </div>
+
+  <button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button>
+  <div id="queue_container" class="">
+    <ul>
+    </ul>
+  </div>
+
 <div id="dance_floor">
   <ul>
     <% 10.times do %>
@@ -34,3 +42,5 @@
   <ul>
   </ul>
 </div>
+
+

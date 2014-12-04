@@ -1,5 +1,18 @@
-$("#recent_rooms_list").append("<%= j (render "room") %>");
-$('#recent_rooms_list').slideDown(350);
-$('#new_room_form_div').hide();
-$('input#text_field').val('');
-$('textarea#text_area').val('');
+// $("#recent_rooms_list").append("<%= j (render "room") %>");
+// $('#recent_rooms_list').slideDown(350);
+// $('#new_room_form_div').hide();
+// $('input#text_field').val('');
+// $('textarea#text_area').val('');
+
+$("#new_room_form_div").css("display", "none");
+$("#profile_page").slideDown();
+
+var owl_my_carousels = $("#my_rooms_carousel").data("owlCarousel")
+owl_my_carousels.addItem("<%= j (render "moderator_room_box") %>")
+
+var owl_joined_carousels = $("#joined_rooms_carousel").data("owlCarousel")
+owl_joined_carousels.addItem("<%= j (render "room_box") %>")
+
+var owl_trending_carousels = $("#trending_carousel").data("owlCarousel")
+owl_trending_carousels.addItem("<%= j (render "trending_rooms_box") %>")
+

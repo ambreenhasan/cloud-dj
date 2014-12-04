@@ -1,20 +1,22 @@
 class RoomsController < ApplicationController
 
   def index
+    @user = User.find(session[:user_id])
     @room = Room.find(session[:room_id])
   end
 
   def create
-    p params
-    p "3" * 100
     @room = Room.new(room_params)
-    p @room
     @room.user_id = session[:user_id]
+    @id = @room.id
+    @name = @room.name
+    @user_id = session[:user_id]
+    @description = @room.description
     respond_to do |f|
       if @room.save
         f.js { render :new_room }
       else
-        f.json { render :index }
+        f.js { render :room_errors }
       end
     end
   end

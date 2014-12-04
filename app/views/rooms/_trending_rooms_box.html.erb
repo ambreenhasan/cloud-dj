@@ -1,0 +1,8 @@
+<div class="item" id="<%= @id %>">
+  <h4><%= @name %></h4>
+  <br>
+  <h5><%= @description %></h5>
+  <%= form_tag("/users/#{@user_id}/rooms/#{@id}/join", method: :post, remote: true) do %>
+    <div class="join" id=<%="#{@id}"%>><%= submit_tag 'join room' %></div>
+   <% end %>
+</div>

@@ -275,4 +275,8 @@ hr {
 #dance_floor ul li {
   display: inline-block;
 }
+
+#room_form_errors {
+  color: red;
+}
 /*# sourceMappingURL=room.css.map */
