@@ -1,5 +1,7 @@
 <!-- when completed, this should be in room view -->
-<div id="sessionuserid" sessionid=""></div>
+<div id="sessionuserid" sessionid="">
+</div>
+
 <div id="song_search_bar">
   <%= render :partial => 'partials/search' %>
   <div id="query_song_list">
@@ -18,10 +20,13 @@
 </div>
 
 <div id="player_container">
- <div id="soundcloud"></div>
+ <div id="soundcloud">
+ </div>
 </div>
 
-<div><button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button></div>
+<div>
+  <button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button>
+</div>
 <div id="queue_container" class="">
   <ul>
   </ul>

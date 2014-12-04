@@ -324,8 +324,11 @@ hr {
   border-top: 0px white solid;
   border-right: 0px white solid;
   border-left: 0px white solid;
-  length: 50em;
+  length: 40em;
   width: 20em;
   color: #333333;
   font-size: 40px;
   outline: none; }
+
+#song_search_bar {
+  margin-left: -5em; }
