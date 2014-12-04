@@ -2,8 +2,8 @@ $(document).on("page:change", function(){
   $("#fav_button").on("click", function(event){
     if ($(this).is(":checked")) {
       var userid = $("#sessionuserid").attr("sessionid")
-      var apiid = $("#queue_container ul").first().attr("id")
-      var songtitle = $("#queue_container ul").first().attr("data-title-title")
+      var apiid = $("#queue_container ul button").first().attr("id")
+      var songtitle = $("#queue_container ul button").first().attr("data-track-title")
       var pass_to_songs = {song: {user_id: userid, api_id: apiid, title: songtitle}}
 
       var songid = 0
@@ -22,6 +22,10 @@ $(document).on("page:change", function(){
         })
         .done(function(response){
           console.log('SONG SAVED TO DATABASE!');
+           $("#favorited").text("Song has been added to your favorites.").css('color', 'green').fadeOut(5000);
+
+
+           console.log(apiid)
         })
         .fail(function(event){
           console.log('YOU FAILED BECAUSE YOURE A LOSER');
@@ -35,10 +39,13 @@ $(document).on("page:change", function(){
           data: pass_to_user_stars
         })
         .done(function(response){
-          console.log('FAVORITED THIS SONG!');
+          $('#fav_button').prop('checked', false);
+           $("favorited").empty();
+          // $("#favorited").append("Song has been added to your favorites.").css('color', 'green').fadeOut(5000)
         })
         .fail(function(event){
-          console.log('YOURE A LOSER AND GET NO RESPONSE');
+          $('#fav_button').attr('checked', false);
+           $("#favorited").append("Song was not successfully saved. Try again later.").css('color', 'red').fadeOut(5000)
         })
       };
     };
