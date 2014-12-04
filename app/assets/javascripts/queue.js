@@ -22,6 +22,10 @@ $(document).on("page:change", function(){
     };
   });
 
+  $("#clear_search").on("click", function() {
+    $("#sc_song_list").empty();
+  });
+
   var addSongsToQueue = function(){
     var id = $("#queue_container ul button").last().attr("id")
     var type = $("#queue_container ul button").last().attr("data-type")
