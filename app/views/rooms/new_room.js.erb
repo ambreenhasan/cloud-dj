@@ -1,17 +1,11 @@
-alert("hello");
-
 // $("#recent_rooms_list").append("<%= j (render "room") %>");
 // $('#recent_rooms_list').slideDown(350);
 // $('#new_room_form_div').hide();
 // $('input#text_field').val('');
 // $('textarea#text_area').val('');
 
- $("#new_room_form_div").css("display", "none");
- $("#profile_page").slideDown();
+$("#new_room_form_div").css("display", "none");
+$("#profile_page").slideDown();
 
-
-$("#trending_carousel").prepend("<%= j (render "room_box") %>");
-
-$("#my_rooms_carousel").prepend("<%= j (render "room_box") %>");
-
-$("#joined_rooms_carousel").prepend("<%= j (render "room_box") %>");
+var owl = $("#my_rooms_carousel").data("owlCarousel")
+owl.addItem("<%= j (render "room_box") %>")
