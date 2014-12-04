@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
   $("#user_profile").on("click", function(){
-    $(this).css("color", "blue");
-    // $("#ajax_home_thing").css("display", "none");
-    $("#ajax_home_thing").slideUp();
-    $("#new_room_form_div").slideUp(500);
+    $("#ajax_home_thing").css("display", "none");
+    $("#new_room_form_div").css("display", "none");
     $("#profile_page").slideDown();
   })
 

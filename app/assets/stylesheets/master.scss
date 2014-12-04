@@ -1,4 +1,4 @@
-$black:#080308;
+ $black:#080308;
 $white:#FFFFFF;
 $beige:#FFFFEC;
 $dblue:#75ACD1;
@@ -50,6 +50,7 @@ body {background-color:$white;}
 .ht-s {height: 10em;}
 
 .wdt-l {width: 25em}
+.wdt-f {width: 100%}
 
 .ps-f {position: fixed;}
 .ps-r {position: relative; width: 100%;}
@@ -296,4 +297,5 @@ hr {
   height: 27em;
   position: relative;
   margin-top: -3em;
+  z-index: -1;
 }

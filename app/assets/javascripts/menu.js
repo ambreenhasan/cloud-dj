@@ -130,7 +130,8 @@ $(document).ready(function() {
 
 
 
-
-  $("#sti-menu li").hover( handlerInMenu, handlerOutMenu )
+// $("#home_trending_section").on("mouseenter", "#sti-menu li", handlerInMenu);
+// $("#home_trending_section").on("mouseout", "#sti-menu li", handlerOutMenu);
+  $("#home_trending_section #sti-menu li").hover(handlerInMenu, handlerOutMenu )
 
 })
