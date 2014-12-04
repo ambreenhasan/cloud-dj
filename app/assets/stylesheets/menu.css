@@ -59,12 +59,18 @@ body {
   top: 10px; }
 
 
-.header {
-  margin-top: 20px;
-  font-size: 5em;
+h1.header {
+  font-size: 2em;
+}
+
+#user_home {
+  margin-top: 10px;
+  font-size: 3em;
 }
 
 #cloud_image {
+  width: 400px;
+  height: 400px;
   float: left;
 }
 
