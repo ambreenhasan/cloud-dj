@@ -279,4 +279,18 @@ hr {
 #room_form_errors {
   color: red;
 }
+
+#sc_song_list li {
+  padding: 3px;
+  list-style-type: none;
+}
+
+button.track_title {
+  border: 0;
+  border-radius: 2px;
+  font-size: 13px;
+  padding: 5px;
+  background-color: black transparent;
+  color: white;
+}
 /*# sourceMappingURL=room.css.map */
