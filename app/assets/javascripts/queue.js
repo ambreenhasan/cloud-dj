@@ -107,27 +107,3 @@ $(document).on("page:change", function(){
       playSong();
     }
   })
-
-  var colours=[ '#666666','#ffffff'];  // List of colors
-  var tempID=0;
-  var changeInterval=1000;    // Change interval in miliseconds
-  var objectID='#dance_floor';
-
-  setInterval(function(){
-        $(objectID).animate({backgroundColor: colours[tempID]},500);
-        tempID=tempID+1;
-        if (tempID>colours.length-1) tempID=0;
-    },changeInterval);
-
-  setInterval(function(){
-    $(".avatar").each(function(){
-      var num = getRandomInt(1,15);
-      $(this).attr("src", "/assets/crazy_dancing_girl_"+num+".png")
-    });
-  }, 1000)
-
-  function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-});
-//'#ff0000','#00ff00','#0000ff','#ffff00','#acacac',

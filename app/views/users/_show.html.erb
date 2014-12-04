@@ -9,6 +9,13 @@
   </div>
 </div>
 
+<div id="dance_floor">
+  <ul>
+    <% 10.times do %>
+      <li><%= image_tag("dance#{(1..10).to_a.sample}.jpg", class: "avatar") %></li>
+    <% end %>
+  </ul>
+</div>
 
 <div id="now_playing_div">Now playing: <span id="currently_playing"></span>
   <form>
@@ -21,20 +28,6 @@
 
 <div id="player_container">
  <div id="soundcloud"></div>
-</div>
-
-  <button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button>
-  <div id="queue_container" class="">
-    <ul>
-    </ul>
-  </div>
-
-<div id="dance_floor">
-  <ul>
-    <% 10.times do %>
-      <li><%= image_tag("crazy_dancing_girl_#{(1..15).to_a.sample}.png", class: "avatar") %></li>
-    <% end %>
-  </ul>
 </div>
 
 <div><button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button></div>
