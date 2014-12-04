@@ -9,6 +9,13 @@
   </div>
 </div>
 
+<div id="dance_floor">
+  <ul>
+    <% 7.times do %>
+      <li><%= image_tag("dance#{(1..10).to_a.sample}.jpg", class: "avatar") %></li>
+    <% end %>
+  </ul>
+</div>
 
 <div id="now_playing_div">Now playing: <span id="currently_playing"></span>
   <form>
@@ -19,29 +26,8 @@
   <button id="mute_button"><%= image_tag 'mutebutton.png' %></button>
   <button id="skip_button"><%= image_tag 'skipbutton.png' %></button>
 
-  <div id="player_container">
-    <div id="soundcloud">
-    </div>
-  </div>
-
-  <button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button>
-  <div id="queue_container" class="">
-    <ul>
-    </ul>
-  </div>
-
-
-<div id="dance_floor">
-  <ul>
-    <li><%= image_tag("human128x128.png", id: 1, class: "bounce avatar") %></li>
-    <li><%= image_tag("human128x128.png", id: 2, class: "bounce avatar") %></li>
-    <li><%= image_tag("human128x128.png", id: 3, class: "bounce avatar") %></li>
-    <li><%= image_tag("human128x128.png", id: 4, class: "bounce avatar") %></li>
-    <li><%= image_tag("human128x128.png", id: 5, class: "bounce avatar") %></li>
-    <li><%= image_tag("human128x128.png", id: 6, class: "bounce avatar") %></li>
-    <li><%= image_tag("human128x128.png", id: 7, class: "bounce avatar") %></li>
-    <li><%= image_tag("human128x128.png", id: 8, class: "bounce avatar") %></li>
-  </ul>
+<div id="player_container">
+ <div id="soundcloud"></div>
 </div>
 
 <div><button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button></div>

@@ -64,26 +64,23 @@ $(document).on("page:change", function(){
     waveform.innerColor = gradient;
 
     var i = 0;
+    setInterval(function(){
+      data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
+      waveform.update({
+        data: data
+      });
+    }, 50);
 
     waveform.dataFromSoundCloudTrack(track);
     SC.stream(track.uri, {onplay:function(){
         $("#currently_playing").text(queue[0].trackTitle);
         isPlaying = true;
-        console.log('Playing a song!');
-        setInterval(function(){
-          data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
-          waveform.update({
-            data: data
-          });
-        }, 50);
-        startDancing();
       }, onfinish: function(){
         isPlaying = false;
         $("#soundcloud").empty();
         $("#queue_container ul button:first-child").remove();
         queue.shift();
         playSong();
-        stopDancing();
       }
     }, function(stream){
       currentTrack = stream;
@@ -103,24 +100,10 @@ $(document).on("page:change", function(){
     $("#queue_container ul").append($(this))
     $deleteListTag.remove()
 
-
     addSongsToQueue();
 
     if ((queue.length === 1) || (isPlaying === false)) {
       playSong();
     }
   })
-
-setInterval(function(){
-                $(objectID).animate({backgroundColor: colours[tempID]},2000);
-                tempID=tempID+1;
-                if (tempID>colours.length-1) tempID=0;
-            },changeInterval);
-
-  var colours=[ '#000000','#ffffff'];  // List of colors
-    var tempID=0;
-    var changeInterval=3000;    // Change interval in miliseconds
-    var objectID='#dance_floor';
-
 });
-// '#ff0000','#00ff00','#0000ff','#acacac',
