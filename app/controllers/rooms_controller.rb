@@ -1,5 +1,4 @@
 class RoomsController < ApplicationController
-  add_flash_types :error, :another_custom_type
 
   def index
     @user = User.find(session[:user_id])
@@ -17,8 +16,7 @@ class RoomsController < ApplicationController
       if @room.save
         f.js { render :new_room }
       else
-        error: "Room title and description both must be present."
-        # f.json { render :index }
+        f.js { render :room_errors }
       end
     end
   end
