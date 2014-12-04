@@ -22,3 +22,15 @@
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+#join {
+  outline: 0;
+  background-color: #fff;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: 'Wire One', arial, serif;
+  border: 2px solid white;
+
+
+
+}
