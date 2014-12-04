@@ -2,14 +2,14 @@
 
 $(document).ready(function() {
 
-    function roomOutTransition() {
-      $("#room").css("display", "none");
-      $(".sti-menu").animate({"top": 0}, 500);
-      $(body).css("height", "1600px");
-      $("#trending_carousel_div").css("display", "block");
-      $("#home_trending_section").animate({"top": 0}, 500);
-      $("#home_trending_section").animate({"height": "960px"}, 500);
-    }
+    // function roomOutTransition() {
+    //   $("#room").css("display", "none");
+    //   $(".sti-menu").animate({"top": 0}, 500);
+    //   $(body).css("height", "1600px");
+    //   $("#trending_carousel_div").css("display", "block");
+    //   $("#home_trending_section").animate({"top": 0}, 500);
+    //   $("#home_trending_section").animate({"height": "960px"}, 500);
+    // }
 
   $('#hide_button').on("click", function() {
         if ( $("#login_menu").css('top') != '0px' ) {
@@ -26,7 +26,10 @@ $(document).ready(function() {
         $("#signup_menu").slideDown(500);
         $("#show_signup_form_button").html("hide registration form.");
         $("#hide_button").css("display", "none");
-          roomOutTransition()
+        $("#room").css("display", "none");
+        $("#room_black_bar").css("display", "none");
+        $("#home_trending_section").css("display", "block")
+          // roomOutTransition()
       } else  {
         $("#signup_menu").slideUp(500);
         $("#show_signup_form_button").html("Not a member?");
@@ -55,7 +58,9 @@ $(document).ready(function() {
       $('#profile_page').css("display", "none");
       $("#room").css("display", "none");
       $("#ajax_home_thing").slideDown();
-      roomOutTransition();
+      $("#room_black_bar").css("display", "none");
+      $("#home_trending_section").css("display", "block")
+      // roomOutTransition();
     })
 })
 

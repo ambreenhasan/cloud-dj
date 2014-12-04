@@ -15,10 +15,10 @@ $(document).ready(function() {
     $("#ajax_home_thing").css("display", "none");
     $("#profile_page").css("display", "none");
     $("#room").slideDown(1000)
-    $("#trending_carousel_div").css("display", "none");
-    $("#home_trending_section").animate({"top": "14em"}, 500);
-    $(".sti-menu").animate({"top": "3em"}, 500);
-    $("#home_trending_section").animate({"height": "28em"}, 500);
+    // $("#trending_carousel_div").css("display", "none");
+    $("#home_trending_section").css("display", "none");
+    // $(".sti-menu").animate({"top": "3em"}, 500);
+    // $("#home_trending_section").animate({"height": "28em"}, 500);
     $(body).css("height", "1000px");
   }
 
