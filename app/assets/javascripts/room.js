@@ -48,10 +48,6 @@ $(document).ready(function() {
       $("#new_room_form_div").slideUp(500);
     })
 
-    $("#home_button").on("click", function() {
-      $("#ajax_home_thing").slideDown();
-    })
-
     $("#home_tab").on("click", function() {
       $("#room").css("display", "none");
       $("#new_room_form_div").css("display", "none");

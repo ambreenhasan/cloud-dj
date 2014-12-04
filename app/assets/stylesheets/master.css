@@ -220,19 +220,6 @@ h1 {
   background-color: #75acd1;
   border: 2px #080308 solid; }
 
-#home_button {
-  width: 5em;
-  margin: 1em;
-  margin-left: 15em;
-  float: right;
-  text-align: center;
-  top: -10em;
-  position: relative; }
-
-#home_button:hover {
-  background-color: #75acd1;
-  border: 2px #080308 solid; }
-
 #check_box {
   margin: 5px;
   margin-left: 1.5em;
