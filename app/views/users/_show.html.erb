@@ -10,14 +10,6 @@
   </div>
 </div>
 
-<div id="dance_floor">
-  <ul>
-    <% 7.times do %>
-      <li><%= image_tag("dance#{(1..10).to_a.sample}.jpg", class: "avatar") %></li>
-    <% end %>
-  </ul>
-</div>
-
 <div id="now_playing_div">Now playing: <span id="currently_playing"></span>
   <form>
     <label>Favorite this song:</label>
