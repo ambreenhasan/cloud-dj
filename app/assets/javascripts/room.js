@@ -45,14 +45,12 @@ $(document).ready(function() {
 
     $("#home_tab").on("click", function() {
       $("#room").css("display", "none");
-      $("#new_room_form_div").slideUp(500);
+      $("#new_room_form_div").css("display", "none");
       $('#profile_page').css("display", "none");
       $("#ajax_home_thing").slideDown();
     })
 
       $(".bounce").exBounce();
-
-
 
 })
 

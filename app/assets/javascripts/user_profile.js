@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
   $("#user_profile").on("click", function(){
-    $(this).css("color", "blue");
-    // $("#ajax_home_thing").css("display", "none");
-    $("#ajax_home_thing").slideUp();
-    $("#new_room_form_div").slideUp(500);
+    $("#ajax_home_thing").css("display", "none");
+    $("#new_room_form_div").css("display", "none");
     $("#profile_page").slideDown();
   })
 
@@ -38,8 +36,8 @@ var Profile = (function() {
   function showProfile() {
     var $userHomeSelector = $('div#user_home');
     var $userProfileSelector = $('div.user_profile');
-    $userHomeSelector.hide();
-    $userProfileSelector.css("display", "");
+    // $userHomeSelector.hide();
+    // $userProfileSelector.css("display", "");
   };
 
   return {
