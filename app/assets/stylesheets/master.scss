@@ -169,21 +169,6 @@ h1 {
   border: 2px $black solid;
 }
 
-#home_button {
-  width: 5em;
-  margin: 1em;
-  margin-left: 15em;
-  float:right;
-  text-align: center;
-  top: -10em;
-  position:relative;
-}
-
-#home_button:hover {
-  background-color: $dblue;
-  border: 2px $black solid;
-}
-
 #check_box {
   margin: 5px;
   margin-left: 1.5em;
@@ -301,4 +286,54 @@ hr {
   height: 27em;
   position: relative;
   margin-top: -3em;
+}
+
+#home_trending_section {
+  position: relative;
+}
+
+#song_search_input {
+  position: relative;
+  border-bottom: 2px $gray solid;
+  border-top:0px white solid;
+  border-right:0px white solid;
+  border-left:0px white solid;
+  length: 30em;
+  width: 20em;
+  color: $gray;
+  font-size: 40px;
+  outline: none;
+}
+
+#song_search_bar {
+  position: relative;
+  margin-left: -16em;
+  margin-top: -8em;
+  width: 50em;
+  height: 19em;
+}
+
+#now_playing_div {
+  position: sticky;
+  float:right;
+  margin-top: -19em;
+  margin-left: 45em;
+}
+
+#queue_container {
+  margin-top: 1em;
+  margin-left: -3em;
+}
+
+#player_container {
+  height: 6em;
+}
+
+#soundcloud {
+  height: 5em;
+}
+
+#delete_button {
+  margin-top: -20em;
+
 }
