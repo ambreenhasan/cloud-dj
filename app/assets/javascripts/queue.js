@@ -106,7 +106,7 @@ $(document).on("page:change", function(){
     }
   })
 
-  var colours=[ '#333333','#ffffff'];  // List of colors
+  var colours=[ '#666666','#ffffff'];  // List of colors
   var tempID=0;
   var changeInterval=1000;    // Change interval in miliseconds
   var objectID='#dance_floor';
