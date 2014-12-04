@@ -64,17 +64,17 @@ $(document).on("page:change", function(){
     waveform.innerColor = gradient;
 
     var i = 0;
+    setInterval(function(){
+      data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
+      waveform.update({
+        data: data
+      });
+    }, 50);
 
     waveform.dataFromSoundCloudTrack(track);
     SC.stream(track.uri, {onplay:function(){
         $("#currently_playing").text(queue[0].trackTitle);
         isPlaying = true;
-        setInterval(function(){
-          data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
-          waveform.update({
-            data: data
-          });
-        }, 50);
       }, onfinish: function(){
         isPlaying = false;
         $("#soundcloud").empty();
