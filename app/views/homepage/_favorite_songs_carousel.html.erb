@@ -1,0 +1,22 @@
+<div id="my_rooms_carousel_div" class="bd-sm">
+  <div id="my_rooms_carousel" class="owl-carousel owl-theme">
+    <% if @favorites %>
+      <% @favorites.each do |fav| %>
+        <% number = rand(1..7) %>
+        <div class="item num<%= number.to_s %>" >
+          <h4><%= fav.song.name %></h4>
+        </div>
+      <% end %>
+    <% else %>
+      <h3>You don't have any friends yet!</h3>
+    <% end %>
+  </div>
+
+  <div class="customNavigation">
+    <a class="btn prev">Previous</a>
+    <a class="btn next">Next</a>
+    <a class="btn play">Autoplay</a>
+    <a class="btn stop">Stop</a>
+  </div>
+</div>
+

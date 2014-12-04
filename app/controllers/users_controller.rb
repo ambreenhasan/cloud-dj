@@ -8,6 +8,7 @@ class UsersController < ApplicationController
       @joined_rooms = RoomUser.where(user_id: session[:user_id])
       @my_rooms = Room.where(user_id: session[:user_id])
       @user = User.find(session[:user_id])
+      @favorites = @user.user_stars
     end
 
 
