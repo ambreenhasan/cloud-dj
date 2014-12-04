@@ -19,6 +19,7 @@ $(document).ready(function() {
     $("#home_trending_section").animate({"top": "14em"}, 500);
     $(".sti-menu").animate({"top": "3em"}, 500);
     $("#home_trending_section").animate({"height": "28em"}, 500);
+    $(body).css("height", "1000px");
   }
 
   $("#home_trending_section").on("mouseover", function() {

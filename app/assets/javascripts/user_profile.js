@@ -3,6 +3,7 @@ function roomOutTransition() {
   $(".sti-menu").animate({"top": 0}, 500);
   $("#trending_carousel_div").css("display", "block");
   $("#home_trending_section").animate({"top": 0}, 500);
+  $(body).css("height", "1600px");
   $("#home_trending_section").animate({"height": "960px"}, 500);
 }
 

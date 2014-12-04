@@ -1,11 +1,4 @@
 <%= form_for :search, remote:true, url: search_path do |f| %>
-
-  <p>
-    <%= f.label :search %><br>
-    <%= f.text_field :query %>
-  </p>
-
-  <p>
-    <%= f.submit "Submit search"%>
-  </p>
+  <%= f.text_field :query, :id => "song_search_input", :placeholder => "Search" %>
+  <%= f.submit "Submit search", :class=>"dsp-n"%>
 <% end %>
