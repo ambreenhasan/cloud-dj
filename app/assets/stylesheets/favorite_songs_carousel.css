@@ -16,8 +16,4 @@ Backtrace:
 /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.2.19/bin/sass:13:in `<top (required)>'
 /Users/apprentice/.rbenv/versions/2.0.0-p353/bin/sass:23:in `load'
 /Users/apprentice/.rbenv/versions/2.0.0-p353/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - favorite_songs_carousel.scss"; }
+/**/
