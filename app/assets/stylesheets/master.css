@@ -317,5 +317,15 @@ hr {
   margin-top: -3em; }
 
 #home_trending_section {
-  position: relative;
-  border: 5px pink solid; }
+  position: relative; }
+
+#song_search_input {
+  border-bottom: 2px #333333 solid;
+  border-top: 0px white solid;
+  border-right: 0px white solid;
+  border-left: 0px white solid;
+  length: 50em;
+  width: 20em;
+  color: #333333;
+  font-size: 40px;
+  outline: none; }
