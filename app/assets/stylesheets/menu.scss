@@ -1,19 +1,19 @@
 body { font-family: 'Wire One', arial, serif; text-shadow: 0px .5px 0px black;}
 
-.sti-menu{
+.sti-menu {
     width:1210px;
     position:relative;
     margin:5px auto 0 auto;
 }
 
-.sti-menu li{
+.sti-menu li {
     float:left;
     width:200px;
     height:250px;
     margin:0 30px 0 30px;
 }
 
-.sti-menu li a{
+.sti-menu li a {
     display:block;
     overflow:hidden;
     background:#fff;
@@ -26,7 +26,7 @@ body { font-family: 'Wire One', arial, serif; text-shadow: 0px .5px 0px black;}
     box-shadow:1px 1px 2px #ddd;
 }
 
-.sti-menu li a h2{
+.sti-menu li a h2 {
     color:#000;
     font-family: 'Wire One', arial, serif;
     font-size:42px;
@@ -38,7 +38,7 @@ body { font-family: 'Wire One', arial, serif; text-shadow: 0px .5px 0px black;}
     top:50px;
     text-shadow: 0px 1px .5px black;
 }
-.sti-menu li a h3{
+.sti-menu li a h3 {
     font-family: Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
     font-size:18px;
     font-style:italic;
@@ -49,19 +49,14 @@ body { font-family: 'Wire One', arial, serif; text-shadow: 0px .5px 0px black;}
     padding:10px;
 }
 
-.sti-icon{
+.sti-icon {
     width:100px;
     height:100px;
     position:absolute;
     background-position:top left;
     background-repeat:no-repeat;
     background-size: 100%;
-    background-color:tranparent;
+    background-color:transparent;
     left:50px;
     top:10px;
 }
-
-
-
-
-
