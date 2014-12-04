@@ -1,4 +1,21 @@
+function roomOutTransition() {
+  alert("hit")
+  $("#room").css("display", "none");
+  $(".sti-menu").animate({"top": 0}, 500);
+  $("#trending_carousel_div").css("display", "block");
+  $("#home_trending_section").animate({"top": 0}, 500);
+  $("#home_trending_section").animate({"height": "960px"}, 500);
+}
+
+
 $(document).ready(function() {
+
+  if ($("#room").css("display") === "block") {
+    $(".sti-menu li").on("click", function() {
+      roomOutTransition()
+    })
+  }
+
 
   $('#hide_button').on("click", function() {
         if ( $("#login_menu").css('top') != '0px' ) {
@@ -27,8 +44,6 @@ $(document).ready(function() {
         $("#new_room_form_div").slideDown(500);
         $("#ajax_home_thing").css("display", "none");
         $('#profile_page').css("display", "none");
-        $("#new_room_tab").css("color", "#75acd1");
-
       } else
         $("#new_room_form_div").slideUp(500);
         $("#new_room_tab").css("color", "#080308");
@@ -39,7 +54,6 @@ $(document).ready(function() {
     })
 
     $("#home_button").on("click", function() {
-      $("#room").css("display", "none");
       $("#ajax_home_thing").slideDown();
     })
 
