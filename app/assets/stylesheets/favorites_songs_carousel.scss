@@ -7,23 +7,28 @@ $gray:#333333;
 $red:#9C1616;
 
 
-#favorite_songs_carousel .item{
+#favorite_songs_carousel .item {
   padding: 3px 0px;
   margin: 5px;
   color: $white;
+  width: 10em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
   height: 172px;
-  overflow: hidden;
   border: 1px white solid;
-  background-color: blue;
+  background-color: $white;
+  display: block;
+}
+
+.owl-carousel {
+  display: block;
 }
 
 .item h4 {
   font-size: 20px;
-  color: $white;
+  color: $lblue;
   text-shadow: 0.1em 0.1em 0.1em $black;
 }
 

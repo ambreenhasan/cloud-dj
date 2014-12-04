@@ -3,8 +3,7 @@
     <% if @favorites %>
       <% if @favorites.length > 0 %>
         <% @favorites.each do |fav| %>
-          <% number = rand(1..7) %>
-          <div class="item num<%= number.to_s %>" >
+          <div class="item">
             <h4><%= fav.song.title %></h4>
           </div>
         <% end %>
