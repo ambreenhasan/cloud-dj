@@ -100,7 +100,6 @@ $(document).on("page:change", function(){
     $("#queue_container ul").append($(this))
     $deleteListTag.remove()
 
-
     addSongsToQueue();
 
     if ((queue.length === 1) || (isPlaying === false)) {
