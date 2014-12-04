@@ -58,4 +58,20 @@ body {
   left: 50px;
   top: 10px; }
 
+
+h1.header {
+  font-size: 2em;
+}
+
+#user_home {
+  margin-top: 10px;
+  font-size: 3em;
+}
+
+#cloud_image {
+  width: 400px;
+  height: 400px;
+  float: left;
+}
+
 /*# sourceMappingURL=menu.css.map */
