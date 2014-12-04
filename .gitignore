@@ -26,4 +26,4 @@ coverage
 coverage/
 coverage/*
 
-
+.sass-cache
