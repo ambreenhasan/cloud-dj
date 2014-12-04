@@ -151,9 +151,9 @@ h1 {
   color: #75ACD1; }
 
 #trending_carousel {
-  border: 2px purple solid;
-  height: 30em;
-  width: 90em;
+  /*border: 2px purple solid;
+  height: 30em;*/
+  width: 70em;
   margin-left: 20em;
   text-align: center;
   padding-top: 3em;
