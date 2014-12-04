@@ -102,6 +102,8 @@ $(document).on("page:change", function(){
     var $deleteListTag = $(this).parent();
     $("#queue_container ul").append($(this))
     $deleteListTag.remove()
+
+
     addSongsToQueue();
 
     if ((queue.length === 1) || (isPlaying === false)) {
