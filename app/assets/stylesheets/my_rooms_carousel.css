@@ -68,7 +68,8 @@
 
 .customNavigation a {
   padding-left: 4px;
-  color: white; }
+  color: white;
+  text-shadow: 0.1em 0.1em 0.1em black; }
 
 .customNavigation a:hover {
   color: #75acd1; }
