@@ -10,8 +10,8 @@ alert("hello");
  $("#profile_page").slideDown();
 
 
-$("#trending_carousel").append("<%= j (render "room_box") %>");
+$("#trending_carousel").prepend("<%= j (render "room_box") %>");
 
-$("#my_rooms_carousel").append("<%= j (render "room_box") %>");
+$("#my_rooms_carousel").prepend("<%= j (render "room_box") %>");
 
-$("#joined_rooms_carousel").append("<%= j (render "room_box") %>");
+$("#joined_rooms_carousel").prepend("<%= j (render "room_box") %>");
