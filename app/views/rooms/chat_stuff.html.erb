@@ -1,0 +1,17 @@
+<ul id="avatar_list">
+  <% @users.each do |user| %>
+    <li id="personal_space" class="bounce">
+      <div id="chat_bubble_area" class="wdt-l">
+      </div>
+      <div class="bou nce"><%= image_tag "cloud-icon.png" %>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= form_for :chat, :html => {:method => :post, :class => "bd-sm mgl-r wdt-l"}, :url => '/rooms/chat', remote: true do |f| %>
+  <%= f.text_field :content, :id => "chat_text_field", :placeholder => "chat it up yo" %>
+  <div id="save_new_room_form_button"><%= f.submit %>
+  </div>
+<% end %>

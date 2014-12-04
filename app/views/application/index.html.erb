@@ -1,1 +1,25 @@
-<div ng-view=""></div>
+<div id="body" class="p-n mg-n ht-l bd-sm">
+  <%= render "homepage/top_bar" %>
+
+  <div id="body_main">
+    <div id="home_body" >
+      <%= render "main_div" %>
+
+      <% if @user %>
+        <%= render "user_profile" %>
+        <%= render :partial => "rooms/room" %>
+        <div class='user_profile' style="display:none;">
+          <%= render 'users/user_profile' %>
+        </div>
+        <%= render 'rooms/new_room_form' %>
+      <% end %>
+    </div>
+  </div>
+
+  <div id="home_trending_section" class="bd-sm bk-b ht-b">
+    <% if @user %>
+      <%= render 'users/side_bar' %>
+    <%= render :partial => 'homepage/trending_carousel' %>
+    <% end %>
+  </div>
+</div>

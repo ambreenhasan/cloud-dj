@@ -1,0 +1,20 @@
+
+
+// signUpMenuSlideUp().done(logInMenuSlideUp())
+
+//  function signUpMenuSlideUp() {$("#signup_menu").slideUp(500); }
+
+//  function logInMenuSlideUp() {$("#login_menu").css("display", "block").animate({top: -163}, 500);}
+
+
+ // function signUpMenuSlideUp() {$("#signup_menu").slideUp(500); } finally { $("#login_menu").css("display", "block").animate({top: -163}, 500);}
+
+$("#signup_menu").slideUp(500);
+$("#login_menu").css("display", "block").animate({top: -163}, 500);
+
+
+$("#ajax_home_thing").remove();
+$("#home_body").append("<%= j (render 'main_div') %>");
+$("#home_body").append("<%= j (render 'users/side_bar') %>");
+// alert("hello");
+$("#login_hidden").css("display", "none");
