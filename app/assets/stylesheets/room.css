@@ -293,4 +293,15 @@ button.track_title {
   background-color: black transparent;
   color: white;
 }
+
+button#clear_search {
+  margin-top: 3px;
+  border: 0;
+  border-radius: 2px;
+  font-size: 13px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+
+}
 /*# sourceMappingURL=room.css.map */

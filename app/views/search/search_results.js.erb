@@ -1,7 +1,8 @@
 $('#sessionuserid').attr('sessionid', <%= @user_id %>);
 
 $("#sc_song_list").empty();
-$("#search_query").val("")
+$("#song_search_input").val("")
+
 
 
 <% @streamable_songs.each do |track| %>
@@ -9,3 +10,4 @@ $("#search_query").val("")
 <% end %>
 
 $("#query_song_list").hide().slideDown(600)
+
