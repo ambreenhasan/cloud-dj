@@ -293,11 +293,12 @@ hr {
 }
 
 #song_search_input {
+  position: relative;
   border-bottom: 2px $gray solid;
   border-top:0px white solid;
   border-right:0px white solid;
   border-left:0px white solid;
-  length: 40em;
+  length: 30em;
   width: 20em;
   color: $gray;
   font-size: 40px;
@@ -305,6 +306,35 @@ hr {
 }
 
 #song_search_bar {
+  position: relative;
   margin-left: -16em;
   margin-top: -8em;
+  width: 50em;
+  height: 19em;
+}
+
+#now_playing_div {
+  position: sticky;
+  float:right;
+  margin-top: -19em;
+  margin-left: 45em;
+}
+
+#queue_container {
+  margin-top: 1em;
+  margin-left: -3em;
+}
+
+#player_container {
+  height: 6em;
+}
+
+#soundcloud {
+  border: 2px black solid;
+  height: 5em;
+}
+
+#delete_button {
+  margin-top: -20em;
+
 }

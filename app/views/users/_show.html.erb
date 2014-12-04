@@ -10,24 +10,26 @@
 </div>
 
 
-<div>Now playing: <span id="currently_playing"></span>
+<div id="now_playing_div">Now playing: <span id="currently_playing"></span>
   <form>
     <label>Favorite this song:</label>
     <input type="checkbox" id="fav_button" title="" description="" song_id="" >
   </form>
   <button id="mute_button"><%= image_tag 'mutebutton.png' %></button>
   <button id="skip_button"><%= image_tag 'skipbutton.png' %></button>
-</div>
 
-<div id="player_container">
- <div id="soundcloud">
- </div>
-</div>
+  <div id="player_container">
+    <div id="soundcloud">
+    </div>
+  </div>
 
-<div>
   <button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button>
+  <div id="queue_container" class="">
+    <ul>
+    </ul>
+  </div>
+
+
 </div>
-<div id="queue_container" class="">
-  <ul>
-  </ul>
-</div>
+
+
