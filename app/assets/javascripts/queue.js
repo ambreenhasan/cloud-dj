@@ -4,16 +4,6 @@ $(document).on("page:change", function(){
   var deleteFromQueueMode = false;
   var currentTrack = "";
 
-  var startDancing = function() {
-    console.log("now dancing");
-    $(".avatar").addClass("bounce")
-  };
-
-  var stopDancing = function() {
-    console.log("stopped dancing");
-    $(".avatar").removeClass("bounce")
-  };
-
   $(document).on("click", "#mute_button", function() {
     currentTrack.toggleMute();
   });
@@ -86,14 +76,14 @@ $(document).on("page:change", function(){
             data: data
           });
         }, 50);
-        //onplay, start dancing!
+        startDancing();
       }, onfinish: function(){
         isPlaying = false;
         $("#soundcloud").empty();
         $("#queue_container ul button:first-child").remove();
         queue.shift();
         playSong();
-        startDancing();
+        stopDancing();
       }
     }, function(stream){
       currentTrack = stream;
@@ -118,4 +108,17 @@ $(document).on("page:change", function(){
       playSong();
     }
   })
+
+setInterval(function(){
+                $(objectID).animate({backgroundColor: colours[tempID]},2000);
+                tempID=tempID+1;
+                if (tempID>colours.length-1) tempID=0;
+            },changeInterval);
+
+  var colours=[ '#000000','#ffffff'];  // List of colors
+    var tempID=0;
+    var changeInterval=3000;    // Change interval in miliseconds
+    var objectID='#dance_floor';
+
 });
+// '#ff0000','#00ff00','#0000ff','#acacac',

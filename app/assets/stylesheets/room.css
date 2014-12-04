@@ -268,11 +268,16 @@ hr {
 
 #dance_floor {
   width: 100%;
-  height: 250px;
+  height: 200px;
+  background-color: yellow;
+  padding-top: 70px;
+}
+
+#dance_floor ul li {
+  display: inline-block;
 }
 
 .avatar {
-
 }
 
 /*# sourceMappingURL=room.css.map */
