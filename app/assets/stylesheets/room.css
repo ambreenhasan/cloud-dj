@@ -280,4 +280,8 @@ hr {
 .avatar {
 }
 
+#room_form_errors {
+  color: red;
+}
+
 /*# sourceMappingURL=room.css.map */
