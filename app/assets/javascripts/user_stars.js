@@ -22,6 +22,10 @@ $(document).on("page:change", function(){
         })
         .done(function(response){
           console.log('SONG SAVED TO DATABASE!');
+           $("#favorited").text("Song has been added to your favorites.").css('color', 'green').fadeOut(5000);
+
+
+           console.log(apiid)
         })
         .fail(function(event){
           console.log('YOU FAILED BECAUSE YOURE A LOSER');
@@ -35,8 +39,9 @@ $(document).on("page:change", function(){
           data: pass_to_user_stars
         })
         .done(function(response){
-          $('#fav_button').attr('checked', false);
-          $("#favorited").append("Song has been added to your favorites.").css('color', 'green').fadeOut(5000)
+          $('#fav_button').prop('checked', false);
+           $("favorited").empty();
+          // $("#favorited").append("Song has been added to your favorites.").css('color', 'green').fadeOut(5000)
         })
         .fail(function(event){
           $('#fav_button').attr('checked', false);
