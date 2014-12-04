@@ -4,11 +4,11 @@
       <% @favorites.each do |fav| %>
         <% number = rand(1..7) %>
         <div class="item num<%= number.to_s %>" >
-          <h4><%= fav.song.name %></h4>
+          <h4><%= fav.song.title %></h4>
         </div>
       <% end %>
     <% else %>
-      <h3>You don't have any friends yet!</h3>
+      <h3>You don't have any favorite songs yet!</h3>
     <% end %>
   </div>
 
