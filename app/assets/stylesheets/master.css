@@ -104,6 +104,9 @@ body {
 .wdt-l {
   width: 25em; }
 
+.wdt-f {
+  width: 100%; }
+
 .ps-f {
   position: fixed; }
 
@@ -319,4 +322,5 @@ hr {
 #body_main {
   height: 27em;
   position: relative;
-  margin-top: -3em; }
+  margin-top: -3em;
+  z-index: -1; }
