@@ -1,14 +1,14 @@
 #trending_carousel .item {
   background: #3fbf79;
   height: 12em;
-  width: 12em;
+  width: 10em;
   margin: 10px;
   color: #FFF;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
-  border: 1px purple solid;
+  border: 1px black solid;
   margin: 10px;
   font-size: 18px; }
 
