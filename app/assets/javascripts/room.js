@@ -56,10 +56,6 @@ $(document).ready(function() {
       $("#room").css("display", "none");
       $("#ajax_home_thing").slideDown();
       roomOutTransition();
-
     })
-
-      $(".bounce").exBounce();
-
 })
 
