@@ -10,10 +10,11 @@
   height: 172px;
   border: 1px white solid;
   background-color: white;
-  display: block; }
+  display: inline-block;
+  position: relative; }
 
 .owl-carousel {
-  display: block; }
+  display: inline-block; }
 
 .item h4 {
   font-size: 20px;
