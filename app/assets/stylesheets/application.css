@@ -4,6 +4,6 @@
  *= require owl.carousel
  *= require owl.theme
  *= require jquery-ui
-  *= require jquery-ui/menu
+ *= require jquery-ui/menu
  *= require_self
  */
