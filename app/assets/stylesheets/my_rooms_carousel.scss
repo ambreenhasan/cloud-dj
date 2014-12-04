@@ -6,18 +6,68 @@ $lblue:#BAE7E8;
 $gray:#333333;
 $red:#9C1616;
 
+.num1 {
+  background-image: url(/assets/1.jpg);
+  background-size: 100%;
+}
+
+.num2 {
+  background-image: url(/assets/2.jpg);
+  background-size: 100%;
+}
+
+.num3 {
+  background-image: url(/assets/3.jpg);
+  background-size: 100%;
+}
+
+.num4 {
+  background-image: url(/assets/4.jpg);
+  background-size: 100%;
+}
+
+.num5 {
+  background-image: url(/assets/5.jpg);
+  background-size: 100%;
+}
+
+.num6 {
+  background-image: url(/assets/6.jpg);
+  background-size: 100%;
+}
+
+.num7 {
+  background-image: url(/assets/7.jpg);
+  background-size: 100%;
+}
+
+
 #my_rooms_carousel .item{
-  background: $white;
   padding: 3px 0px;
   margin: 5px;
-  color: black;
+  color: $white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
   height: 172px;
   overflow: hidden;
+  border: 1px white solid;
 }
+
+.item h4 {
+  font-size: 20px;
+  color: $white;
+  text-shadow: 0.1em 0.1em 0.1em $black;
+}
+
+.item h5 {
+  margin-top: -2px;
+  font-size: 14px;
+  color: $white;
+  text-shadow: 0.1em 0.1em 0.1em black;
+}
+
 .custom Navigation{
   text-align: center;
 }
