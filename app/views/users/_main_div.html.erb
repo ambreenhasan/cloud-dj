@@ -3,10 +3,12 @@
      <%= image_tag("cloud-2.gif", :id => "cloud_image") %>
     <% if @user %>
       <h1>CLOUD DJ WELCOMES <br> YOU, <%= @user.first_name.upcase %>.</h1>
+       <p class="app_description">Create rooms and playlists to get started!</p>
     <% else %>
       <h1 class="header">Cloud DJ</h1>
+      <p class="app_description">A cloud party where you can create rooms and share playlists with your friends and others.</p>
     <% end %>
-    <p class="app_description">A cloud party where you can create rooms and share playlists with your friends and others.</p>
+
   </div>
 
 </div>
