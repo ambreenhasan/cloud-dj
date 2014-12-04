@@ -1,0 +1,65 @@
+$black:#080308;
+$white:#FFFFFF;
+$beige:#FFFFEC;
+$dblue:#75ACD1;
+$lblue:#BAE7E8;
+$gray:#333333;
+$red:#9C1616;
+
+
+#favorite_songs_carousel .item{
+  padding: 3px 0px;
+  margin: 5px;
+  color: $white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  height: 172px;
+  overflow: hidden;
+  border: 1px white solid;
+  background-color: blue;
+}
+
+.item h4 {
+  font-size: 20px;
+  color: $white;
+  text-shadow: 0.1em 0.1em 0.1em $black;
+}
+
+.item h5 {
+  margin-top: -2px;
+  font-size: 14px;
+  color: $white;
+  text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+.custom Navigation{
+  text-align: center;
+}
+//use styles below to disable ugly selection
+.custom Navigation a{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#favorite_songs_div {
+  background-color: $black;
+  height: 15em;
+  width: 75.5em;
+  margin-left: -38px;
+}
+
+.customNavigation a {
+  padding-left: 4px;
+  color: $white;
+  text-shadow: 0.1em 0.1em 0.1em black;
+}
+
+.customNavigation a:hover {
+  color: $dblue;
+}
