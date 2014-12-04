@@ -23,6 +23,8 @@ gem 'turbolinks'
 
 gem 'owlcarousel-rails'
 
+gem 'uglifier', '>= 1.3.0'
+
 # gem 'devise'
 
 # gem 'bower-rails'
