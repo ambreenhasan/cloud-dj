@@ -107,3 +107,4 @@ $(document).on("page:change", function(){
       playSong();
     }
   })
+});
