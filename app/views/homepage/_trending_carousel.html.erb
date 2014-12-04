@@ -9,7 +9,7 @@
             <h4><%= room.name %></h4><br>
             <h5><%= room.description %></h5>
             <%= form_tag("/users/#{@user.id}/rooms/#{room.id}/join", method: :post, remote: true) do %>
-              <div class="join" id="<%= room.id %>"><%= submit_tag 'join room' %></div>
+              <div class="class" id="<%= room.id %>"><%= submit_tag 'join room', id: "join" %></div>
             <% end %>
           </div>
           <% end %>
