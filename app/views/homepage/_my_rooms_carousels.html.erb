@@ -2,7 +2,8 @@
   <div id="my_rooms_carousel" class="owl-carousel owl-theme">
     <% if @my_rooms %>
       <% @my_rooms.each do |room| %>
-        <div class="item" id="<%= room.id %>">
+        <% number = rand(1..7) %>
+        <div class="item num<%= number.to_s %>" id="<%= room.id %>">
           <h4><%= room.name %></h4>
           <br>
           <h5><%= room.description %></h5>
