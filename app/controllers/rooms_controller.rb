@@ -16,7 +16,7 @@ class RoomsController < ApplicationController
       if @room.save
         f.js { render :new_room }
       else
-        f.json { render :index }
+        f.js { render :room_errors }
       end
     end
   end

@@ -15,6 +15,7 @@
     <label>Favorite this song:</label>
     <input type="checkbox" id="fav_button" title="" description="" song_id="" >
   </form>
+  <div id="favorited"></div>
   <button id="mute_button"><%= image_tag 'mutebutton.png' %></button>
   <button id="skip_button"><%= image_tag 'skipbutton.png' %></button>
 
@@ -30,6 +31,23 @@
   </div>
 
 
+<div id="dance_floor">
+  <ul>
+    <li><%= image_tag("human128x128.png", id: 1, class: "bounce avatar") %></li>
+    <li><%= image_tag("human128x128.png", id: 2, class: "bounce avatar") %></li>
+    <li><%= image_tag("human128x128.png", id: 3, class: "bounce avatar") %></li>
+    <li><%= image_tag("human128x128.png", id: 4, class: "bounce avatar") %></li>
+    <li><%= image_tag("human128x128.png", id: 5, class: "bounce avatar") %></li>
+    <li><%= image_tag("human128x128.png", id: 6, class: "bounce avatar") %></li>
+    <li><%= image_tag("human128x128.png", id: 7, class: "bounce avatar") %></li>
+    <li><%= image_tag("human128x128.png", id: 8, class: "bounce avatar") %></li>
+  </ul>
+</div>
+
+<div><button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button></div>
+<div id="queue_container" class="">
+  <ul>
+  </ul>
 </div>
 
 

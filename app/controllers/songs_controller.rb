@@ -8,6 +8,8 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
     respond_to do |f|
       if @song.save
+
+        flash[:notice] = "Song added to database"
         f.json { render json: @song }
       else
         f.json { redirect_to user_songs_path }
@@ -25,7 +27,7 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    params.require(:song).permit(:user_id, :api_id, :title, :description)
+    params.require(:song).permit(:user_id, :api_id, :title)
   end
 
 end
