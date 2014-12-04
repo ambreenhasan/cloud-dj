@@ -69,21 +69,18 @@ $(document).on("page:change", function(){
     SC.stream(track.uri, {onplay:function(){
         $("#currently_playing").text(queue[0].trackTitle);
         isPlaying = true;
-        console.log('Playing a song!');
         setInterval(function(){
           data.push(Math.cos(i++/25) - 0.2 + Math.random()*0.3);
           waveform.update({
             data: data
           });
         }, 50);
-        startDancing();
       }, onfinish: function(){
         isPlaying = false;
         $("#soundcloud").empty();
         $("#queue_container ul button:first-child").remove();
         queue.shift();
         playSong();
-        stopDancing();
       }
     }, function(stream){
       currentTrack = stream;
