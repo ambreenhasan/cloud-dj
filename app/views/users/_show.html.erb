@@ -13,12 +13,20 @@
     <label>Favorite this song:</label>
     <input type="checkbox" id="fav_button" title="" description="" song_id="" >
   </form>
+  <div id="favorited"></div>
   <button id="mute_button"><%= image_tag 'mutebutton.png' %></button>
   <button id="skip_button"><%= image_tag 'skipbutton.png' %></button>
 </div>
 
 <div id="player_container">
  <div id="soundcloud"></div>
+</div>
+
+<div id="dance_floor">
+<ul>
+  <%= image_tag "human-512.png", id: 123, class: "avatar", class: "bounce" %>
+  <%= image_tag "human-512.png", id: 999, class: "avatar", class: "bounce" %>
+</ul>
 </div>
 
 <div><button id="delete_button">Delete mode: <span id="delete_mode_toggle">OFF</span></button></div>

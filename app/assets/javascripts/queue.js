@@ -4,6 +4,16 @@ $(document).on("page:change", function(){
   var deleteFromQueueMode = false;
   var currentTrack = "";
 
+  var startDancing = function() {
+    console.log("now dancing");
+    $(".avatar").addClass("bounce")
+  };
+
+  var stopDancing = function() {
+    console.log("stopped dancing");
+    $(".avatar").removeClass("bounce")
+  };
+
   $(document).on("click", "#mute_button", function() {
     currentTrack.toggleMute();
   });
@@ -83,6 +93,7 @@ $(document).on("page:change", function(){
         $("#queue_container ul button:first-child").remove();
         queue.shift();
         playSong();
+        startDancing();
       }
     }, function(stream){
       currentTrack = stream;
