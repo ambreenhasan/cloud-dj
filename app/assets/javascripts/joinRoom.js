@@ -22,12 +22,15 @@ $(document).ready(function() {
     $("#home_trending_section").addClass("hoverUp");
   }
 
-  $(".hoverUp").on("mouseover", function() {
-    $(this).animate({"top": 0},500);
+  $("#home_trending_section").on("mouseover", function() {
+    $(this).animate({"top": 0},600);
   })
 
-  $(".hoverUp").on("mouseleave", function() {
-    if $(this).animate({"top": 0},500);
+  $("#home_trending_section").on("mouseleave", function() {
+    if ($("#room").css("display") === "block") {
+      $("#home_trending_section").animate({"top": "19em"},600);
+    }
+
   })
 
 
