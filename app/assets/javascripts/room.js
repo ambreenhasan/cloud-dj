@@ -43,11 +43,13 @@ $(document).ready(function() {
       } else {
         $("#new_room_form_div").slideUp(500);
         $("#new_room_tab").css("color", "#080308");
+        $("#ajax_home_thing").css("display", "block")
       }
     });
 
     $("#hide_new_room_form_button").on("click", function() {
       $("#new_room_form_div").slideUp(500);
+      $("#ajax_home_thing").css("display", "block")
     })
 
     $("#home_tab").on("click", function() {
