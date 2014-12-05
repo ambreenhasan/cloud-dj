@@ -36,14 +36,11 @@ $(document).ready(function() {
 
     $("#new_room_tab").on("click", function(){
       if ($("#new_room_form_div").css("display") === "none") {
-        // $("#new_room_form_div").css("display", "block")
-        // console.log($("#new_room_form_div").css("display"))
         $("#room").css("display", "none")
         $("#new_room_form_div").slideDown(500);
         $("#ajax_home_thing").css("display", "none");
         $('#profile_page').css("display", "none");
-
-      } else {//display === block
+      } else {
         $("#new_room_form_div").slideUp(500);
         $("#new_room_tab").css("color", "#080308");
       }
