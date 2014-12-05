@@ -4,14 +4,13 @@
   <div id="body_main">
     <div id="home_body" >
       <%= render "main_div" %>
-
+      <%= render 'rooms/new_room_form' %>
       <% if @user %>
         <%= render "user_profile" %>
         <%= render :partial => "rooms/room" %>
         <div class='user_profile' style="display:none;">
           <%= render 'users/user_profile' %>
         </div>
-        <%= render 'rooms/new_room_form' %>
       <% end %>
     </div>
   </div>
