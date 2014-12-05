@@ -22,4 +22,11 @@
     <%= render :partial => 'homepage/trending_carousel' %>
     <% end %>
   </div>
+
+  <div id="room_black_bar" class="dsp-n">
+    <% if @user %>
+      <%= render 'users/side_bar' %>
+    <% end %>
+  </div>
+
 </div>
