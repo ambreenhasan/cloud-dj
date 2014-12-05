@@ -3,7 +3,7 @@
           <br>
           <h5><%= @description %></h5>
           <%= form_tag("/users/#{@user_id}/rooms/#{@id}", method: :delete, remote: true) do %>
-            <div class="delete"><%= submit_tag 'Delete' %>
+            <div class="delete"><%= submit_tag ('Delete', :class => "button") %>
             </div>
           <% end %>
 </div>

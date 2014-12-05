@@ -197,7 +197,7 @@ h1 {
   float: left;
   display: inline-block; }
 
-#save_new_room_form_button {
+input#save_new_room_form_button {
   width: 5em;
   margin: 2px;
   margin-left: 15em;
@@ -335,4 +335,12 @@ button#mute_button, button#skip_button {
   margin-top: 3px;
   background-color: white;
 }
+
+.save_room_button {
+  border: 0;
+  border: 1px solid black;
+  background-color: white;
+}
+
+
 /*# sourceMappingURL=room.css.map */
