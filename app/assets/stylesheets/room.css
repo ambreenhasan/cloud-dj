@@ -309,4 +309,24 @@ button#clear_search {
   margin-bottom: 5px;
   padding
 }
+
+button#delete_button {
+  margin-top: 3px;
+  border: 0;
+  border-radius: 2px;
+  font-size: 13px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+p.queue_head {
+  text-align: center;
+  border-radius: 2px;
+  font-size: 13px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+
+}
 /*# sourceMappingURL=room.css.map */
