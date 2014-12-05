@@ -1,8 +1,10 @@
 #room_black_bar {
   height: 27em;
-  margin-top: 17em;
+  margin-top: 23em;
   padding-top: 8em;
   background-color: black;
+  z-index: 10;
+  position: relative;
 }
 
 
