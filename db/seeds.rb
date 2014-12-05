@@ -1,8 +1,11 @@
 
 room_names = ["Cool Partay Room", "Welcome to the Fun", "Room 3", "Beep Bop", "Room 5", "Chill like Alex", "Alex's Dream", "Alex, the Cool", "Alex al Ex?", "Kangaroos Do's", "TeeHee For Me"]
 
+more_descriptions = ["Blowing the roof off of quiet personal gatherings",
+"Lounging around doing nothing", "archery is the best sport ever", "AJAX for WWHHAAaattt?!?!", "git push origin master!","Friday night and nothing to do", "come in for the worst music in the world"]
+
 room_names.each do |name|
-  Room.create(name: name, description: "Blowing the roof off of quiet personal gatherings", publicness: true, user_id: 1)
+  Room.create(name: name, description: more_descriptions.sample, publicness: true, user_id: 1)
 end
 
 people_names = ["alex", "Ambreen", "Daniel", "Michael"]
