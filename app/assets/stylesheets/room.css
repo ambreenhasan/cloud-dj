@@ -307,7 +307,7 @@ button#clear_search {
 
 .track_title {
   margin-bottom: 5px;
-  padding
+  margin-right: 5px;
 }
 
 button#delete_button {
@@ -327,6 +327,11 @@ p.queue_head {
   padding: 5px;
   background-color: black;
   color: white;
+}
 
+button#mute_button, button#skip_button {
+  border: 0;
+  margin-top: 3px;
+  background-color: white;
 }
 /*# sourceMappingURL=room.css.map */
