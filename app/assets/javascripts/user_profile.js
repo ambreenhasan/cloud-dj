@@ -1,12 +1,3 @@
-// function roomOutTransition() {
-//   $("#room").css("display", "none");
-//   $(".sti-menu").animate({"top": 0}, 500);
-//   $("#trending_carousel_div").css("display", "block");
-//   $("#home_trending_section").animate({"top": 0}, 500);
-//   $(body).css("height", "1600px");
-//   $("#home_trending_section").animate({"height": "960px"}, 500);
-// }
-
 $(document).ready(function(){
 
 
@@ -16,7 +7,6 @@ $(document).ready(function(){
     $("#room").css("display", "none");
     $("#room_black_bar").css("display", "none");
     $("#home_trending_section").css("display", "block")
-    // roomOutTransition()
     $("#profile_page").slideDown();
   })
 
@@ -25,7 +15,6 @@ $(document).ready(function(){
 
 function bindEvents() {
   $('#user_profile').on('click', Profile.showProfile)
-  // $('li#user_profile').on('click', Profile.showProfile)
   $('#accordion ul > li ul').click(function(event){
     event.stopPropagation();
   })
@@ -49,8 +38,6 @@ var Profile = (function() {
   function showProfile() {
     var $userHomeSelector = $('div#user_home');
     var $userProfileSelector = $('div.user_profile');
-    // $userHomeSelector.hide();
-    // $userProfileSelector.css("display", "");
   };
 
   return {
