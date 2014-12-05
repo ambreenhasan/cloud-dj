@@ -167,8 +167,9 @@ h1 {
 #new_room_form_div {
   float: right;
   margin-right: 2em;
-  top: -12em;
-  position: relative; }
+ /* margin-top: -12em;*/
+  position: relative;
+  z-index: 5;}
 
 #text_area {
   width: 80%;
