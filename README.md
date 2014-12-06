@@ -1,4 +1,28 @@
 cloud-dj
 ========
 
-A virtual party where you can share sounds with your friends and others
+A cloud party where you can share sounds with your friends and others by creating continuous playlists.
+
+Final project on branch: 'ding_dong_the_witch_is_dead'
+
+## Team Members
+* [Ambreen Hasan](https://github.com/ambreenhasan)
+* [Michael Teevan](https://github.com/mike6838)
+* [Alexandra Trost](https://github.com/AlexTrost)
+* [Daniel Yee](https://github.com/DanYee910)
+
+## Technologies
+* Ruby on Rails
+* JavaScript and jQuery
+* Soundcloud API
+* Waveform.js
+* Atomic CSS and Sass
+* RSpec for testing
+* Simplecov for test coverage (71% test coverage)
+
+## Schema
+![Schema](schema.png)
+
+
+
+
