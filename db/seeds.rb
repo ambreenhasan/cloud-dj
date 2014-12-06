@@ -18,6 +18,16 @@ end
 100.times do
   RoomUser.create(room_id: rand(1..10), user_id: 1)
 end
+
+song_names = ["Radiohead", "Creep", "OkComputer Song", "Ambreen and the Mikes", "Hate Death Dead", "Rubber Dodgeballs", "Cry Cry Cry"]
+
+# song_names.each do |song|
+#   @song = Song.create(title: song)
+#   UserStar.create(song_id: @song.id, user_id: 1)
+# end
+
+
+
 #   User.create(email: Faker::Internet.email, password_hash: "password", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
 
 #   RoomInvite.create(inviter_id: User.all.sample.id, invitee_id: User.all.sample.id, room_id: rand(1..10))
