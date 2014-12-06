@@ -1,9 +1,7 @@
-cloud-dj
+Cloud DJ
 ========
 
 A cloud party where you can share sounds with your friends and others by creating continuous playlists.
-
-Final project on branch: 'ding_dong_the_witch_is_dead'
 
 ## Team Members
 * [Ambreen Hasan](https://github.com/ambreenhasan)
@@ -13,6 +11,7 @@ Final project on branch: 'ding_dong_the_witch_is_dead'
 
 ## Technologies
 * Ruby on Rails
+* PostgreSQL
 * JavaScript and jQuery
 * Soundcloud API
 * Waveform.js
