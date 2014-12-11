@@ -1,7 +1,7 @@
 Cloud DJ
 ========
 
-A cloud party where you can share sounds with your friends and others by creating continuous playlists.
+A cloud party where you can share sounds with your friends and others by creating collaborative playlists.
 
 ## Team Members
 * [Ambreen Hasan](https://github.com/ambreenhasan)
