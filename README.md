@@ -30,7 +30,7 @@ A cloud party where you can share sounds with your friends and others by creatin
 #### view of created rooms on user profile
 ![User Profile](public/cloud_dj_user_profile.png)
 
-### Room View (
+### Room View
 #### search song with SoundCloud, add to a queue, view waveform; delete, mute, and pause current song
 ![Room View](public/cloud_dj_room.png)
 
