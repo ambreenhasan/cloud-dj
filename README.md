@@ -23,6 +23,8 @@ A cloud party where you can share sounds with your friends and others by creatin
 ![Schema](public/schema.png)
 
 ## Screenshots
+# User Page
+![User Page](public/)
 
 
 
