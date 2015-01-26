@@ -20,7 +20,7 @@ A cloud party where you can share sounds with your friends and others by creatin
 * Simplecov for test coverage (71% test coverage)
 
 ## Schema
-![Schema](schema.png)
+![Schema](public/schema.png)
 
 ## Screenshots
 
